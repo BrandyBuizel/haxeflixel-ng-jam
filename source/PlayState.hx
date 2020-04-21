@@ -35,6 +35,134 @@ class PlayState extends FlxState
 	static var LEVEL_MIN_Y:Float;
 	static var LEVEL_MAX_Y:Float;
 	
+	//Chaarcter Dialogue Arrays
+	var chezText:Array<Dynamic> = 
+	[
+		[
+			"Gimme Kiss"
+		]
+	];	
+	
+	var sammyText:Array<Dynamic> = 
+	[
+		[
+			"Isn't being so happy All the time amazing?"
+		],
+		[
+			"I just love smiling, they say if you smile more you'll start being happy again."
+		],
+		[
+			"You're right, I'm actually quite depressed but i try to smile so that people dont have to worry about me and feel sorry for me"
+		]
+	];	
+	
+	var cickassText:Array<Dynamic> = 
+	[
+		[
+			"Wanna fight bro?"
+		],
+		[
+			"Nah man, i just love fighting. My dad bought me these gloves as a kitten, been fighting ever since. Can i try my gloves on your face?"
+		],
+		[
+			"Only if you promise it'll hurt. Pain is just information that the mind can master!"
+		]
+	];		
+	
+	var kenText:Array<Dynamic> = 
+	[
+		[
+			"You holding?"
+		],
+		[
+			"Nah man, you got seed?"
+		],
+		[
+			"Sunflower seeds, whats your favorite flavor?"
+		],
+		[
+			"Man me too, aww bro. Nice nice. "
+		],
+		[
+			"No problem"
+		]
+	];	
+	
+	var gleetusText:Array<Dynamic> = 
+	[
+		[
+			"munch munch much"
+		],
+		[
+			"munch munch much munch munch"
+		],
+		[
+			"munch munch much munch munch much munch munch much",
+			"munch munch much munch munch much munch munch much",
+			"munch munch much munch munch much munch munch much"
+		]
+	];	
+	
+	var ferdinandText:Array<Dynamic> = 
+	[
+		[
+			"I hate taking baths"
+		],
+		[
+			"No, like, I just prefer showers. I'm not dirty"
+		],
+		[
+			"I showered just last night though!"
+		],
+		[
+			"Do people really think I'm dirty?"
+		],
+		[
+			"I even use mouthwash regularly"
+		],
+		[
+			"I'll prove it doesnt, Kiss me!"
+		]
+	];
+		
+	var hankText:Array<Dynamic> = 
+	[
+		[
+			"Gotta get top speed. Win next week's race. Show biker troy who's boss"
+		],
+		[
+			"Gotta go fast, beat my best time. Gotta keep moving"
+		],
+		[
+			"What do you want. I cant stop right now, so close to my Personal record"
+		],
+		[
+			"*heaves*"
+		],
+		[
+			"*collapses*"
+		]
+	];
+			
+	var gottsleyText:Array<Dynamic> = 
+	[
+		[
+			"Wanna join my cult?"
+		],
+		[
+			"We’ll spill the blood of virgins"
+		],
+		[
+			"You also have to take a vow of silence, but i broke mine to speak with you"
+		],
+		[
+			"I must be slaughtered now as per told by the scripture"
+		],
+		[
+			"Give me the sweet kiss of death and seal my fate"
+		]
+	];
+	
 	override public function create():Void 
 	{
 		//screen size
@@ -92,25 +220,33 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		
 		//Depth, Scale Camera
-			if (FlxG.keys.anyPressed(["S", "DOWN"]))
-			{
-				cam.zoom += 0.01;
+		if (FlxG.keys.anyPressed(["S", "DOWN"]))
+		{
+			if(cam.zoom < 4){
+			cam.zoom += 0.01;
 			}
-			
-			if (FlxG.keys.anyPressed(["W", "UP"]))
-			{
+		}
+		
+		if (FlxG.keys.anyPressed(["W", "UP"]))
+		{
+			if(cam.zoom > 0.01){
 				cam.zoom -= 0.01;
 			}
-		
+		}
+	
 		if (FlxG.keys.anyPressed(["A", "LEFT"]))
-			{
-				_player.x -= 20;
-			}
+		{
+			_player.x -= 20;
+		}
 			
-			if (FlxG.keys.anyPressed(["D", "RIGHT"]))
-			{
-				_player.x += 20;
-			}
+		if (FlxG.keys.anyPressed(["D", "RIGHT"]))
+		{
+			_player.x += 20;
+		}
+		
+		if (FlxG.keys.anyPressed(["SPACE"])){
+			
+		}
 	}
 }
 
