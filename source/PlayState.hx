@@ -35,11 +35,44 @@ class PlayState extends FlxState
 	static var LEVEL_MIN_Y:Float;
 	static var LEVEL_MAX_Y:Float;
 	
-	//Chaarcter Dialogue Arrays
+	var curText = new FlxText();
+	
+	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
 	[
 		[
 			"Gimme Kiss"
+		]
+	];		
+	
+	var vernieText:Array<Dynamic> = 
+	[
+		[
+			""
+		]
+	];		
+	
+	//a dog character upset about how many dogs there are in this game, they feel less special
+	var digbyText:Array<Dynamic> = 
+	[
+		[
+			""
+		]
+	];	
+	
+	//glutton
+	var gleetusText:Array<Dynamic> = 
+	[
+		[
+			"munch munch much"
+		],
+		[
+			"munch munch much munch munch"
+		],
+		[
+			"munch munch much munch munch much munch munch much",
+			"munch munch much munch munch much munch munch much",
+			"munch munch much munch munch much munch munch much"
 		]
 	];	
 	
@@ -86,20 +119,13 @@ class PlayState extends FlxState
 		[
 			"No problem"
 		]
-	];	
+	];		
 	
-	var gleetusText:Array<Dynamic> = 
+	//Artist whos been drawing 5 years hasn't gotten better
+	var reggieText:Array<Dynamic> = 
 	[
 		[
-			"munch munch much"
-		],
-		[
-			"munch munch much munch munch"
-		],
-		[
-			"munch munch much munch munch much munch munch much",
-			"munch munch much munch munch much munch munch much",
-			"munch munch much munch munch much munch munch much"
+			""
 		]
 	];	
 	
@@ -125,6 +151,7 @@ class PlayState extends FlxState
 		]
 	];
 		
+	//biker hank
 	var hankText:Array<Dynamic> = 
 	[
 		[
@@ -143,7 +170,24 @@ class PlayState extends FlxState
 			"*collapses*"
 		]
 	];
-			
+	
+	//Yugioh fanaatic who seems like anaexhibistionist, tranchcoat owl
+	var ramasamaText:Array<Dynamic> = 
+	[
+		[
+			""
+		]
+	];	
+	
+	//hotdog dog selling hot dogs
+	var oscarText:Array<Dynamic> = 
+	[
+		[
+			""
+		]
+	];
+	
+	//a goat
 	var gottsleyText:Array<Dynamic> = 
 	[
 		[
@@ -195,9 +239,7 @@ class PlayState extends FlxState
 		});
 		
 		
-		// create a new FlxText
-		var curText = new FlxText();
-		
+		// create a new FlxText		
 		curText.setFormat("assets/fonts/SeaHorses.ttf");
 		curText.color = FlxColor.WHITE; // set the color to cyan
 		curText.size = 32; // set the text's size to 32px
@@ -247,6 +289,8 @@ class PlayState extends FlxState
 		if (FlxG.keys.anyPressed(["SPACE"])){
 			
 		}
+		
+		curText.setPosition(_player.x + 10, _player.y - 40);
 	}
 }
 
