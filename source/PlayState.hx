@@ -6,7 +6,9 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.FlxBasic;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
+import flixel.group.FlxGroup;
 
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
@@ -22,6 +24,7 @@ import openfl.utils.ByteArray;
 import openfl.utils.Object;
 
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import flixel.effects.FlxFlicker;
 
 
@@ -41,6 +44,10 @@ class PlayState extends FlxState
 	var curText = new FlxText();
 	var curPlacement:Int = 0;
 	var curDialogue:Array<Dynamic>;
+	var blankDialogue:Array<Dynamic>;
+	
+	var isTalking:Bool;
+	var isMoving:Bool;
 	
 	//player and camera
 	var _player:Player;
@@ -62,12 +69,18 @@ class PlayState extends FlxState
 	var chezText:Array<Dynamic> = 
 	[
 		[
+			""
+		],
+		[
 			"Gimme Kiss"
 		]
 	];		
 	
 	var vernieText:Array<Dynamic> = 
 	[
+		[
+			""
+		],
 		[
 			""
 		]
@@ -78,12 +91,18 @@ class PlayState extends FlxState
 	[
 		[
 			""
+		],
+		[
+			""
 		]
 	];	
 	
 	//glutton
 	var gleetusText:Array<Dynamic> = 
 	[
+		[
+			""
+		],
 		[
 			"munch munch much"
 		],
@@ -100,6 +119,9 @@ class PlayState extends FlxState
 	var sammyText:Array<Dynamic> = 
 	[
 		[
+			""
+		],
+		[
 			"Isn't being so happy All the time amazing?"
 		],
 		[
@@ -113,6 +135,9 @@ class PlayState extends FlxState
 	var cickassText:Array<Dynamic> = 
 	[
 		[
+			""
+		],
+		[
 			"Wanna fight bro?"
 		],
 		[
@@ -125,6 +150,9 @@ class PlayState extends FlxState
 	
 	var kenText:Array<Dynamic> = 
 	[
+		[
+			""
+		],
 		[
 			"You holding?"
 		],
@@ -147,11 +175,17 @@ class PlayState extends FlxState
 	[
 		[
 			""
+		],
+		[
+			""
 		]
 	];	
 	
 	var ferdinandText:Array<Dynamic> = 
 	[
+		[
+			""
+		],
 		[
 			"I hate taking baths"
 		],
@@ -176,6 +210,9 @@ class PlayState extends FlxState
 	var hankText:Array<Dynamic> = 
 	[
 		[
+			""
+		],
+		[
 			"Gotta get top speed. Win next week's race. Show biker troy who's boss"
 		],
 		[
@@ -197,6 +234,9 @@ class PlayState extends FlxState
 	[
 		[
 			""
+		],
+		[
+			""
 		]
 	];	
 	
@@ -205,12 +245,18 @@ class PlayState extends FlxState
 	[
 		[
 			""
+		],
+		[
+			""
 		]
 	];
 	
 	//a goat
 	var gottsleyText:Array<Dynamic> = 
 	[
+		[
+			""
+		],
 		[
 			"Wanna join my cult?"
 		],
@@ -249,13 +295,22 @@ class PlayState extends FlxState
 		backdrop.shader = effect.shader;
 		
 		
+		
 		//create player
 		_player = new Player(100, 200);
+		// prevents the sprite to scroll with the camera
+		_player.scrollFactor.set(0, 0);
 		add(_player);
-		
+		/*
 		//create characters to talk to
 		charGroup.add(_chez);
-		
+		charGroup.add(_vernie);
+		charGroup.add(_digby);
+		charGroup.add(_gleetus);
+		charGroup.add(_sammy);
+		charGroup.add(_cickass);
+		charGroup.add(_ken);
+		*/
 		effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v)
 		{
 			effect.setStrength(v, v);
@@ -268,12 +323,13 @@ class PlayState extends FlxState
 		curText.size = 32; // set the text's size to 32px
 		curText.alignment = FlxTextAlign.CENTER; // center the text
 		curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
+		
 		curText.setPosition(_player.x + 10, _player.y - 40);
 		
 		curText.text = "Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(curText);
 		
-		
+		isTalking = false;
 		
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
@@ -285,59 +341,80 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		
-		//Depth, Scale Camera
-		if (FlxG.keys.anyPressed(["S", "DOWN"]))
-		{
-			if(cam.zoom < 4){
-			cam.zoom += 0.01;
+		if (!isTalking){
+			
+			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"])){
+				isMoving = true;
+				
+				if(_player.y <= 200){
+					_player.y += 2.4;
+				}else if (_player.y > 100){
+					_player.y -= 32;
+				}
+			}else{
+				isMoving = false;
+				_player.y = 200;
+			}
+			
+			//Depth, Scale Camera
+			if (FlxG.keys.anyPressed(["S", "DOWN"]))
+			{
+				if(cam.zoom < 4){
+					cam.zoom += 0.01;
+				}
+			}
+			
+			if (FlxG.keys.anyPressed(["W", "UP"]))
+			{
+				if(cam.zoom > 0.01){
+					cam.zoom -= 0.01;
+				}
+			}
+		
+			if (FlxG.keys.anyPressed(["A", "LEFT"]))
+			{
+				_player.x -= 20;
+			}
+				
+			if (FlxG.keys.anyPressed(["D", "RIGHT"]))
+			{
+				_player.x += 20;
 			}
 		}
 		
-		if (FlxG.keys.anyPressed(["W", "UP"]))
-		{
-			if(cam.zoom > 0.01){
-				cam.zoom -= 0.01;
-			}
-		}
-	
-		if (FlxG.keys.anyPressed(["A", "LEFT"]))
-		{
-			_player.x -= 20;
-		}
+		if (FlxG.keys.justPressed.SPACE){
 			
-		if (FlxG.keys.anyPressed(["D", "RIGHT"]))
-		{
-			_player.x += 20;
-		}
-		
-		if (FlxG.keys.anyJustPressed(["SPACE"])){
-			
-			if (_player.overlaps(charGroup)){
+			//if (_player.overlaps(charGroup)){
 				
 				//set character to talk to
-				if (_player.overlaps(_chez)){
-					curDialogue = chezText;
-				}
+				//if (_player.overlaps(_chez)){
+					curDialogue = cickassText;
+					isTalking = true;
+				//}
 				
 				curText.text = "";
 				curPlacement += 1;
 				
 				//end dialogue
-				if (curPlacement >= curDialogue.length)
+				if (curPlacement > curDialogue.length){
+					curDialogue = blankDialogue;
+					
+					curText.text = "";
+					isTalking = false;
+					
 					curPlacement = 0;
+				}
 				
 				for (i in 0...curDialogue[curPlacement].length){
 					curText.text += curDialogue[curPlacement][i] + "\n";
 				}
-				
-				curText.screenCenter();
-			};	
+			//}
 		}
 		
 		curText.setPosition(_player.x + 10, _player.y - 40);
 		
-		if (cam.zoom > 2){
-			FlxFlicker.flicker(backdrop);
+		if (cam.zoom < 2){
+			FlxFlicker.flicker(backdrop, 0);
 		}
 	}
 }

@@ -2,10 +2,7 @@
 	
 Made for the Newgrounds HaxeFlixel game jam.
 Theme: Alone, Together
-	
-### Credits
 
-Full credits in-game, or in source/CredState.hx
 
 #### Programming: 
 
