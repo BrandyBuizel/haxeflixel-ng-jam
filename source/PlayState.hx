@@ -6,6 +6,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
@@ -21,21 +22,41 @@ import openfl.utils.ByteArray;
 import openfl.utils.Object;
 
 import flixel.tweens.FlxTween;
+import flixel.effects.FlxFlicker;
 
 
 class PlayState extends FlxState
 {
-	var _player:Player;
-	var effectTween:FlxTween;
-	var cam = new FlxCamera();
-	
 	// Demo arena boundaries
 	static var LEVEL_MIN_X:Float;
 	static var LEVEL_MAX_X:Float;
 	static var LEVEL_MIN_Y:Float;
 	static var LEVEL_MAX_Y:Float;
 	
+	//backgrounds go here
+	var bgGroup:FlxGroup;
+	var backdrop:FlxSprite;
+	
+	//Text Variables
 	var curText = new FlxText();
+	var curPlacement:Int = 0;
+	var curDialogue:Array<Dynamic>;
+	
+	//player and camera
+	var _player:Player;
+	var effectTween:FlxTween;
+	var cam = new FlxCamera();
+	
+	//characters
+	var charGroup:FlxGroup;
+	
+	var _chez:FlxSprite;
+	var _vernie:FlxSprite;
+	var _digby:FlxSprite;
+	var _gleetus:FlxSprite;
+	var _sammy:FlxSprite;
+	var _cickass:FlxSprite;
+	var _ken:FlxSprite;
 	
 	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
@@ -220,7 +241,7 @@ class PlayState extends FlxState
 		FlxG.cameras.add(cam);
 		
 		//setup backdrop
-		var backdrop = new FlxSprite(0, 0, "assets/images/backdrop.png");
+		backdrop = new FlxSprite(0, 0, "assets/images/backdrop.png");
 		backdrop.screenCenter();
 		add(backdrop);		
 		
@@ -232,6 +253,8 @@ class PlayState extends FlxState
 		_player = new Player(100, 200);
 		add(_player);
 		
+		//create characters to talk to
+		charGroup.add(_chez);
 		
 		effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v)
 		{
@@ -250,8 +273,9 @@ class PlayState extends FlxState
 		curText.text = "Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(curText);
 		
-		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
+		
+		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
 		
 		super.create();
@@ -286,11 +310,35 @@ class PlayState extends FlxState
 			_player.x += 20;
 		}
 		
-		if (FlxG.keys.anyPressed(["SPACE"])){
+		if (FlxG.keys.anyJustPressed(["SPACE"])){
 			
+			if (_player.overlaps(charGroup)){
+				
+				//set character to talk to
+				if (_player.overlaps(_chez)){
+					curDialogue = chezText;
+				}
+				
+				curText.text = "";
+				curPlacement += 1;
+				
+				//end dialogue
+				if (curPlacement >= curDialogue.length)
+					curPlacement = 0;
+				
+				for (i in 0...curDialogue[curPlacement].length){
+					curText.text += curDialogue[curPlacement][i] + "\n";
+				}
+				
+				curText.screenCenter();
+			};	
 		}
 		
 		curText.setPosition(_player.x + 10, _player.y - 40);
+		
+		if (cam.zoom > 2){
+			FlxFlicker.flicker(backdrop);
+		}
 	}
 }
 
