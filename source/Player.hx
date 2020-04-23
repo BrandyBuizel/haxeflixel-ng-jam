@@ -17,7 +17,6 @@ import flixel.graphics.frames.FlxAtlasFrames;
 class Player extends FlxSprite 
 {
 	var interacting:Bool;
-	var C = FlxMath.fastCos(8 * FlxG.elapsed);
 	
 	public function new(x:Float, y:Float):Void
 	{
@@ -35,6 +34,8 @@ class Player extends FlxSprite
         //setFacingFlip(FlxObject.RIGHT, false, false);
 
 		animation.play('idle');
+		
+		interacting = false;	
 
 		FlxG.log.add("added player");
 	}
@@ -71,37 +72,11 @@ class Player extends FlxSprite
 	
 	override public function update(elapsed:Float):Void 
 	{
-		interacting = false;	
+		super.update(elapsed);
+		
+		interacting = FlxG.keys.justPressed.SPACE;
 	}
 	
-	private function keyboardControls():Bool
-	{
-		interacting = FlxG.keys.justPressed.SPACE;
-		
-		if (FlxG.keys.anyPressed([A, S, D, W, "UP", "DOWN", "LEFT", "RIGHT"]))
-		{
-			var vertSlow:Float = 0.9;
-			
-			if (FlxG.keys.anyPressed(["S", "DOWN"]))
-			{
-				velocity.y = C * vertSlow;
-			}
-			if (FlxG.keys.anyPressed(["W", "UP"]))
-			{
-				velocity.y = -C * vertSlow;
-			}
-			if (FlxG.keys.anyPressed(["A", "LEFT"]))
-			{
-				velocity.x = -C;
-			}
-			if (FlxG.keys.anyPressed(["D", "RIGHT"]))
-			{
-				velocity.x = C;
-			}
-			return true;
-		}
-		return false;
-	}
 	
 	private function gamepadControls(gamepad:FlxGamepad):Bool
 	{
@@ -109,23 +84,22 @@ class Player extends FlxSprite
 			
 		if (gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN", "UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP", "LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT", "RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"]))
 		{
-			var vertSlow:Float = 0.9;
 				
 			if (gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN"]))
 			{
-				velocity.y = C * vertSlow;
+
 			}
 			if (gamepad.anyPressed(["UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP"]))
 			{
-				velocity.y = -C * vertSlow;
+
 			}
 			if (gamepad.anyPressed(["LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT"]))
 			{
-				velocity.x = -C;
+
 			}
 			if (gamepad.anyPressed(["RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"]))
 			{
-				velocity.x = C;
+
 			}
 			return true;
 		}
