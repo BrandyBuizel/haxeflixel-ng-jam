@@ -11,6 +11,7 @@ import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 import flixel.group.FlxGroup;
 
 import flixel.text.FlxText;
+import flixel.addons.text.FlxTypeText;
 import flixel.util.FlxColor;
 
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
@@ -41,7 +42,7 @@ class PlayState extends FlxState
 	var backdrop:FlxSprite;
 	
 	//Text Variables
-	var curText = new FlxText();
+	var curText:FlxTypeText;
 	var curPlacement:Int = 0;
 	var curDialogue:Array<Dynamic>;
 	var blankDialogue:Array<Dynamic>;
@@ -317,14 +318,19 @@ class PlayState extends FlxState
 		});
 		
 		
-		// create a new FlxText		
+		// create a new FlxText
+		curText = new FlxTypeText(0, 0, 640, "", 32);
 		curText.setFormat("assets/fonts/SeaHorses.ttf");
 		curText.color = FlxColor.WHITE; // set the color to cyan
 		curText.size = 32; // set the text's size to 32px
 		curText.alignment = FlxTextAlign.CENTER; // center the text
 		curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
 		
-		curText.setPosition(_player.x + 10, _player.y - 40);
+		curText.screenCenter();
+		curText.y = 40;
+		
+		curText.delay = 0.2;
+		//curText.sounds[] = "assets/sounds/menuConfirm.mp3";
 		
 		curText.text = "Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(curText);
@@ -396,10 +402,11 @@ class PlayState extends FlxState
 				curPlacement += 1;
 				
 				//end dialogue
-				if (curPlacement > curDialogue.length){
+				if (curPlacement >= curDialogue.length){
 					curDialogue = blankDialogue;
 					
 					curText.text = "";
+					
 					isTalking = false;
 					
 					curPlacement = 0;
@@ -407,15 +414,13 @@ class PlayState extends FlxState
 				
 				for (i in 0...curDialogue[curPlacement].length){
 					curText.text += curDialogue[curPlacement][i] + "\n";
+					curText.skip();
+					curText.start();
 				}
 			//}
 		}
 		
-		curText.setPosition(_player.x + 10, _player.y - 40);
-		
-		if (cam.zoom < 2){
-			FlxFlicker.flicker(backdrop, 0);
-		}
+		//curText.setPosition(_player.x + 10, _player.y - 40);
 	}
 }
 
