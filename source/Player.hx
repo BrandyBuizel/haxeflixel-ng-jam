@@ -28,7 +28,7 @@ class Player extends FlxSprite
         updateHitbox();
         antialiasing = true;
 
-		animation.addByPrefix('idle', 'idle', 24, true);
+		animation.addByPrefix('idle', 'playerIdle', 24, true);
 		
 		//setFacingFlip(FlxObject.LEFT, true, false);
         //setFacingFlip(FlxObject.RIGHT, false, false);
