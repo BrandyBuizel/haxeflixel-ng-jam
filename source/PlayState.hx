@@ -592,30 +592,39 @@ class PlayState extends FlxState
 				worldScale += 0.01;
 			}
 		}
-			
 		
 		//WORLD SCALE TWEENING
 		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
 		
-		FlxTween.tween(_cickass.scale, { x: worldScale, y: worldScale },  0.1);
-		_cickass.x = (worldScale * 200) + 450;
+		FlxTween.tween(_cickass.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		_cickass.x = (worldScale * 150) + 480;
 		_cickass.y = (worldScale * -100) + 200;
 		_cickass.updateHitbox();
-		
-		FlxTween.tween(_reggie.scale, { x: worldScale/1.5 - 0.2, y: worldScale/1.5 - 0.2 },  0.1);
-		_reggie.x = (worldScale * -200) + 450;
-		_reggie.y = (worldScale * -100) + 200;
+
+		FlxTween.tween(_reggie.scale, { x:  worldScale * worldScale - 0.2, y:  worldScale * worldScale - 0.2 },  0.1);
+		_reggie.x = 480 - (worldScale * 150);
+		_reggie.y = (worldScale * -100) + 240;
 		_reggie.updateHitbox();
 		
 		
-		//Positioning
+		//FADE OUT AND POP IN
+		if (_chez.scale.x >= 1.45 || _chez.scale.x <= 0.18){
+			FlxTween.tween(_chez, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		
+		if(_chez.alpha != 1){
+			if (_chez.scale.x < 1.45 && _chez.scale.x > 0.18){
+				_chez.alpha = 1;
+			}
+		}		
+		
 		if (_cickass.scale.x >= 1.45 || _cickass.scale.x <= 0.18){
 			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		
-		if(_cickass.alpha < 50){
-			if (_cickass.scale.x < 1.45 || _cickass.scale.x > 0.18){
-				FlxTween.tween(_cickass, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
+		if(_cickass.alpha != 1){
+			if (_cickass.scale.x < 1.45 && _cickass.scale.x > 0.18){
+				_cickass.alpha = 1;
 			}
 		}
 		
@@ -623,9 +632,9 @@ class PlayState extends FlxState
 			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		
-		if(_reggie.alpha < 50){
-			if (_reggie.scale.x < 1.45 || _reggie.scale.x > 0.18){
-				FlxTween.tween(_reggie, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
+		if(_reggie.alpha != 1){
+			if (_reggie.scale.x < 1.45 && _reggie.scale.x > 0.18){
+				_reggie.alpha = 1;
 			}
 		}
 		
@@ -659,6 +668,7 @@ class PlayState extends FlxState
 			
 		}			
 			
+		//Name popup bottom left
 		if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){debugText.text = "Chez Beaks";
 		}else if (_player.overlaps(_cickass) && _cickass.scale.x > 0.6 && _cickass.scale.x < 1.2){debugText.text = "Cickass Cat";
 		}else if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){debugText.text = "Reggie";
