@@ -1,7 +1,5 @@
 package;
 
-import flixel.FlxCamera;
-import flixel.FlxCamera.FlxCameraFollowStyle;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -41,6 +39,7 @@ class PlayState extends FlxState
 	//backgrounds go here
 	var bgGroup:FlxGroup;
 	var backdrop:FlxSprite;
+	var effectTween:FlxTween;
 	
 	//Text Variables
 	var curText:FlxTypeText;
@@ -48,13 +47,13 @@ class PlayState extends FlxState
 	var curDialogue:Array<Dynamic>;
 	var blankDialogue:Array<Dynamic>;
 	
+	var debugText:FlxText;
+	
 	var isTalking:Bool;
 	var isMoving:Bool;
 	
-	//player and camera
+	//player=
 	var _player:Player;
-	var effectTween:FlxTween;
-	var cam = new FlxCamera();
 	
 	//characters
 	var charGroup:FlxGroup;
@@ -63,7 +62,7 @@ class PlayState extends FlxState
 	var _cickass:FlxSprite;
 	var _digby:FlxSprite;
 	var _ferdinand:FlxSprite;
-	var _glottle:FlxSprite;
+	var _glottis:FlxSprite;
 	var _gottsley:FlxSprite;
 	var _hank:FlxSprite;
 	var _ken:FlxSprite;
@@ -72,6 +71,11 @@ class PlayState extends FlxState
 	var _reggie:FlxSprite;
 	var _sammy:FlxSprite;
 	var _vernie:FlxSprite;
+	
+	var worldScale:Float = 1;
+	
+	var chezScale:Int;
+	var cickassScale:Int;
 	
 	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
@@ -137,7 +141,7 @@ class PlayState extends FlxState
 	];
 	
 	//glutton
-	var glottleText:Array<Dynamic> = 
+	var glottisText:Array<Dynamic> = 
 	[
 		[
 			""
@@ -290,17 +294,13 @@ class PlayState extends FlxState
 		LEVEL_MAX_X = FlxG.stage.stageWidth * 1.5;
 		LEVEL_MIN_Y = -FlxG.stage.stageHeight / 2;
 		LEVEL_MAX_Y = FlxG.stage.stageHeight * 1.5;
-
-		//Camera settings
-		cam.zoom = 1; // For 1/2 zoom out.
-		FlxG.cameras.add(cam);
 		
 		//setup backdrop
-		backdrop = new FlxSprite(0, 0, "assets/images/backdrop.png");
+		backdrop = new FlxSprite(0, 0, "assets/images/back.png");
 		backdrop.screenCenter();
 		add(backdrop);		
 		
-		/*
+		
 		var effect = new MosaicEffect();
 		backdrop.shader = effect.shader;
 		
@@ -308,15 +308,8 @@ class PlayState extends FlxState
 		{
 			effect.setStrength(v, v);
 		});
-		*/
 		
-		//create player
-		_player = new Player(100, 200);
-		add(_player);
 		
-		// prevents the sprite to scroll with the camera
-		_player.scrollFactor.set(0, 0);
-			
 		/*
 		CREATE NPC CHARACTERS TO TALK TO 
 		*/
@@ -345,6 +338,8 @@ class PlayState extends FlxState
 		_cickass.animation.addByPrefix('talking', 'cickassTalking', 24, true);
 		
 		add(_cickass);
+		_cickass.screenCenter();
+		_cickass.y = 200;
 		_cickass.animation.play("idle");
 		
 		//Digby
@@ -373,18 +368,18 @@ class PlayState extends FlxState
 		add(_ferdinand);
 		_ferdinand.animation.play("idle");
 		
-		//Glottle
-		_glottle = new FlxSprite(0, 200);
-		_glottle.frames = FlxAtlasFrames.fromSparrow(AssetPaths.glottle__png, AssetPaths.glottle__xml);
-		_glottle.updateHitbox();
-        _glottle.antialiasing = true;
+		//glottis
+		_glottis = new FlxSprite(0, 200);
+		_glottis.frames = FlxAtlasFrames.fromSparrow(AssetPaths.glottis__png, AssetPaths.glottis__xml);
+		_glottis.updateHitbox();
+        _glottis.antialiasing = true;
 
-		_glottle.animation.addByPrefix('idle', 'glottleIdle', 24, true);
-		_glottle.animation.addByPrefix('kissed', 'glottleKissed', 24, true);
-		_glottle.animation.addByPrefix('talking', 'glottleTalking', 24, true);
+		_glottis.animation.addByPrefix('idle', 'glottisIdle', 24, true);
+		_glottis.animation.addByPrefix('kissed', 'glottisKissed', 24, true);
+		_glottis.animation.addByPrefix('talking', 'glottisTalking', 24, true);
 		
-		add(_glottle);
-		_glottle.animation.play("idle");
+		add(_glottis);
+		_glottis.animation.play("idle");
 		
 		//Gottsley
 		_gottsley = new FlxSprite(0, 200);
@@ -490,22 +485,7 @@ class PlayState extends FlxState
 		add(_vernie);
 		_vernie.animation.play("idle");
 		
-		/*
-		charGroup.add(_chez);
-		charGroup.add(_vernie);
-		charGroup.add(_digby);
-		charGroup.add(_gleetus);
-		charGroup.add(_sammy);
-		charGroup.add(_cickass);
-		charGroup.add(_ken);
-		charGroup.add(_reggie);
-		charGroup.add(_ferdinand);
-		charGroup.add(_hank);
-		charGroup.add(_ramasama);
-		charGroup.add(_oscar);
-		charGroup.add(_gottsley);
-		var _chez:FlxSprite;	
-		*/
+		//END OF CHARACTER CREATE
 		
 		// create a new FlxText
 		curText = new FlxTypeText(0, 0, 640, "", 32);
@@ -523,11 +503,27 @@ class PlayState extends FlxState
 		
 		curText.text = "Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(curText);
+			
+		// create a new FlxText
+		debugText = new FlxTypeText(0, 200, 640, "", 32);
+		debugText.setFormat("assets/fonts/SeaHorses.ttf");
+		debugText.color = FlxColor.WHITE; // set the color to cyan
+		debugText.size = 32; // set the text's size to 32px
+		debugText.alignment = FlxTextAlign.CENTER; // center the text
+		debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
+		
+		debugText.text = "OBJECTIVE: Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
+		add(debugText);
 		
 		isTalking = false;
 		
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
+		//create player
+		_player = new Player(100, 200);
+		add(_player);
+		
+		debugText = new FlxText(0, 0, 0, "", 60);
 		
 		super.create();
 	}
@@ -552,31 +548,53 @@ class PlayState extends FlxState
 				_player.y = 200;
 			}
 			
-			//Depth, Scale Camera
+			//Zoom in and out
 			if (FlxG.keys.anyPressed(["S", "DOWN"]))
 			{
-				if(cam.zoom < 4){
-					cam.zoom -= 0.007;
+				if(worldScale > 0){
+					worldScale -= 0.01;
 				}
 			}
 			
 			if (FlxG.keys.anyPressed(["W", "UP"]))
 			{
-				if(cam.zoom > 0.01){
-					cam.zoom += 0.01;
-				}
+				worldScale += 0.01;
 			}
 		
 			if (FlxG.keys.anyPressed(["A", "LEFT"]))
 			{
-				_player.x -= 20;
+				if(_player.x > (-120)){
+					_player.x -= 20;
+				}
 			}
 				
 			if (FlxG.keys.anyPressed(["D", "RIGHT"]))
 			{
-				_player.x += 20;
+				if(_player.x < (LEVEL_MAX_X / 2)){
+					_player.x += 20;
+				}
 			}
 		}
+		
+		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
+		
+		FlxTween.tween(_cickass.scale, { x: worldScale, y: worldScale },  0.1);
+		_cickass.x = (worldScale * 200) + 400;
+		_cickass.y = (worldScale * -100) + 200;
+		_cickass.updateHitbox();
+		
+		
+		
+		if (_cickass.scale.x >= 1.5 || _cickass.scale.x <= 0.3){
+			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		
+		if(_cickass.alpha < 50){
+			if (_cickass.scale.x < 1.45 || _cickass.scale.x > 0.35){
+				FlxTween.tween(_cickass, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
+			}
+		}
+		
 		
 		//set character to talk to on overlap
 		if (FlxG.keys.justPressed.SPACE && !isTalking){			
@@ -586,11 +604,13 @@ class PlayState extends FlxState
 				curDialogue = chezText;
 				_chez.animation.play("talking");
 			}
-			if (_player.overlaps(_cickass)){
+			if (_player.overlaps(_cickass) && _cickass.alpha != 0){
 				isTalking = true;
 				
 				curDialogue = cickassText;
 				_cickass.animation.play("talking");
+				
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
 			}
 			
 		}
@@ -615,6 +635,7 @@ class PlayState extends FlxState
 				isTalking = false;
 			}
 		}		
+		
 	}
 }
 
