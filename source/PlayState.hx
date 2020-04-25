@@ -319,9 +319,6 @@ class PlayState extends FlxState
 		_chez.animation.addByPrefix('kissed', 'chezKissed', 24, true);
 		_chez.animation.addByPrefix('talking', 'chezTalking', 24, true);
 		
-		add(_chez);
-		_chez.animation.play("idle");
-		
 		//Cickass Cat
 		_cickass = new FlxSprite(0, 200);
 		_cickass.frames = FlxAtlasFrames.fromSparrow(AssetPaths.cickass__png, AssetPaths.cickass__xml);
@@ -332,10 +329,6 @@ class PlayState extends FlxState
 		_cickass.animation.addByPrefix('kissed', 'cickassKissed', 24, true);
 		_cickass.animation.addByPrefix('talking', 'cickassTalking', 24, true);
 		
-		add(_cickass);
-		_cickass.screenCenter();
-		_cickass.animation.play("idle");
-		
 		//Digby
 		_digby = new FlxSprite(0, 200);
 		_digby.frames = FlxAtlasFrames.fromSparrow(AssetPaths.digby__png, AssetPaths.digby__xml);
@@ -345,9 +338,6 @@ class PlayState extends FlxState
 		_digby.animation.addByPrefix('idle', 'digbyIdle', 24, true);
 		_digby.animation.addByPrefix('kissed', 'digbyKissed', 24, true);
 		_digby.animation.addByPrefix('talking', 'digbyTalking', 24, true);
-		
-		//add(_digby);
-		_digby.animation.play("idle");
 				
 		//Ferdinand
 		_ferdinand = new FlxSprite(0, 200);
@@ -359,9 +349,6 @@ class PlayState extends FlxState
 		_ferdinand.animation.addByPrefix('kissed', 'ferdinandKissed', 24, true);
 		_ferdinand.animation.addByPrefix('talking', 'ferdinandTalking', 24, true);
 		
-		add(_ferdinand);
-		_ferdinand.animation.play("idle");
-		
 		//glottis
 		_glottis = new FlxSprite(0, 200);
 		_glottis.frames = FlxAtlasFrames.fromSparrow(AssetPaths.glottis__png, AssetPaths.glottis__xml);
@@ -371,10 +358,7 @@ class PlayState extends FlxState
 		_glottis.animation.addByPrefix('idle', 'glottisIdle', 24, true);
 		_glottis.animation.addByPrefix('kissed', 'glottisKissed', 24, true);
 		_glottis.animation.addByPrefix('talking', 'glottisTalking', 24, true);
-		
-		//add(_glottis);
-		_glottis.animation.play("idle");
-		
+			
 		//Gottsley
 		_gottsley = new FlxSprite(0, 200);
 		_gottsley.frames = FlxAtlasFrames.fromSparrow(AssetPaths.gottsley__png, AssetPaths.gottsley__xml);
@@ -384,9 +368,6 @@ class PlayState extends FlxState
 		_gottsley.animation.addByPrefix('idle', 'gottsleyIdle', 24, true);
 		_gottsley.animation.addByPrefix('kissed', 'gottsleyKissed', 24, true);
 		_gottsley.animation.addByPrefix('talking', 'gottsleyTalking', 24, true);
-		
-		//add(_gottsley);
-		_gottsley.animation.play("idle");
 		
 		//Hank
 		_hank = new FlxSprite(0, 200);
@@ -398,9 +379,6 @@ class PlayState extends FlxState
 		_hank.animation.addByPrefix('kissed', 'hankKissed', 24, true);
 		_hank.animation.addByPrefix('talking', 'hankTalking', 24, true);
 		
-		//add(_hank);
-		_hank.animation.play("idle");
-		
 		//Ken
 		_ken = new FlxSprite(0, 200);
 		_ken.frames = FlxAtlasFrames.fromSparrow(AssetPaths.ken__png, AssetPaths.ken__xml);
@@ -410,9 +388,6 @@ class PlayState extends FlxState
 		_ken.animation.addByPrefix('idle', 'kenIdle', 24, true);
 		_ken.animation.addByPrefix('kissed', 'kenKissed', 24, true);
 		_ken.animation.addByPrefix('talking', 'kenTalking', 24, true);
-		
-		//add(_ken);
-		_ken.animation.play("idle");
 		
 		//Oscar
 		_oscar = new FlxSprite(0, 200);
@@ -424,9 +399,6 @@ class PlayState extends FlxState
 		_oscar.animation.addByPrefix('kissed', 'oscarKissed', 24, true);
 		_oscar.animation.addByPrefix('talking', 'oscarTalking', 24, true);
 		
-		//add(_oscar);
-		_oscar.animation.play("idle");
-		
 		//Ramasama
 		_ramasama = new FlxSprite(0, 200);
 		_ramasama.frames = FlxAtlasFrames.fromSparrow(AssetPaths.ramasama__png, AssetPaths.ramasama__xml);
@@ -436,10 +408,7 @@ class PlayState extends FlxState
 		_ramasama.animation.addByPrefix('idle', 'ramasamaIdle', 24, true);
 		_ramasama.animation.addByPrefix('kissed', 'ramasamaKissed', 24, true);
 		_ramasama.animation.addByPrefix('talking', 'ramasamaTalking', 24, true);
-		
-		//add(_ramasama);
-		_ramasama.animation.play("idle");
-		
+				
 		//Reggie
 		_reggie = new FlxSprite(0, 200);
 		_reggie.frames = FlxAtlasFrames.fromSparrow(AssetPaths.reggie__png, AssetPaths.reggie__xml);
@@ -449,9 +418,6 @@ class PlayState extends FlxState
 		_reggie.animation.addByPrefix('idle', 'reggieIdle', 24, true);
 		_reggie.animation.addByPrefix('kissed', 'reggieKissed', 24, true);
 		_reggie.animation.addByPrefix('talking', 'reggieTalking', 24, true);
-		
-		add(_reggie);
-		_reggie.animation.play("idle");
 		
 		//Sammy the Otter
 		_sammy = new FlxSprite(0, 200);
@@ -463,9 +429,6 @@ class PlayState extends FlxState
 		_sammy.animation.addByPrefix('kissed', 'sammyKissed', 24, true);
 		_sammy.animation.addByPrefix('talking', 'sammyTalking', 24, true);
 		
-		//add(_sammy);
-		_sammy.animation.play("idle");
-		
 		//Vernie
 		_vernie = new FlxSprite(0, 200);
 		_vernie.frames = FlxAtlasFrames.fromSparrow(AssetPaths.vernie__png, AssetPaths.vernie__xml);
@@ -476,7 +439,53 @@ class PlayState extends FlxState
 		_vernie.animation.addByPrefix('kissed', 'vernieKissed', 24, true);
 		_vernie.animation.addByPrefix('talking', 'vernieTalking', 24, true);
 		
+		
+		//SPAWN NPCS
+		add(_chez);
+		_chez.animation.play("idle");
+		
+		add(_cickass);
+		_cickass.screenCenter();
+		_cickass.animation.play("idle");
+		
+		//add(_digby);
+		_digby.screenCenter();
+		_digby.animation.play("idle");
+		
+		add(_ferdinand);
+		_ferdinand.screenCenter();
+		_ferdinand.animation.play("idle");
+		
+		//add(_glottis);
+		_glottis.screenCenter();
+		_glottis.animation.play("idle");
+		
+		//add(_gottsley);
+		_gottsley.screenCenter();
+		_gottsley.animation.play("idle");
+		
+		//add(_ken);
+		_ken.screenCenter();
+		_ken.animation.play("idle");
+		
+		//add(_oscar);
+		_oscar.screenCenter();
+		_oscar.animation.play("idle");
+		
+		//add(_ramasama);
+		_ramasama.screenCenter();
+		_ramasama.animation.play("idle");
+		
+		add(_reggie);
+		_reggie.screenCenter();
+		_reggie.animation.play("idle");
+		
+		//add(_sammy);
+		_sammy.screenCenter();
+		_sammy.animation.play("idle");
+		
 		//add(_vernie);
+		_vernie.screenCenter();
 		_vernie.animation.play("idle");
 		
 		//END OF CHARACTER CREATE
@@ -505,11 +514,11 @@ class PlayState extends FlxState
 		add(curText);
 			
 		// create a new FlxText
-		debugText = new FlxText(0, 400, 640, "", 32);
+		debugText = new FlxText(40, 480, 640, "", 32);
 		debugText.setFormat("assets/fonts/SeaHorses.ttf");
 		debugText.color = FlxColor.WHITE; // set the color to cyan
 		debugText.size = 32; // set the text's size to 32px
-		debugText.alignment = FlxTextAlign.CENTER; // center the text
+		debugText.alignment = FlxTextAlign.LEFT; // center the text
 		debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
 		
 		debugText.text = "OBJECTIVE: Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
@@ -575,8 +584,8 @@ class PlayState extends FlxState
 		_cickass.y = (worldScale * -100) + 200;
 		_cickass.updateHitbox();
 		
-		FlxTween.tween(_reggie.scale, { x: worldScale - 0.2, y: worldScale - 0.2 },  0.1);
-		_reggie.x = (worldScale * 200) + 450;
+		FlxTween.tween(_reggie.scale, { x: worldScale/1.5 - 0.2, y: worldScale/1.5 - 0.2 },  0.1);
+		_reggie.x = (worldScale * -200) + 450;
 		_reggie.y = (worldScale * -100) + 200;
 		_reggie.updateHitbox();
 		
@@ -620,10 +629,12 @@ class PlayState extends FlxState
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
 			}
 			
-		}
-		
+		}			
+			
 		if (_player.overlaps(_cickass)){
 			debugText.text = "Cickass Cat";
+		}else{
+			debugText.text = "OBJECTIVE: Get Kisses, Assimilate";
 		}
 		
 		if (FlxG.keys.justPressed.SPACE && isTalking){
