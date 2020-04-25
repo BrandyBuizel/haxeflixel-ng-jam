@@ -300,15 +300,10 @@ class PlayState extends FlxState
 		backdrop.screenCenter();
 		add(backdrop);		
 		
-		
 		var effect = new MosaicEffect();
 		backdrop.shader = effect.shader;
 		
-		effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v)
-		{
-			effect.setStrength(v, v);
-		});
-		
+		effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v){effect.setStrength(v, v);});
 		
 		/*
 		CREATE NPC CHARACTERS TO TALK TO 
@@ -324,7 +319,7 @@ class PlayState extends FlxState
 		_chez.animation.addByPrefix('kissed', 'chezKissed', 24, true);
 		_chez.animation.addByPrefix('talking', 'chezTalking', 24, true);
 		
-		add(_chez);
+		//add(_chez);
 		_chez.animation.play("idle");
 		
 		//Cickass Cat
@@ -339,7 +334,6 @@ class PlayState extends FlxState
 		
 		add(_cickass);
 		_cickass.screenCenter();
-		_cickass.y = 200;
 		_cickass.animation.play("idle");
 		
 		//Digby
@@ -352,7 +346,7 @@ class PlayState extends FlxState
 		_digby.animation.addByPrefix('kissed', 'digbyKissed', 24, true);
 		_digby.animation.addByPrefix('talking', 'digbyTalking', 24, true);
 		
-		add(_digby);
+		//add(_digby);
 		_digby.animation.play("idle");
 				
 		//Ferdinand
@@ -365,7 +359,7 @@ class PlayState extends FlxState
 		_ferdinand.animation.addByPrefix('kissed', 'digbyKissed', 24, true);
 		_ferdinand.animation.addByPrefix('talking', 'digbyTalking', 24, true);
 		
-		add(_ferdinand);
+		//add(_ferdinand);
 		_ferdinand.animation.play("idle");
 		
 		//glottis
@@ -378,7 +372,7 @@ class PlayState extends FlxState
 		_glottis.animation.addByPrefix('kissed', 'glottisKissed', 24, true);
 		_glottis.animation.addByPrefix('talking', 'glottisTalking', 24, true);
 		
-		add(_glottis);
+		//add(_glottis);
 		_glottis.animation.play("idle");
 		
 		//Gottsley
@@ -391,7 +385,7 @@ class PlayState extends FlxState
 		_gottsley.animation.addByPrefix('kissed', 'gottsleyKissed', 24, true);
 		_gottsley.animation.addByPrefix('talking', 'gottsleyTalking', 24, true);
 		
-		add(_gottsley);
+		//add(_gottsley);
 		_gottsley.animation.play("idle");
 		
 		//Hank
@@ -404,7 +398,7 @@ class PlayState extends FlxState
 		_hank.animation.addByPrefix('kissed', 'hankKissed', 24, true);
 		_hank.animation.addByPrefix('talking', 'hankTalking', 24, true);
 		
-		add(_hank);
+		//add(_hank);
 		_hank.animation.play("idle");
 		
 		//Ken
@@ -417,7 +411,7 @@ class PlayState extends FlxState
 		_ken.animation.addByPrefix('kissed', 'kenKissed', 24, true);
 		_ken.animation.addByPrefix('talking', 'kenTalking', 24, true);
 		
-		add(_ken);
+		//add(_ken);
 		_ken.animation.play("idle");
 		
 		//Oscar
@@ -430,7 +424,7 @@ class PlayState extends FlxState
 		_oscar.animation.addByPrefix('kissed', 'oscarKissed', 24, true);
 		_oscar.animation.addByPrefix('talking', 'oscarTalking', 24, true);
 		
-		add(_oscar);
+		//add(_oscar);
 		_oscar.animation.play("idle");
 		
 		//Ramasama
@@ -443,7 +437,7 @@ class PlayState extends FlxState
 		_ramasama.animation.addByPrefix('kissed', 'ramasamaKissed', 24, true);
 		_ramasama.animation.addByPrefix('talking', 'ramasamaTalking', 24, true);
 		
-		add(_ramasama);
+		//add(_ramasama);
 		_ramasama.animation.play("idle");
 		
 		//Reggie
@@ -456,7 +450,7 @@ class PlayState extends FlxState
 		_reggie.animation.addByPrefix('kissed', 'reggieKissed', 24, true);
 		_reggie.animation.addByPrefix('talking', 'reggieTalking', 24, true);
 		
-		add(_reggie);
+		//add(_reggie);
 		_reggie.animation.play("idle");
 		
 		//Sammy the Otter
@@ -469,7 +463,7 @@ class PlayState extends FlxState
 		_sammy.animation.addByPrefix('kissed', 'sammyKissed', 24, true);
 		_sammy.animation.addByPrefix('talking', 'sammyTalking', 24, true);
 		
-		add(_sammy);
+		//add(_sammy);
 		_sammy.animation.play("idle");
 		
 		//Vernie
@@ -482,7 +476,7 @@ class PlayState extends FlxState
 		_vernie.animation.addByPrefix('kissed', 'vernieKissed', 24, true);
 		_vernie.animation.addByPrefix('talking', 'vernieTalking', 24, true);
 		
-		add(_vernie);
+		//add(_vernie);
 		_vernie.animation.play("idle");
 		
 		//END OF CHARACTER CREATE
@@ -520,8 +514,10 @@ class PlayState extends FlxState
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
 		//create player
-		_player = new Player(100, 200);
+		_player = new Player(0, 200);
 		add(_player);
+		_player.screenCenter();
+		_player.animation.play('idle');
 		
 		debugText = new FlxText(0, 0, 0, "", 60);
 		
@@ -548,34 +544,32 @@ class PlayState extends FlxState
 				_player.y = 200;
 			}
 			
-			//Zoom in and out
-			if (FlxG.keys.anyPressed(["S", "DOWN"]))
-			{
-				if(worldScale > 0){
-					worldScale -= 0.01;
-				}
-			}
-			
-			if (FlxG.keys.anyPressed(["W", "UP"]))
-			{
-				worldScale += 0.01;
-			}
-		
-			if (FlxG.keys.anyPressed(["A", "LEFT"]))
-			{
+			if (FlxG.keys.anyPressed(["A", "LEFT"])){
 				if(_player.x > (-120)){
 					_player.x -= 20;
 				}
 			}
 				
-			if (FlxG.keys.anyPressed(["D", "RIGHT"]))
-			{
+			if (FlxG.keys.anyPressed(["D", "RIGHT"])){
 				if(_player.x < (LEVEL_MAX_X / 2)){
 					_player.x += 20;
 				}
 			}
+			
+			//Zoom in and out
+			if (FlxG.keys.anyPressed(["S", "DOWN"])){
+				if(worldScale > 0){
+					worldScale -= 0.01;
+				}
+			}
+			
+			if (FlxG.keys.anyPressed(["W", "UP"])){
+				worldScale += 0.01;
+			}
 		}
+			
 		
+		//WORLD SCALE TWEENING
 		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
 		
 		FlxTween.tween(_cickass.scale, { x: worldScale, y: worldScale },  0.1);
