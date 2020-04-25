@@ -56,8 +56,6 @@ class PlayState extends FlxState
 	var _player:Player;
 	
 	//characters
-	var charGroup:FlxGroup;
-	
 	var _chez:FlxSprite;
 	var _cickass:FlxSprite;
 	var _digby:FlxSprite;
@@ -73,9 +71,6 @@ class PlayState extends FlxState
 	var _vernie:FlxSprite;
 	
 	var worldScale:Float = 1;
-	
-	var chezScale:Int;
-	var cickassScale:Int;
 	
 	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
@@ -439,56 +434,79 @@ class PlayState extends FlxState
 		_vernie.animation.addByPrefix('kissed', 'vernieKissed', 24, true);
 		_vernie.animation.addByPrefix('talking', 'vernieTalking', 24, true);
 		
+		/*
+		SPAWN NPCs to talk to
+		*/
 		
-		//SPAWN NPCS
-		add(_chez);
+		_chez.screenCenter();
 		_chez.animation.play("idle");
+	
 		
-		add(_cickass);
 		_cickass.screenCenter();
 		_cickass.animation.play("idle");
 		
-		//add(_digby);
+		
 		_digby.screenCenter();
 		_digby.animation.play("idle");
 		
-		add(_ferdinand);
+		
 		_ferdinand.screenCenter();
 		_ferdinand.animation.play("idle");
 		
-		//add(_glottis);
+		
 		_glottis.screenCenter();
 		_glottis.animation.play("idle");
 		
-		//add(_gottsley);
+		
 		_gottsley.screenCenter();
 		_gottsley.animation.play("idle");
 		
-		//add(_ken);
+		
 		_ken.screenCenter();
 		_ken.animation.play("idle");
 		
-		//add(_oscar);
+		
 		_oscar.screenCenter();
 		_oscar.animation.play("idle");
 		
-		//add(_ramasama);
+		
 		_ramasama.screenCenter();
 		_ramasama.animation.play("idle");
 		
-		add(_reggie);
+		
 		_reggie.screenCenter();
 		_reggie.animation.play("idle");
 		
-		//add(_sammy);
+		
 		_sammy.screenCenter();
 		_sammy.animation.play("idle");
 		
-		//add(_vernie);
+		
 		_vernie.screenCenter();
 		_vernie.animation.play("idle");
 		
-		//END OF CHARACTER CREATE
+		
+		/*
+		SPAWN ORDER BACK TO FRONT 
+		*/
+		
+		add(_ferdinand);
+		add(_reggie);
+		add(_cickass);
+		add(_chez);
+		
+		//add(_digby);
+		//add(_vernie);
+		//add(_sammy);
+		//add(_ramasama);
+		//add(_oscar);
+		//add(_ken);
+		//add(_gottsley);
+		//add(_glottis);
+		
+		/*
+		END OF CHARACTER CREATE
+		*/
 		
 		//create player
 		_player = new Player(0, 180);
@@ -619,6 +637,8 @@ class PlayState extends FlxState
 				
 				curDialogue = chezText;
 				_chez.animation.play("talking");
+				
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 2);
 			}
 			if (_player.overlaps(_cickass) && _cickass.alpha != 0){
 				isTalking = true;
@@ -628,14 +648,21 @@ class PlayState extends FlxState
 				
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
 			}
+			if (_player.overlaps(_reggie) && _reggie.alpha != 0){
+				isTalking = true;
+				
+				curDialogue = reggieText;
+				_reggie.animation.play("talking");
+				
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+			}
 			
 		}			
 			
-		if (_player.overlaps(_cickass)){
-			debugText.text = "Cickass Cat";
-		}else{
-			debugText.text = "OBJECTIVE: Get Kisses, Assimilate";
-		}
+		if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){debugText.text = "Chez Beaks";
+		}else if (_player.overlaps(_cickass) && _cickass.scale.x > 0.6 && _cickass.scale.x < 1.2){debugText.text = "Cickass Cat";
+		}else if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){debugText.text = "Reggie";
+		}else{debugText.text = "OBJECTIVE: Get Kisses, Assimilate";}
 		
 		if (FlxG.keys.justPressed.SPACE && isTalking){
 			
@@ -651,13 +678,12 @@ class PlayState extends FlxState
 			
 			//end dialogue
 			if (curPlacement >= curDialogue.length){
-				curDialogue = blankDialogue;
-				curText.text = "";
-				
 				isTalking = false;
+				
+				curDialogue = blankDialogue;
+				curText.text = "";				
 			}
-		}		
-		
+		}	
 	}
 }
 

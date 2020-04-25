@@ -1,15 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="chez.png">
-	<!-- Created with Adobe Animate version 20.0.1.19255 -->
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="chezIdle 10000" x="0" y="0" width="443" height="163" frameX="-86" frameY="-221" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10001" x="0" y="0" width="443" height="163" frameX="-86" frameY="-221" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10002" x="443" y="0" width="431" height="270" frameX="-294" frameY="-109" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10003" x="443" y="0" width="431" height="270" frameX="-294" frameY="-109" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10004" x="0" y="270" width="265" height="245" frameX="-563" frameY="-116" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10005" x="0" y="270" width="265" height="245" frameX="-563" frameY="-116" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10006" x="265" y="270" width="243" height="376" frameX="-808" frameY="0" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10007" x="265" y="270" width="243" height="376" frameX="-808" frameY="0" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10008" x="508" y="270" width="376" height="423" frameX="0" frameY="-140" frameWidth="1051" frameHeight="563"/>
-	<SubTexture name="chezIdle 10009" x="508" y="270" width="376" height="423" frameX="0" frameY="-140" frameWidth="1051" frameHeight="563"/>
+	<SubTexture name="chezIdle0000" x="0" y="0" width="336" height="525" frameX="-17" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0001" x="0" y="0" width="336" height="525" frameX="-17" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0002" x="0" y="0" width="336" height="525" frameX="-17" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0003" x="336" y="0" width="362" height="495" frameX="0" frameY="-32" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0004" x="336" y="0" width="362" height="495" frameX="0" frameY="-32" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0005" x="336" y="0" width="362" height="495" frameX="0" frameY="-32" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0006" x="698" y="0" width="348" height="513" frameX="-17" frameY="-14" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0007" x="698" y="0" width="348" height="513" frameX="-17" frameY="-14" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0008" x="698" y="0" width="348" height="513" frameX="-17" frameY="-14" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0009" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0010" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0011" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezIdle0012" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
+	<SubTexture name="chezKissed0000" x="1362" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0001" x="1362" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0002" x="1362" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0003" x="1759" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0004" x="1759" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0005" x="1759" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0006" x="2156" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0007" x="2156" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0008" x="2156" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0009" x="2553" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0010" x="2553" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0011" x="2553" y="0" width="397" height="525"/>
+	<SubTexture name="chezKissed0012" x="2553" y="0" width="397" height="525"/>
+	<SubTexture name="chezTalking0000" x="2950" y="0" width="340" height="525" frameX="-81" frameY="0" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0001" x="2950" y="0" width="340" height="525" frameX="-81" frameY="0" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0002" x="3290" y="0" width="501" height="525"/>
+	<SubTexture name="chezTalking0003" x="0" y="525" width="501" height="525"/>
+	<SubTexture name="chezTalking0004" x="501" y="525" width="439" height="525" frameX="-32" frameY="0" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0005" x="940" y="525" width="439" height="506" frameX="-32" frameY="-19" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0006" x="1379" y="525" width="485" height="506" frameX="-9" frameY="-19" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0007" x="1379" y="525" width="485" height="506" frameX="-9" frameY="-19" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0008" x="1864" y="525" width="446" height="525" frameX="-29" frameY="0" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0009" x="2310" y="525" width="446" height="525" frameX="-29" frameY="0" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0010" x="2756" y="525" width="395" height="506" frameX="-52" frameY="-19" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0011" x="2756" y="525" width="395" height="506" frameX="-52" frameY="-19" frameWidth="501" frameHeight="525"/>
+	<SubTexture name="chezTalking0012" x="2756" y="525" width="395" height="506" frameX="-52" frameY="-19" frameWidth="501" frameHeight="525"/>
 </TextureAtlas>
