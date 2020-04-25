@@ -579,12 +579,12 @@ class PlayState extends FlxState
 		
 		
 		
-		if (_cickass.scale.x >= 1.5 || _cickass.scale.x <= 0.3){
+		if (_cickass.scale.x >= 1.5 || _cickass.scale.x <= 0.15){
 			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		
 		if(_cickass.alpha < 50){
-			if (_cickass.scale.x < 1.45 || _cickass.scale.x > 0.35){
+			if (_cickass.scale.x < 1.48 || _cickass.scale.x > 0.16){
 				FlxTween.tween(_cickass, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
 			}
 		}

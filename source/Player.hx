@@ -25,7 +25,7 @@ class Player extends FlxSprite
         updateHitbox();
         antialiasing = true;
 
-		animation.addByPrefix('idle', 'playerIdle', 24, true);	
+		animation.addByPrefix('idle', 'playerIdle', 24, true);
 
 		FlxG.log.add("added player");
 	}
