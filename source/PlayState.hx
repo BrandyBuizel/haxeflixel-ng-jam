@@ -481,6 +481,12 @@ class PlayState extends FlxState
 		
 		//END OF CHARACTER CREATE
 		
+		//create player
+		_player = new Player(0, 180);
+		add(_player);
+		_player.screenCenter();
+		_player.animation.play('idle');
+		
 		// create a new FlxText
 		curText = new FlxTypeText(0, 0, 640, "", 32);
 		curText.setFormat("assets/fonts/SeaHorses.ttf");
@@ -499,7 +505,7 @@ class PlayState extends FlxState
 		add(curText);
 			
 		// create a new FlxText
-		debugText = new FlxTypeText(0, 200, 640, "", 32);
+		debugText = new FlxText(0, 400, 640, "", 32);
 		debugText.setFormat("assets/fonts/SeaHorses.ttf");
 		debugText.color = FlxColor.WHITE; // set the color to cyan
 		debugText.size = 32; // set the text's size to 32px
@@ -512,14 +518,6 @@ class PlayState extends FlxState
 		isTalking = false;
 		
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
-		
-		//create player
-		_player = new Player(0, 180);
-		add(_player);
-		_player.screenCenter();
-		_player.animation.play('idle');
-		
-		debugText = new FlxText(0, 0, 0, "", 60);
 		
 		super.create();
 	}
@@ -573,19 +571,34 @@ class PlayState extends FlxState
 		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
 		
 		FlxTween.tween(_cickass.scale, { x: worldScale, y: worldScale },  0.1);
-		_cickass.x = (worldScale * 200) + 420;
+		_cickass.x = (worldScale * 200) + 450;
 		_cickass.y = (worldScale * -100) + 200;
 		_cickass.updateHitbox();
 		
+		FlxTween.tween(_reggie.scale, { x: worldScale - 0.2, y: worldScale - 0.2 },  0.1);
+		_reggie.x = (worldScale * 200) + 450;
+		_reggie.y = (worldScale * -100) + 200;
+		_reggie.updateHitbox();
 		
 		
-		if (_cickass.scale.x >= 1.48 || _cickass.scale.x <= 0.18){
+		//Positioning
+		if (_cickass.scale.x >= 1.45 || _cickass.scale.x <= 0.18){
 			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		
 		if(_cickass.alpha < 50){
-			if (_cickass.scale.x < 1.48 || _cickass.scale.x > 0.18){
+			if (_cickass.scale.x < 1.45 || _cickass.scale.x > 0.18){
 				FlxTween.tween(_cickass, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
+			}
+		}
+		
+		if (_reggie.scale.x >= 1.45 || _reggie.scale.x <= 0.18){
+			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		
+		if(_reggie.alpha < 50){
+			if (_reggie.scale.x < 1.45 || _reggie.scale.x > 0.18){
+				FlxTween.tween(_reggie, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
 			}
 		}
 		
@@ -607,6 +620,10 @@ class PlayState extends FlxState
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
 			}
 			
+		}
+		
+		if (_player.overlaps(_cickass)){
+			debugText.text = "Cickass Cat";
 		}
 		
 		if (FlxG.keys.justPressed.SPACE && isTalking){
