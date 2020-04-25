@@ -319,7 +319,7 @@ class PlayState extends FlxState
 		_chez.animation.addByPrefix('kissed', 'chezKissed', 24, true);
 		_chez.animation.addByPrefix('talking', 'chezTalking', 24, true);
 		
-		//add(_chez);
+		add(_chez);
 		_chez.animation.play("idle");
 		
 		//Cickass Cat
@@ -351,15 +351,15 @@ class PlayState extends FlxState
 				
 		//Ferdinand
 		_ferdinand = new FlxSprite(0, 200);
-		_ferdinand.frames = FlxAtlasFrames.fromSparrow(AssetPaths.digby__png, AssetPaths.digby__xml);
+		_ferdinand.frames = FlxAtlasFrames.fromSparrow(AssetPaths.ferdinand__png, AssetPaths.ferdinand__xml);
 		_ferdinand.updateHitbox();
         _ferdinand.antialiasing = true;
 
-		_ferdinand.animation.addByPrefix('idle', 'digbyIdle', 24, true);
-		_ferdinand.animation.addByPrefix('kissed', 'digbyKissed', 24, true);
-		_ferdinand.animation.addByPrefix('talking', 'digbyTalking', 24, true);
+		_ferdinand.animation.addByPrefix('idle', 'ferdinandIdle', 24, true);
+		_ferdinand.animation.addByPrefix('kissed', 'ferdinandKissed', 24, true);
+		_ferdinand.animation.addByPrefix('talking', 'ferdinandTalking', 24, true);
 		
-		//add(_ferdinand);
+		add(_ferdinand);
 		_ferdinand.animation.play("idle");
 		
 		//glottis
@@ -450,7 +450,7 @@ class PlayState extends FlxState
 		_reggie.animation.addByPrefix('kissed', 'reggieKissed', 24, true);
 		_reggie.animation.addByPrefix('talking', 'reggieTalking', 24, true);
 		
-		//add(_reggie);
+		add(_reggie);
 		_reggie.animation.play("idle");
 		
 		//Sammy the Otter
@@ -514,7 +514,7 @@ class PlayState extends FlxState
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
 		//create player
-		_player = new Player(0, 200);
+		_player = new Player(0, 180);
 		add(_player);
 		_player.screenCenter();
 		_player.animation.play('idle');
@@ -541,7 +541,7 @@ class PlayState extends FlxState
 				}
 			}else{
 				isMoving = false;
-				_player.y = 200;
+				_player.y = 180;
 			}
 			
 			if (FlxG.keys.anyPressed(["A", "LEFT"])){
@@ -573,18 +573,18 @@ class PlayState extends FlxState
 		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
 		
 		FlxTween.tween(_cickass.scale, { x: worldScale, y: worldScale },  0.1);
-		_cickass.x = (worldScale * 200) + 400;
+		_cickass.x = (worldScale * 200) + 420;
 		_cickass.y = (worldScale * -100) + 200;
 		_cickass.updateHitbox();
 		
 		
 		
-		if (_cickass.scale.x >= 1.5 || _cickass.scale.x <= 0.15){
+		if (_cickass.scale.x >= 1.48 || _cickass.scale.x <= 0.18){
 			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		
 		if(_cickass.alpha < 50){
-			if (_cickass.scale.x < 1.48 || _cickass.scale.x > 0.16){
+			if (_cickass.scale.x < 1.48 || _cickass.scale.x > 0.18){
 				FlxTween.tween(_cickass, { alpha: 1 }, 0.5, { ease: FlxEase.expoIn } );
 			}
 		}

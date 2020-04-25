@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="player.png">
-	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- Created with Adobe Animate version 20.0.1.19255 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="playerIdle0000" x="0" y="0" width="357" height="505"/>
 	<SubTexture name="playerIdle0001" x="0" y="0" width="357" height="505"/>
@@ -26,5 +26,4 @@
 	<SubTexture name="playerIdle0021" x="1428" y="505" width="357" height="501" frameX="0" frameY="-4" frameWidth="357" frameHeight="505"/>
 	<SubTexture name="playerIdle0022" x="1428" y="505" width="357" height="501" frameX="0" frameY="-4" frameWidth="357" frameHeight="505"/>
 	<SubTexture name="playerIdle0023" x="1428" y="505" width="357" height="501" frameX="0" frameY="-4" frameWidth="357" frameHeight="505"/>
-	<SubTexture name="playerIdle0024" x="1785" y="505" width="0" height="0" frameX="-145" frameY="-270" frameWidth="357" frameHeight="505"/>
 </TextureAtlas>
