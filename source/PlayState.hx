@@ -39,7 +39,10 @@ class PlayState extends FlxState
 	
 	//backgrounds go here
 	var bgGroup:FlxGroup;
-	var backdrop:FlxSprite;
+	var backdrop1:FlxSprite;
+	var backdrop2:FlxSprite;
+	var backdrop3:FlxSprite;
+	var backdrop4:FlxSprite;
 	var effectTween:FlxTween;
 	
 	//Text Variables
@@ -70,7 +73,7 @@ class PlayState extends FlxState
 	var _sammy:FlxSprite;
 	var _vernie:FlxSprite;
 	
-	var worldScale:Float = 1;
+	var worldScale:Float = 0.25;
 	var tempScale:Float = 100;
 	
 	//Character Dialogue Arrays
@@ -314,12 +317,31 @@ class PlayState extends FlxState
 		LEVEL_MAX_Y = FlxG.stage.stageHeight * 1.5;
 		
 		//setup backdrop
-		backdrop = new FlxSprite(0, 0, "assets/images/back.png");
-		backdrop.screenCenter();
-		add(backdrop);		
+		backdrop1 = new FlxSprite(0, 0, "assets/images/back.png");
+		backdrop1.screenCenter();
+		backdrop1.alpha = 0;
+		add(backdrop1);
+		
+		backdrop2 = new FlxSprite(0, 0, "assets/images/back.png");
+		backdrop2.screenCenter();
+		backdrop2.alpha = 0;
+		add(backdrop2);
+		
+		backdrop3 = new FlxSprite(0, 0, "assets/images/back.png");
+		backdrop3.screenCenter();
+		backdrop3.alpha = 0;
+		add(backdrop3);
+		
+		backdrop4 = new FlxSprite(0, 0, "assets/images/back.png");
+		backdrop4.screenCenter();
+		backdrop4.alpha = 0;
+		add(backdrop4);
 		
 		var effect = new MosaicEffect();
-		backdrop.shader = effect.shader;
+		backdrop1.shader = effect.shader;
+		backdrop2.shader = effect.shader;
+		backdrop3.shader = effect.shader;
+		backdrop4.shader = effect.shader;
 		
 		effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v){effect.setStrength(v, v);});
 		
@@ -497,25 +519,19 @@ class PlayState extends FlxState
 		_vernie.screenCenter();
 		_vernie.animation.play("idle");
 		
-		/*
-		SPAWN ORDER BACK TO FRONT 
-		*/
-		
-		//add(_oscar);
-		
-		//add(_reggie);
 		add(_cickass);
 		add(_ferdinand);
 		add(_chez);
+		
+		//add(_oscar);
 		//add(_glottis);
 		//add(_ramasama);
-		//add(_sammy);
-		
-		//add(_digby);
+		//add(_reggie);
+		//add(_sammy);			
 		//add(_vernie);
-		
 		//add(_ken);
 		//add(_gottsley);
+		//add(_digby);
 		
 		/*
 		END OF CHARACTER CREATE
@@ -555,6 +571,8 @@ class PlayState extends FlxState
 		/*
 		END TEXT 
 		*/
+		
+		backdrop1.alpha = 1;
 		
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
@@ -676,47 +694,102 @@ class PlayState extends FlxState
 		}
 		
 		//WORLD SCALE TWEENING
-		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
+		FlxTween.tween(backdrop1.scale, { x: worldScale, y: worldScale },  0.1);
 		
-		FlxTween.tween(_chez.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
-		_chez.x = (worldScale * 150) + 480;
-		_chez.y = (worldScale * -100) + 225;
-		_chez.updateHitbox();
+		if (backdrop1.alpha == 1){
+			FlxTween.tween(_cickass.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
+			_cickass.x = (worldScale * 50) + 480;
+			_cickass.y = (worldScale * -100) + 240;
+			_cickass.updateHitbox();
+			
+			FlxTween.tween(_ferdinand.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
+			_ferdinand.x = (100 / (worldScale / 2)) - 100;
+			_ferdinand.y = (worldScale * -100) + 240;
+			_ferdinand.updateHitbox();
+			
+			FlxTween.tween(_chez.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
+			_chez.x = (worldScale * 150) + 480;
+			_chez.y = (worldScale * -100) + 225;
+			_chez.updateHitbox();
+			
+			if (worldScale >= 1.5){
+				backdrop2.alpha = 1;
+				backdrop1.alpha = 0;			
+				worldScale = 0.25;
+			}
+		}
 		
-		FlxTween.tween(_cickass.scale, { x: (tempScale/100) * (worldScale * worldScale), y: (tempScale/100) * (worldScale * worldScale) },  0.1);
-		_cickass.x = (worldScale * 50) + 480;
-		_cickass.y = (worldScale * -100) + 240;
-		_cickass.updateHitbox();
+		FlxTween.tween(backdrop2.scale, { x: worldScale, y: worldScale },  0.1);
 		
-		FlxTween.tween(_ferdinand.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
-		_ferdinand.x = (100 / (worldScale / 2)) - 100;
-		_ferdinand.y = (worldScale * -100) + 240;
-		_ferdinand.updateHitbox();
+		if (backdrop2.alpha == 1){
+			FlxTween.tween(_oscar.scale, { x: (tempScale/100) * (worldScale * worldScale), y: (tempScale/100) * (worldScale * worldScale) },  0.1);
+			_oscar.x = (worldScale * 150) + 480;
+			_oscar.y = (worldScale * -100) + 240;
+			_oscar.updateHitbox();
+			
+			FlxTween.tween(_glottis.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
+			_glottis.x = (worldScale * 150) + 480;
+			_glottis.y = (worldScale * -100) + 240;
+			_glottis.updateHitbox();
+			
+			FlxTween.tween(_ramasama.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
+			_ramasama.x = (worldScale * 150) + 480;
+			_ramasama.y = (worldScale * -100) + 240;
+			_ramasama.updateHitbox();
+			
+			if (worldScale >= 1.25){
+				backdrop3.alpha = 1;
+				backdrop2.alpha = 0;
+				worldScale = 0.25;
+			}
+			
+			if (worldScale <= 0.5){
+				backdrop1.alpha = 1;
+				backdrop2.alpha = 0;
+				worldScale = 0.25;
+			}
+		}
 		
-		FlxTween.tween(_glottis.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
-		_glottis.x = (worldScale * 150) + 480;
-		_glottis.y = (worldScale * -100) + 240;
-		_glottis.updateHitbox();
+		FlxTween.tween(backdrop3.scale, { x: worldScale, y: worldScale },  0.1);
 		
-		FlxTween.tween(_oscar.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
-		_oscar.x = (worldScale * 150) + 480;
-		_oscar.y = (worldScale * -100) + 240;
-		_oscar.updateHitbox();
+		if (backdrop3.alpha == 1){			
+			FlxTween.tween(_reggie.scale, { x: (tempScale/100) * (worldScale * worldScale), y: (tempScale/100) * (worldScale * worldScale) },  0.1);
+			_reggie.x = (worldScale * 150) + 480;
+			_reggie.y = (worldScale * -100) + 240;
+			_reggie.updateHitbox();
+			
+			FlxTween.tween(_sammy.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
+			_sammy.x = (worldScale * 150) + 480;
+			_sammy.y = (worldScale * -100) + 240;
+			_sammy.updateHitbox();
+			
+			FlxTween.tween(_vernie.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
+			_vernie.x = (worldScale * 150) + 480;
+			_vernie.y = (worldScale * -100) + 240;
+			_vernie.updateHitbox();
+			
+			if (worldScale >= 1.25){
+				backdrop4.alpha = 1;
+				backdrop3.alpha = 0;
+				worldScale = 0.25;
+			}			
+			
+			if (worldScale <= 0.5){
+				backdrop2.alpha = 1;
+				backdrop3.alpha = 0;
+				worldScale = 0.25;
+			}
+		}
 		
-		FlxTween.tween(_ramasama.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
-		_ramasama.x = (worldScale * 150) + 480;
-		_ramasama.y = (worldScale * -100) + 240;
-		_ramasama.updateHitbox();
-
-		FlxTween.tween(_reggie.scale, { x:  worldScale * worldScale, y:  worldScale * worldScale },  0.1);
-		_reggie.x = (worldScale * 150) + 480;
-		_reggie.y = (worldScale * -100) + 240;
-		_reggie.updateHitbox();
+		FlxTween.tween(backdrop4.scale, { x: worldScale, y: worldScale },  0.1);
 		
-		FlxTween.tween(_sammy.scale, { x:  worldScale * worldScale, y:  worldScale * worldScale },  0.1);
-		_sammy.x = (worldScale * 150) + 480;
-		_sammy.y = (worldScale * -100) + 240;
-		_sammy.updateHitbox();
+		if (backdrop4.alpha == 1){
+			if (worldScale <= 0.5){
+				backdrop3.alpha = 1;
+				backdrop4.alpha = 0;
+				worldScale = 0.25;
+			}			
+		}
 		
 		
 		//FADE OUT AND POP IN
@@ -736,7 +809,7 @@ class PlayState extends FlxState
 			if (_cickass.scale.x < 1.45 && _cickass.scale.x > 0.18){
 				_cickass.alpha = 1;
 			}
-		}		
+		}
 		
 		if (_ferdinand.scale.x >= 1.45 || _ferdinand.scale.x <= 0.21){
 			FlxTween.tween(_ferdinand, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
