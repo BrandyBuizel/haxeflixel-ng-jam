@@ -17,6 +17,7 @@ import flixel.addons.util.PNGEncoder;
 import flixel.group.FlxGroup;
 import flixel.math.FlxMath;
 import flixel.system.replay.FlxReplay;
+import flixel.system.FlxSound;
 
 import openfl.display.BitmapData;
 import openfl.utils.ByteArray;
@@ -46,11 +47,10 @@ class PlayState extends FlxState
 	var curPlacement:Int = 0;
 	var curDialogue:Array<Dynamic>;
 	var blankDialogue:Array<Dynamic>;
-	
+	var textSound:Array<FlxSound>;
 	var debugText:FlxText;
 	
 	var isTalking:Bool = false;
-	var isMoving:Bool;
 	
 	//player=
 	var _player:Player;
@@ -110,6 +110,9 @@ class PlayState extends FlxState
 		],
 		[
 			"It certainly doesn't make me feel special."
+		],
+		[
+			"You can, how?"
 		]
 	];	
 	
@@ -230,7 +233,13 @@ class PlayState extends FlxState
 			""
 		],
 		[
-			""
+			"My great great great great grandpappy, pupsworth the cannibal created our family recipe that we continue to sell to this day. They’re barking delicious"
+		],
+		[
+			"Well yes sir, what you like!"
+		],
+		[
+			"Can I recommend the... "
 		]
 	];
 	
@@ -252,7 +261,19 @@ class PlayState extends FlxState
 			""
 		],
 		[
-			""
+			"I just finished this neat sketch, do you like it?"
+		],
+		[
+			"...you can't tell it’s me at all. "
+		],
+		[
+			"oh, well i actually spent the whole day on it. practice makes... perfect."
+		],
+		[
+			"I do every day! i want so badly to draw like i see people do on twitter!! i've been doing art for 5 years but im still no good"
+		],
+		[
+			"Wow, you know, you're really nice."
 		]
 	];	
 	
@@ -515,11 +536,9 @@ class PlayState extends FlxState
 		curText.size = 32; // set the text's size to 32px
 		curText.alignment = FlxTextAlign.CENTER; // center the text
 		curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
-		
 		curText.screenCenter();
 		curText.y = 40;
-		
-		curText.delay = 0.2;
+		curText.delay = 2;
 		add(curText);
 		
 		//create a new FlxText
@@ -529,7 +548,6 @@ class PlayState extends FlxState
 		debugText.size = 42; // set the text's size to 32px
 		debugText.alignment = FlxTextAlign.LEFT; // center the text
 		debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
-		
 		add(debugText);
 		
 		/*
@@ -551,26 +569,23 @@ class PlayState extends FlxState
 			curText.visible = false;
 
 			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"])){
-				isMoving = true;
-				
 				if(_player.y <= 200){
 					_player.y += 2.4;
 				}else if (_player.y > 100){
 					_player.y -= 32;
 				}
 			}else{
-				isMoving = false;
 				_player.y = 180;
 			}
 			
 			if (FlxG.keys.anyPressed(["A", "LEFT"])){
-				if(_player.x > (-120)){
+				if(_player.x > 60){
 					_player.x -= 20;
 				}
 			}
 				
 			if (FlxG.keys.anyPressed(["D", "RIGHT"])){
-				if(_player.x < (LEVEL_MAX_X / 2)){
+				if(_player.x < 560){
 					_player.x += 20;
 				}
 			}
@@ -659,32 +674,32 @@ class PlayState extends FlxState
 		
 		FlxTween.tween(_chez.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_chez.x = (worldScale * 150) + 480;
-		_chez.y = (worldScale * -100) + 225;
+		_chez.y = (worldScale * -100) + 240;
 		_chez.updateHitbox();
 		
 		FlxTween.tween(_cickass.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
-		_cickass.x = (worldScale * 150) + 480;
-		_cickass.y = (worldScale * -100) + 200;
+		_cickass.x = (worldScale * 10) + 480;
+		_cickass.y = (worldScale * -100) + 240;
 		_cickass.updateHitbox();
 		
 		FlxTween.tween(_ferdinand.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_ferdinand.x = (worldScale * 150) + 480;
-		_ferdinand.y = (worldScale * -100) + 200;
+		_ferdinand.y = (worldScale * -100) + 240;
 		_ferdinand.updateHitbox();	
 				
 		FlxTween.tween(_glottis.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_glottis.x = (worldScale * 150) + 480;
-		_glottis.y = (worldScale * -100) + 200;
+		_glottis.y = (worldScale * -100) + 240;
 		_glottis.updateHitbox();
 		
 		FlxTween.tween(_oscar.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_oscar.x = (worldScale * 150) + 480;
-		_oscar.y = (worldScale * -100) + 200;
+		_oscar.y = (worldScale * -100) + 240;
 		_oscar.updateHitbox();
 		
 		FlxTween.tween(_ramasama.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_ramasama.x = (worldScale * 150) + 480;
-		_ramasama.y = (worldScale * -100) + 200;
+		_ramasama.y = (worldScale * -100) + 240;
 		_ramasama.updateHitbox();
 
 		FlxTween.tween(_reggie.scale, { x:  worldScale * worldScale, y:  worldScale * worldScale },  0.1);
