@@ -490,19 +490,21 @@ class PlayState extends FlxState
 		SPAWN ORDER BACK TO FRONT 
 		*/
 		
+		add(_oscar);
 		add(_ferdinand);
 		add(_reggie);
 		add(_cickass);
 		add(_chez);
+		add(_glottis);
 		
 		//add(_digby);
 		//add(_vernie);
 		//add(_sammy);
 		//add(_ramasama);
-		//add(_oscar);
+		
 		//add(_ken);
 		//add(_gottsley);
-		//add(_glottis);
+		
 		
 		/*
 		END OF CHARACTER CREATE
@@ -526,12 +528,10 @@ class PlayState extends FlxState
 		curText.y = 40;
 		
 		curText.delay = 0.2;
-		//curText.sounds[] = "assets/sounds/menuConfirm.mp3";
-		
 		curText.text = "Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(curText);
-			
-		// create a new FlxText
+		
+		//create a new FlxText
 		debugText = new FlxText(40, 480, 640, "", 32);
 		debugText.setFormat("assets/fonts/SeaHorses.ttf");
 		debugText.color = FlxColor.WHITE; // set the color to cyan
@@ -596,13 +596,33 @@ class PlayState extends FlxState
 		//WORLD SCALE TWEENING
 		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
 		
+		FlxTween.tween(_chez.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		_chez.x = (worldScale * 150) + 480;
+		_chez.y = (worldScale * -100) + 225;
+		_chez.updateHitbox();
+		
 		FlxTween.tween(_cickass.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_cickass.x = (worldScale * 150) + 480;
 		_cickass.y = (worldScale * -100) + 200;
 		_cickass.updateHitbox();
+		
+		FlxTween.tween(_ferdinand.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		_ferdinand.x = (worldScale * 150) + 480;
+		_ferdinand.y = (worldScale * -100) + 200;
+		_ferdinand.updateHitbox();	
+				
+		FlxTween.tween(_glottis.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		_glottis.x = (worldScale * 150) + 480;
+		_glottis.y = (worldScale * -100) + 200;
+		_glottis.updateHitbox();
+		
+		FlxTween.tween(_oscar.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		_oscar.x = (worldScale * 150) + 480;
+		_oscar.y = (worldScale * -100) + 200;
+		_oscar.updateHitbox();
 
-		FlxTween.tween(_reggie.scale, { x:  worldScale * worldScale - 0.2, y:  worldScale * worldScale - 0.2 },  0.1);
-		_reggie.x = 480 - (worldScale * 150);
+		FlxTween.tween(_reggie.scale, { x:  worldScale * worldScale, y:  worldScale * worldScale },  0.1);
+		_reggie.x = (worldScale * 150) + 480;
 		_reggie.y = (worldScale * -100) + 240;
 		_reggie.updateHitbox();
 		
@@ -611,68 +631,137 @@ class PlayState extends FlxState
 		if (_chez.scale.x >= 1.45 || _chez.scale.x <= 0.18){
 			FlxTween.tween(_chez, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
-		
 		if(_chez.alpha != 1){
 			if (_chez.scale.x < 1.45 && _chez.scale.x > 0.18){
 				_chez.alpha = 1;
 			}
-		}		
+		}
 		
 		if (_cickass.scale.x >= 1.45 || _cickass.scale.x <= 0.18){
 			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
-		
 		if(_cickass.alpha != 1){
 			if (_cickass.scale.x < 1.45 && _cickass.scale.x > 0.18){
 				_cickass.alpha = 1;
+			}
+		}		
+		
+		if (_ferdinand.scale.x >= 1.45 || _ferdinand.scale.x <= 0.18){
+			FlxTween.tween(_ferdinand, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_ferdinand.alpha != 1){
+			if (_ferdinand.scale.x < 1.45 && _ferdinand.scale.x > 0.18){
+				_ferdinand.alpha = 1;
+			}
+		}	
+		
+		if (_glottis.scale.x >= 1.45 || _glottis.scale.x <= 0.18){
+			FlxTween.tween(_glottis, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_glottis.alpha != 1){
+			if (_glottis.scale.x < 1.45 && _glottis.scale.x > 0.18){
+				_glottis.alpha = 1;
+			}
+		}	
+		
+		if (_oscar.scale.x >= 1.45 || _oscar.scale.x <= 0.18){
+			FlxTween.tween(_oscar, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_oscar.alpha != 1){
+			if (_oscar.scale.x < 1.45 && _oscar.scale.x > 0.18){
+				_oscar.alpha = 1;
 			}
 		}
 		
 		if (_reggie.scale.x >= 1.45 || _reggie.scale.x <= 0.18){
 			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
-		
 		if(_reggie.alpha != 1){
 			if (_reggie.scale.x < 1.45 && _reggie.scale.x > 0.18){
 				_reggie.alpha = 1;
 			}
 		}
 		
-		
 		//set character to talk to on overlap
 		if (FlxG.keys.justPressed.SPACE && !isTalking){			
-			if (_player.overlaps(_chez)){
+			/*if (_player.overlaps(_chez)){
 				isTalking = true;
-				
 				curDialogue = chezText;
 				_chez.animation.play("talking");
-				
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 2);
-			}
+			}*/
+			
 			if (_player.overlaps(_cickass) && _cickass.alpha != 0){
 				isTalking = true;
-				
 				curDialogue = cickassText;
 				_cickass.animation.play("talking");
-				
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
 			}
+			/*
+			if (_player.overlaps(_ferdinand) && _ferdinand.alpha != 0){
+				isTalking = true;
+				curDialogue = ferdinandText;
+				_ferdinand.animation.play("talking");
+			}
+			
+			if (_player.overlaps(_glottis) && _glottis.alpha != 0){
+				isTalking = true;
+				curDialogue = glottisText;
+				_glottis.animation.play("talking");
+			}
+			
+			if (_player.overlaps(_oscar) && _oscar.alpha != 0){
+				isTalking = true;
+				curDialogue = oscarText;
+				_oscar.animation.play("talking");
+			}
+			
 			if (_player.overlaps(_reggie) && _reggie.alpha != 0){
 				isTalking = true;
-				
 				curDialogue = reggieText;
 				_reggie.animation.play("talking");
-				
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-			}
-			
+			}*/
 		}			
-			
-		//Name popup bottom left
-		if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){debugText.text = "Chez Beaks";
-		}else if (_player.overlaps(_cickass) && _cickass.scale.x > 0.6 && _cickass.scale.x < 1.2){debugText.text = "Cickass Cat";
-		}else if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){debugText.text = "Reggie";
-		}else{debugText.text = "OBJECTIVE: Get Kisses, Assimilate";}
+	
+		//Name popup bottom left and text color
+		if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){
+			debugText.text = "Chez Beaks";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 2);
+		}else{debugText.text = ""; }
+		
+		if (_player.overlaps(_cickass) && _cickass.scale.x > 0.6 && _cickass.scale.x < 1.2){
+			debugText.text = "Cickass Cat";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
+		}else{debugText.text = ""; }
+		
+		if (_player.overlaps(_ferdinand) && _ferdinand.scale.x > 0.6 && _ferdinand.scale.x < 1.2){
+			debugText.text = "Ferdinand";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(61, 64, 106, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(61, 64, 106, 255), 2);
+		}else{debugText.text = ""; }
+		
+		if (_player.overlaps(_glottis) && _glottis.scale.x > 0.6 && _glottis.scale.x < 1.2){
+			debugText.text = "Glottis is a Glutton";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(204, 115, 159, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(204, 115, 159, 255), 2);
+		}else{debugText.text = ""; }
+				
+		if (_player.overlaps(_oscar) && _oscar.scale.x > 0.6 && _oscar.scale.x < 1.2){
+			debugText.text = "Oscar's Hot Hot Dogs";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 2);
+		}else{debugText.text = ""; }
+		
+		if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){
+			debugText.text = "Reggie";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+		}else{debugText.text = ""; }
+		
+		if (debugText.text == ""){
+			debugText.text = "OBJECTIVE: Get Kisses, Assimilate";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2);
+		}
 		
 		if (FlxG.keys.justPressed.SPACE && isTalking){
 			
@@ -682,18 +771,20 @@ class PlayState extends FlxState
 			//Text process dialogue tree
 			for (i in 0...curDialogue[curPlacement].length){
 				curText.text += curDialogue[curPlacement][i] + "\n";
-				curText.skip();
 				curText.start();
 			}
 			
-			//end dialogue
+			
+		}
+		/*
+		//end dialogue
 			if (curPlacement >= curDialogue.length){
 				isTalking = false;
-				
+				debugText.text = "lame";
 				curDialogue = blankDialogue;
 				curText.text = "";				
 			}
-		}	
+			*/
 	}
 }
 

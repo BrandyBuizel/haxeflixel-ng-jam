@@ -1,117 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="ferdinand.png">
-	<!-- Created with Adobe Animate version 20.0.1.19255 -->
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="ferdinandIdle0000" x="0" y="0" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0001" x="0" y="0" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0002" x="0" y="0" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0003" x="0" y="0" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0004" x="0" y="0" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0005" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0006" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0007" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0008" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0009" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0010" x="604" y="0" width="283" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0011" x="887" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0012" x="887" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0013" x="887" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0014" x="1190" y="0" width="303" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0015" x="1190" y="0" width="303" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0016" x="1190" y="0" width="303" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0017" x="1493" y="0" width="338" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0018" x="1831" y="0" width="338" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0019" x="1831" y="0" width="338" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0020" x="1831" y="0" width="338" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0021" x="1831" y="0" width="338" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0022" x="1831" y="0" width="338" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0023" x="2169" y="0" width="365" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0024" x="2169" y="0" width="365" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0025" x="2169" y="0" width="365" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0026" x="2169" y="0" width="365" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0027" x="2169" y="0" width="365" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0028" x="2534" y="0" width="365" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0029" x="2899" y="0" width="373" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0030" x="2899" y="0" width="373" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0031" x="2899" y="0" width="373" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0032" x="3272" y="0" width="373" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0033" x="3272" y="0" width="373" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0034" x="3272" y="0" width="373" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0035" x="1190" y="0" width="303" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0036" x="3645" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0037" x="3645" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0038" x="3645" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0039" x="3645" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0040" x="3645" y="0" width="303" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0041" x="0" y="548" width="303" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0042" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0043" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0044" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0045" x="321" y="0" width="283" height="548" frameX="0" frameY="0" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0046" x="604" y="0" width="283" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0047" x="604" y="0" width="283" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0048" x="303" y="548" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0049" x="303" y="548" width="321" height="542" frameX="0" frameY="-6" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0050" x="624" y="548" width="321" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0051" x="624" y="548" width="321" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0052" x="624" y="548" width="321" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandIdle0053" x="624" y="548" width="321" height="538" frameX="0" frameY="-10" frameWidth="373" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0000" x="945" y="548" width="358" height="542" frameX="-24" frameY="-6" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0001" x="945" y="548" width="358" height="542" frameX="-24" frameY="-6" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0002" x="945" y="548" width="358" height="542" frameX="-24" frameY="-6" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0003" x="945" y="548" width="358" height="542" frameX="-24" frameY="-6" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0004" x="945" y="548" width="358" height="542" frameX="-24" frameY="-6" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0005" x="1303" y="548" width="283" height="548" frameX="-61" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0006" x="1586" y="548" width="298" height="548" frameX="-46" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0007" x="1586" y="548" width="298" height="548" frameX="-46" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0008" x="1586" y="548" width="298" height="548" frameX="-46" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0009" x="1586" y="548" width="298" height="548" frameX="-46" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0010" x="1586" y="548" width="298" height="548" frameX="-46" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0011" x="1884" y="548" width="318" height="548" frameX="-46" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0012" x="2202" y="548" width="358" height="548" frameX="-6" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0013" x="2202" y="548" width="358" height="548" frameX="-6" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0014" x="2202" y="548" width="358" height="548" frameX="-6" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0015" x="2202" y="548" width="358" height="548" frameX="-6" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0016" x="2202" y="548" width="358" height="548" frameX="-6" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0017" x="2560" y="548" width="393" height="548" frameX="-6" frameY="0" frameWidth="399" frameHeight="548"/>
-	<SubTexture name="ferdinandKissed0018" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0019" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0020" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0021" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0022" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0023" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0024" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0025" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0026" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0027" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0028" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0029" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0030" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0031" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0032" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0033" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandKissed0034" x="2953" y="548" width="399" height="548"/>
-	<SubTexture name="ferdinandTalking0000" x="3352" y="548" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0001" x="3352" y="548" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0002" x="3352" y="548" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0003" x="3352" y="548" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0004" x="3352" y="548" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0005" x="3675" y="548" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0006" x="3675" y="548" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0007" x="3675" y="548" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0008" x="3675" y="548" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0009" x="3675" y="548" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0010" x="0" y="1096" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0011" x="286" y="1096" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0012" x="286" y="1096" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0013" x="591" y="1096" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0014" x="591" y="1096" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0015" x="591" y="1096" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0016" x="896" y="1096" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
-	<SubTexture name="ferdinandTalking0017" x="1201" y="1096" width="340" height="548"/>
-	<SubTexture name="ferdinandTalking0018" x="1541" y="1096" width="340" height="548"/>
-	<SubTexture name="ferdinandTalking0019" x="1541" y="1096" width="340" height="548"/>
-	<SubTexture name="ferdinandTalking0020" x="1541" y="1096" width="340" height="548"/>
-	<SubTexture name="ferdinandTalking0021" x="1541" y="1096" width="340" height="548"/>
-	<SubTexture name="ferdinandTalking0022" x="1541" y="1096" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0000" x="0" y="0" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0001" x="0" y="0" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0002" x="0" y="0" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0003" x="0" y="0" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0004" x="0" y="0" width="323" height="542" frameX="0" frameY="-6" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0005" x="323" y="0" width="323" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0006" x="323" y="0" width="323" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0007" x="646" y="0" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0008" x="646" y="0" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0009" x="646" y="0" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0010" x="932" y="0" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0011" x="932" y="0" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0012" x="932" y="0" width="286" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0013" x="1218" y="0" width="286" height="543" frameX="0" frameY="-5" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0014" x="1218" y="0" width="286" height="543" frameX="0" frameY="-5" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0015" x="1504" y="0" width="305" height="543" frameX="0" frameY="-5" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0016" x="0" y="548" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0017" x="0" y="548" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0018" x="305" y="548" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0019" x="610" y="548" width="305" height="543" frameX="0" frameY="-5" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0020" x="610" y="548" width="305" height="543" frameX="0" frameY="-5" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0021" x="610" y="548" width="305" height="543" frameX="0" frameY="-5" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0022" x="915" y="548" width="305" height="548" frameX="0" frameY="0" frameWidth="340" frameHeight="548"/>
+	<SubTexture name="ferdinandTalking0023" x="1220" y="548" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0024" x="1220" y="548" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0025" x="1560" y="548" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0026" x="0" y="1096" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0027" x="0" y="1096" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0028" x="340" y="1096" width="340" height="548"/>
+	<SubTexture name="ferdinandTalking0029" x="340" y="1096" width="340" height="548"/>
 </TextureAtlas>
