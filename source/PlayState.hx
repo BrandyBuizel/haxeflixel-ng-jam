@@ -71,6 +71,7 @@ class PlayState extends FlxState
 	var _vernie:FlxSprite;
 	
 	var worldScale:Float = 1;
+	var tempScale:Float = 100;
 	
 	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
@@ -301,7 +302,7 @@ class PlayState extends FlxState
 		[
 			""
 		]
-	];	
+	];
 	
 	//create event
 	override public function create():Void 
@@ -500,17 +501,19 @@ class PlayState extends FlxState
 		SPAWN ORDER BACK TO FRONT 
 		*/
 		
-		add(_oscar);
-		add(_ferdinand);
-		add(_reggie);
+		//add(_oscar);
+		
+		//add(_reggie);
 		add(_cickass);
+		add(_ferdinand);
 		add(_chez);
-		add(_glottis);
-		add(_ramasama);
+		//add(_glottis);
+		//add(_ramasama);
+		//add(_sammy);
 		
 		//add(_digby);
 		//add(_vernie);
-		//add(_sammy);
+		
 		//add(_ken);
 		//add(_gottsley);
 		
@@ -520,9 +523,9 @@ class PlayState extends FlxState
 		
 		//create player
 		_player = new Player(0, 180);
-		add(_player);
 		_player.screenCenter();
 		_player.animation.play('idle');
+		add(_player);
 		
 		
 		/*
@@ -538,7 +541,6 @@ class PlayState extends FlxState
 		curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
 		curText.screenCenter();
 		curText.y = 40;
-		curText.delay = 2;
 		add(curText);
 		
 		//create a new FlxText
@@ -595,10 +597,14 @@ class PlayState extends FlxState
 				if(worldScale > 0){
 					worldScale -= 0.01;
 				}
+				
+				tempScale -= 0.1;
 			}
 			
 			if (FlxG.keys.anyPressed(["W", "UP"])){
 				worldScale += 0.01;
+				
+				tempScale += 0.1;
 			}
 			
 			if(FlxG.keys.justPressed.SPACE){	
@@ -672,21 +678,21 @@ class PlayState extends FlxState
 		//WORLD SCALE TWEENING
 		FlxTween.tween(backdrop.scale, { x: worldScale, y: worldScale },  0.1);
 		
-		FlxTween.tween(_chez.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		FlxTween.tween(_chez.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 		_chez.x = (worldScale * 150) + 480;
-		_chez.y = (worldScale * -100) + 240;
+		_chez.y = (worldScale * -100) + 225;
 		_chez.updateHitbox();
 		
-		FlxTween.tween(_cickass.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
-		_cickass.x = (worldScale * 10) + 480;
+		FlxTween.tween(_cickass.scale, { x: (tempScale/100) * (worldScale * worldScale), y: (tempScale/100) * (worldScale * worldScale) },  0.1);
+		_cickass.x = (worldScale * 50) + 480;
 		_cickass.y = (worldScale * -100) + 240;
 		_cickass.updateHitbox();
 		
-		FlxTween.tween(_ferdinand.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
-		_ferdinand.x = (worldScale * 150) + 480;
+		FlxTween.tween(_ferdinand.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
+		_ferdinand.x = (100 / (worldScale / 2)) - 100;
 		_ferdinand.y = (worldScale * -100) + 240;
-		_ferdinand.updateHitbox();	
-				
+		_ferdinand.updateHitbox();
+		
 		FlxTween.tween(_glottis.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
 		_glottis.x = (worldScale * 150) + 480;
 		_glottis.y = (worldScale * -100) + 240;
@@ -706,6 +712,11 @@ class PlayState extends FlxState
 		_reggie.x = (worldScale * 150) + 480;
 		_reggie.y = (worldScale * -100) + 240;
 		_reggie.updateHitbox();
+		
+		FlxTween.tween(_sammy.scale, { x:  worldScale * worldScale, y:  worldScale * worldScale },  0.1);
+		_sammy.x = (worldScale * 150) + 480;
+		_sammy.y = (worldScale * -100) + 240;
+		_sammy.updateHitbox();
 		
 		
 		//FADE OUT AND POP IN
@@ -727,11 +738,11 @@ class PlayState extends FlxState
 			}
 		}		
 		
-		if (_ferdinand.scale.x >= 1.45 || _ferdinand.scale.x <= 0.18){
+		if (_ferdinand.scale.x >= 1.45 || _ferdinand.scale.x <= 0.21){
 			FlxTween.tween(_ferdinand, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_ferdinand.alpha != 1){
-			if (_ferdinand.scale.x < 1.45 && _ferdinand.scale.x > 0.18){
+			if (_ferdinand.scale.x < 1.45 && _ferdinand.scale.x > 0.21){
 				_ferdinand.alpha = 1;
 			}
 		}	
@@ -769,6 +780,15 @@ class PlayState extends FlxState
 		if(_reggie.alpha != 1){
 			if (_reggie.scale.x < 1.45 && _reggie.scale.x > 0.18){
 				_reggie.alpha = 1;
+			}
+		}
+			
+		if (_sammy.scale.x >= 1.45 || _sammy.scale.x <= 0.18){
+			FlxTween.tween(_sammy, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_sammy.alpha != 1){
+			if (_sammy.scale.x < 1.45 && _sammy.scale.x > 0.18){
+				_sammy.alpha = 1;
 			}
 		}
 	
@@ -811,6 +831,12 @@ class PlayState extends FlxState
 		
 		if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){
 			debugText.text = "Reggie";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+		}else{debugText.text = ""; }
+		
+		if (_player.overlaps(_sammy) && _sammy.scale.x > 0.6 && _sammy.scale.x < 1.2){
+			debugText.text = "Sammy Schwimmer";
 			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 		}else{debugText.text = ""; }
