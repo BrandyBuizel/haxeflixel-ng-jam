@@ -49,7 +49,7 @@ class PlayState extends FlxState
 	
 	var debugText:FlxText;
 	
-	var isTalking:Bool;
+	var isTalking:Bool = false;
 	var isMoving:Bool;
 	
 	//player=
@@ -103,10 +103,13 @@ class PlayState extends FlxState
 	var digbyText:Array<Dynamic> = 
 	[
 		[
-			""
+			"Have you talked to the other dog yet?"
 		],
 		[
-			""
+			"Why there gotta be two dogs in this game? There's no other duplicate species here!"
+		],
+		[
+			"It certainly doesn't make me feel special."
 		]
 	];	
 	
@@ -441,50 +444,38 @@ class PlayState extends FlxState
 		_chez.screenCenter();
 		_chez.animation.play("idle");
 	
-		
 		_cickass.screenCenter();
-		_cickass.animation.play("idle");
-		
+		_cickass.animation.play("idle");	
 		
 		_digby.screenCenter();
 		_digby.animation.play("idle");
 		
-		
 		_ferdinand.screenCenter();
 		_ferdinand.animation.play("idle");
-		
 		
 		_glottis.screenCenter();
 		_glottis.animation.play("idle");
 		
-		
 		_gottsley.screenCenter();
 		_gottsley.animation.play("idle");
-		
 		
 		_ken.screenCenter();
 		_ken.animation.play("idle");
 		
-		
 		_oscar.screenCenter();
 		_oscar.animation.play("idle");
-		
 		
 		_ramasama.screenCenter();
 		_ramasama.animation.play("idle");
 		
-		
 		_reggie.screenCenter();
 		_reggie.animation.play("idle");
-		
 		
 		_sammy.screenCenter();
 		_sammy.animation.play("idle");
 		
-		
 		_vernie.screenCenter();
 		_vernie.animation.play("idle");
-		
 		
 		/*
 		SPAWN ORDER BACK TO FRONT 
@@ -496,15 +487,13 @@ class PlayState extends FlxState
 		add(_cickass);
 		add(_chez);
 		add(_glottis);
+		add(_ramasama);
 		
 		//add(_digby);
 		//add(_vernie);
 		//add(_sammy);
-		//add(_ramasama);
-		
 		//add(_ken);
 		//add(_gottsley);
-		
 		
 		/*
 		END OF CHARACTER CREATE
@@ -516,8 +505,13 @@ class PlayState extends FlxState
 		_player.screenCenter();
 		_player.animation.play('idle');
 		
+		
+		/*
+		CREATE TEXT 
+		*/
+		
 		// create a new FlxText
-		curText = new FlxTypeText(0, 0, 640, "", 32);
+		curText = new FlxTypeText(0, 0, 640, "");
 		curText.setFormat("assets/fonts/SeaHorses.ttf");
 		curText.color = FlxColor.WHITE; // set the color to cyan
 		curText.size = 32; // set the text's size to 32px
@@ -528,21 +522,21 @@ class PlayState extends FlxState
 		curText.y = 40;
 		
 		curText.delay = 0.2;
-		curText.text = "Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(curText);
 		
 		//create a new FlxText
-		debugText = new FlxText(40, 480, 640, "", 32);
+		debugText = new FlxText(20, 480, 640, "");
 		debugText.setFormat("assets/fonts/SeaHorses.ttf");
 		debugText.color = FlxColor.WHITE; // set the color to cyan
-		debugText.size = 32; // set the text's size to 32px
+		debugText.size = 42; // set the text's size to 32px
 		debugText.alignment = FlxTextAlign.LEFT; // center the text
 		debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
 		
-		debugText.text = "OBJECTIVE: Get Kisses, Assimilate"; // set text's text to say "Hello, World!"
 		add(debugText);
 		
-		isTalking = false;
+		/*
+		END TEXT 
+		*/
 		
 		FlxG.sound.playMusic("assets/music/921812_Morning.mp3", 1, true);
 		
@@ -555,6 +549,7 @@ class PlayState extends FlxState
 		
 		if (!isTalking){
 			curPlacement = 0;
+			curText.text = "";
 			
 			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"])){
 				isMoving = true;
@@ -591,6 +586,50 @@ class PlayState extends FlxState
 			if (FlxG.keys.anyPressed(["W", "UP"])){
 				worldScale += 0.01;
 			}
+			
+			if(FlxG.keys.justPressed.SPACE){	
+				/*if (_player.overlaps(_chez)){
+					isTalking = true;
+					curDialogue = chezText;
+					_chez.animation.play("talking");
+				}*/
+				
+				if (_player.overlaps(_cickass) && _cickass.alpha != 0){
+					isTalking = true;
+					curDialogue = cickassText;
+					_cickass.animation.play("talking");
+				}
+				/*
+				if (_player.overlaps(_ferdinand) && _ferdinand.alpha != 0){
+					isTalking = true;
+					curDialogue = ferdinandText;
+					_ferdinand.animation.play("talking");
+				}
+				
+				if (_player.overlaps(_glottis) && _glottis.alpha != 0){
+					isTalking = true;
+					curDialogue = glottisText;
+					_glottis.animation.play("talking");
+				}
+				
+				if (_player.overlaps(_oscar) && _oscar.alpha != 0){
+					isTalking = true;
+					curDialogue = oscarText;
+					_oscar.animation.play("talking");
+				}
+				
+				if (_player.overlaps(_ramasama) && _ramasama.alpha != 0){
+					isTalking = true;
+					curDialogue = oscarText;
+					_ramasama.animation.play("talking");
+				}
+				
+				if (_player.overlaps(_reggie) && _reggie.alpha != 0){
+					isTalking = true;
+					curDialogue = reggieText;
+					_reggie.animation.play("talking");
+				}*/
+			}
 		}
 		
 		//WORLD SCALE TWEENING
@@ -620,6 +659,11 @@ class PlayState extends FlxState
 		_oscar.x = (worldScale * 150) + 480;
 		_oscar.y = (worldScale * -100) + 200;
 		_oscar.updateHitbox();
+		
+		FlxTween.tween(_ramasama.scale, { x: worldScale * worldScale, y: worldScale * worldScale },  0.1);
+		_ramasama.x = (worldScale * 150) + 480;
+		_ramasama.y = (worldScale * -100) + 200;
+		_ramasama.updateHitbox();
 
 		FlxTween.tween(_reggie.scale, { x:  worldScale * worldScale, y:  worldScale * worldScale },  0.1);
 		_reggie.x = (worldScale * 150) + 480;
@@ -673,6 +717,15 @@ class PlayState extends FlxState
 			}
 		}
 		
+		if (_ramasama.scale.x >= 1.45 || _ramasama.scale.x <= 0.18){
+			FlxTween.tween(_ramasama, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_ramasama.alpha != 1){
+			if (_ramasama.scale.x < 1.45 && _ramasama.scale.x > 0.18){
+				_ramasama.alpha = 1;
+			}
+		}
+		
 		if (_reggie.scale.x >= 1.45 || _reggie.scale.x <= 0.18){
 			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
@@ -681,45 +734,6 @@ class PlayState extends FlxState
 				_reggie.alpha = 1;
 			}
 		}
-		
-		//set character to talk to on overlap
-		if (FlxG.keys.justPressed.SPACE && !isTalking){			
-			/*if (_player.overlaps(_chez)){
-				isTalking = true;
-				curDialogue = chezText;
-				_chez.animation.play("talking");
-			}*/
-			
-			if (_player.overlaps(_cickass) && _cickass.alpha != 0){
-				isTalking = true;
-				curDialogue = cickassText;
-				_cickass.animation.play("talking");
-			}
-			/*
-			if (_player.overlaps(_ferdinand) && _ferdinand.alpha != 0){
-				isTalking = true;
-				curDialogue = ferdinandText;
-				_ferdinand.animation.play("talking");
-			}
-			
-			if (_player.overlaps(_glottis) && _glottis.alpha != 0){
-				isTalking = true;
-				curDialogue = glottisText;
-				_glottis.animation.play("talking");
-			}
-			
-			if (_player.overlaps(_oscar) && _oscar.alpha != 0){
-				isTalking = true;
-				curDialogue = oscarText;
-				_oscar.animation.play("talking");
-			}
-			
-			if (_player.overlaps(_reggie) && _reggie.alpha != 0){
-				isTalking = true;
-				curDialogue = reggieText;
-				_reggie.animation.play("talking");
-			}*/
-		}			
 	
 		//Name popup bottom left and text color
 		if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){
@@ -752,6 +766,12 @@ class PlayState extends FlxState
 			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 2);
 		}else{debugText.text = ""; }
 		
+		if (_player.overlaps(_ramasama) && _ramasama.scale.x > 0.6 && _ramasama.scale.x < 1.2){
+			debugText.text = "Ramasama-kun";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(105, 11, 20, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(105, 11, 20, 255), 2);
+		}else{debugText.text = ""; }
+		
 		if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){
 			debugText.text = "Reggie";
 			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
@@ -763,28 +783,23 @@ class PlayState extends FlxState
 			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2);
 		}
 		
-		if (FlxG.keys.justPressed.SPACE && isTalking){
-			
-			curText.text = "";
-			curPlacement += 1;
-			
-			//Text process dialogue tree
-			for (i in 0...curDialogue[curPlacement].length){
-				curText.text += curDialogue[curPlacement][i] + "\n";
-				curText.start();
+		//DIALOGUE CODE
+		if (isTalking){
+			if(FlxG.keys.justPressed.SPACE){
+				curText.text = "";
+				curPlacement += 1;
+				
+				if (curPlacement <= curDialogue.length){
+					curText.text += curDialogue[curPlacement] + "\n";
+					curText.start();
+				}
+				
+				//end dialogue
+				if (curPlacement > (curDialogue.length - 1)){
+					curDialogue = blankDialogue;
+					isTalking = false;
+				}
 			}
-			
-			
-		}
-		/*
-		//end dialogue
-			if (curPlacement >= curDialogue.length){
-				isTalking = false;
-				debugText.text = "lame";
-				curDialogue = blankDialogue;
-				curText.text = "";				
-			}
-			*/
+		}		
 	}
 }
-

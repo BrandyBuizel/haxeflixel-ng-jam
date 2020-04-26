@@ -2,30 +2,30 @@
 <TextureAtlas imagePath="glottis.png">
 	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="gleetusIdle0000" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0001" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0002" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0003" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0004" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0005" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0006" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0007" x="340" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0008" x="340" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0009" x="340" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0010" x="680" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0011" x="680" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0012" x="680" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0013" x="1020" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0014" x="1020" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0015" x="1020" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0016" x="1360" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0017" x="1360" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0018" x="1360" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0019" x="1700" y="0" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0020" x="1700" y="0" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0021" x="1700" y="0" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0022" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0023" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0024" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
-	<SubTexture name="gleetusIdle0025" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0000" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0001" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0002" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0003" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0004" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0005" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0006" x="0" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0007" x="340" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0008" x="340" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0009" x="340" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0010" x="680" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0011" x="680" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0012" x="680" y="0" width="340" height="597" frameX="0" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0013" x="1020" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0014" x="1020" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0015" x="1020" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0016" x="1360" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0017" x="1360" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0018" x="1360" y="0" width="340" height="597" frameX="-15" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0019" x="1700" y="0" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0020" x="1700" y="0" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0021" x="1700" y="0" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0022" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0023" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0024" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
+	<SubTexture name="glottisIdle0025" x="0" y="597" width="340" height="597" frameX="-27" frameY="0" frameWidth="367" frameHeight="597"/>
 </TextureAtlas>
