@@ -151,9 +151,7 @@ class PlayState extends FlxState
 			"munch munch much munch munch"
 		],
 		[
-			"munch munch much munch munch much munch munch much",
-			"munch munch much munch munch much munch munch much",
-			"munch munch much munch munch much munch munch much"
+			"munch munch munch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch munch munch"
 		]
 	];	
 	
@@ -550,7 +548,8 @@ class PlayState extends FlxState
 		if (!isTalking){
 			curPlacement = 0;
 			curText.text = "";
-			
+			curText.visible = false;
+
 			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"])){
 				isMoving = true;
 				
@@ -588,18 +587,18 @@ class PlayState extends FlxState
 			}
 			
 			if(FlxG.keys.justPressed.SPACE){	
-				/*if (_player.overlaps(_chez)){
+				if (_player.overlaps(_chez)){
 					isTalking = true;
 					curDialogue = chezText;
 					_chez.animation.play("talking");
-				}*/
+				}
 				
 				if (_player.overlaps(_cickass) && _cickass.alpha != 0){
 					isTalking = true;
 					curDialogue = cickassText;
 					_cickass.animation.play("talking");
 				}
-				/*
+				
 				if (_player.overlaps(_ferdinand) && _ferdinand.alpha != 0){
 					isTalking = true;
 					curDialogue = ferdinandText;
@@ -628,7 +627,30 @@ class PlayState extends FlxState
 					isTalking = true;
 					curDialogue = reggieText;
 					_reggie.animation.play("talking");
-				}*/
+				}
+			}
+		}
+		
+		//DIALOGUE CODE
+		if (isTalking){
+			curText.visible = true;
+			
+			if(FlxG.keys.justPressed.SPACE){
+				curText.text = "";
+				curPlacement += 1;
+				
+				FlxG.sound.play("assets/sounds/menuDown.mp3");
+				
+				if (curPlacement <= curDialogue.length){
+					curText.text += curDialogue[curPlacement];
+					curText.start();
+				}
+				
+				//end dialogue
+				if (curPlacement > (curDialogue.length - 1)){
+					curDialogue = blankDialogue;
+					isTalking = false;
+				}
 			}
 		}
 		
@@ -782,24 +804,5 @@ class PlayState extends FlxState
 			debugText.text = "OBJECTIVE: Get Kisses, Assimilate";
 			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2);
 		}
-		
-		//DIALOGUE CODE
-		if (isTalking){
-			if(FlxG.keys.justPressed.SPACE){
-				curText.text = "";
-				curPlacement += 1;
-				
-				if (curPlacement <= curDialogue.length){
-					curText.text += curDialogue[curPlacement] + "\n";
-					curText.start();
-				}
-				
-				//end dialogue
-				if (curPlacement > (curDialogue.length - 1)){
-					curDialogue = blankDialogue;
-					isTalking = false;
-				}
-			}
-		}		
 	}
 }
