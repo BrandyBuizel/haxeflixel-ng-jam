@@ -96,13 +96,19 @@ class PlayState extends FlxState
 	var middleScale:Float;
 	var bigScale:Float;
 	
-	var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
+	//var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 	
 	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
 	[
 		[
 			""
+		],
+		[
+			"Gimme Kiss"
+		],
+		[
+			">Really?"
 		],
 		[
 			"Gimme Kiss"
@@ -144,13 +150,28 @@ class PlayState extends FlxState
 			"Have you talked to the other dog yet?"
 		],
 		[
-			"Why there gotta be two dogs in this game? There's no other duplicate species here!"
+			">Seems friendly aside from the cannibal stuff"
 		],
 		[
-			"It certainly doesn't make me feel special."
+			"The wha--"
+		],
+		[
+			">Nothing, what were you saying before?"
+		],
+		[
+			"Oh, well why there gotta be two dogs in this game? There's no other duplicate species here! It certainly doesn't make me feel special."
+		],
+		[
+			">Maybe I can help with that."
 		],
 		[
 			"You can, how?"
+		],
+		[
+			">smooch"
+		],
+		[
+			">I mean kiss"
 		]
 	];	
 	
@@ -219,7 +240,7 @@ class PlayState extends FlxState
 			">ya got a little somethin on your face"
 		],
 		[
-			"munch munch munch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch munch munch"
+			"munch munch munch munch munch munch\nmunch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch"
 		],
 		[
 			">let me get that for you"
@@ -271,19 +292,19 @@ class PlayState extends FlxState
 			"Gotta get top speed. Win next week's race. Show biker troy who's boss"
 		],
 		[
-			"..."
+			">..."
 		],
 		[
 			"Gotta go fast, beat my best time. Gotta keep moving"
 		],
 		[
-			"..."
+			">..."
 		],
 		[
 			"What do you want. I cant stop right now, so close to my Personal record"
 		],
 		[
-			"..."
+			">..."
 		],
 		[
 			"*heaves and collapses*"
@@ -334,10 +355,16 @@ class PlayState extends FlxState
 			"My great great great great grandpappy, pupsworth the cannibal created our family recipe that we continue to sell to this day. They’re barking delicious"
 		],
 		[
-			">I wou--"
+			">???"
 		],
 		[
 			"Well yes sir, what you like!"
+		],
+		[
+			">I wou--"
+		],
+		[
+			"Go on, I'm listening!"
 		],
 		[
 			">I would like a--"
@@ -346,7 +373,13 @@ class PlayState extends FlxState
 			"Can I recommend the... "
 		],
 		[
-			">THERE'S ONLY ONE HOT DOG I WANT IN MY MOUTH"
+			">Can I just--"
+		],
+		[
+			"Want to try our brand new beef--"
+		],
+		[
+			">THERE'S ONLY ONE HOT DOG I WANT IN MY MOUTH, c'mere"
 		],
 		[
 			">Kiss the fool who wouldn't shut up"
@@ -372,7 +405,7 @@ class PlayState extends FlxState
 			">Hell yea, do you play synchos?"
 		],
 		[
-			"Not really, I'm more  afan of yugioh classic"
+			"Not really, I'm more a fan of yugioh classic"
 		],
 		[
 			">I'm in love"
@@ -450,7 +483,7 @@ class PlayState extends FlxState
 			"You're right, I'm actually quite depressed but i try to smile so that people dont have to worry about me and feel sorry for me"
 		],
 		[
-			">i get it. it's hard putting on a smile, youre brave for dling so but you dont need to hide how you really feel. We're all the same on the inside can can understand what you're going though if you let others in"
+			">i get it. it's hard putting on a smile, you're brave for doing so but you don't need to hide how you really feel. We're all the same on the inside and can understand what you're going through if you let others in"
 		],
 		[
 			">kiss"
@@ -463,7 +496,40 @@ class PlayState extends FlxState
 			""
 		],
 		[
-			""
+			"Please keep 6ft away from me sir!"
+		],
+		[
+			">Why?"
+		],
+		[
+			"You unknowingly carry germs and vicious diseases that can spread in mere breaths! You need to take heavy precautions to avoid them"
+		],
+		[
+			">So you're just screening everyone then?"
+		],
+		[
+			"Yep, can't be too sure, even with friends!"
+		],
+		[
+			">So you're like the TSA, but germs are your terrorists"
+		],
+		[
+			"How do you figure?"
+		],
+		[
+			">well they're mostly invisible and they're such an uncommon threat in reality but you let fear control you and police those around you"
+		],
+		[
+			"..."
+		],
+		[
+			">I don't like get sick either"
+		],
+		[
+			"You get me don't you?"
+		],
+		[
+			">you give them mono"
 		]
 	];
 	
@@ -674,8 +740,8 @@ class PlayState extends FlxState
 		add(_ramasama);
 		add(_glottis);
 		
-		add(_sammy);
 		add(_vernie);
+		add(_sammy);
 		add(_reggie);		
 		
 		add(_digby);
@@ -697,6 +763,9 @@ class PlayState extends FlxState
 		_gottsley.visible = false;
 		_ken.visible = false;
 		_digby.visible = false;
+		
+		add(_hank);
+		_hank.visible = false;
 		
 		/*
 		END OF CHARACTER CREATE
@@ -722,7 +791,7 @@ class PlayState extends FlxState
 		*/
 		
 		// create a new FlxText
-		curText = new FlxTypeText(0, 0, 640, "");
+		curText = new FlxTypeText(0, 0, 720, "");
 		curText.setFormat("assets/fonts/SeaHorses.ttf");
 		curText.color = FlxColor.WHITE; // set the color to cyan
 		curText.size = 32; // set the text's size to 32px
@@ -818,7 +887,7 @@ class PlayState extends FlxState
 			curText.visible = false;
 
 			//Movement
-			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"]) || gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN", "UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP", "LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT", "RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"])){
+			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"])){
 				if(_player.y <= 200){
 					_player.y += 2.4;
 				}else if (_player.y > 100){
@@ -828,20 +897,20 @@ class PlayState extends FlxState
 				_player.y = 180;
 			}
 			
-			if (FlxG.keys.anyPressed(["A", "LEFT"]) || gamepad.anyPressed(["LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT"])){
+			if (FlxG.keys.anyPressed(["A", "LEFT"])){
 				if(_player.x > 60){
 					_player.x -= 20;
 				}
 			}
 				
-			if (FlxG.keys.anyPressed(["D", "RIGHT"]) || gamepad.anyPressed(["RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"])){
-				if(_player.x < 560){
+			if (FlxG.keys.anyPressed(["D", "RIGHT"])){
+				if(_player.x < 320){
 					_player.x += 20;
 				}
 			}
 			
 			//Zoom in and out
-			if (FlxG.keys.anyPressed(["S", "DOWN"]) || gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN"])){
+			if (FlxG.keys.anyPressed(["S", "DOWN"])){
 				if(worldScale > 0){
 					if (level == 1){
 						if (worldScale >= 0.3){
@@ -857,22 +926,20 @@ class PlayState extends FlxState
 						if (worldScale < 0.5){
 							worldScale -= 0.005;
 						}
-					}
-					
-					
+					}					
 				}
 				
 				tempScale -= 0.;
 			}
 			
-			if (FlxG.keys.anyPressed(["W", "UP"]) || gamepad.anyPressed(["UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP"])){
+			if (FlxG.keys.anyPressed(["W", "UP"])){
 				worldScale += 0.005;
 				
 				tempScale += 0.1;
 			}
 			
 			//Who ya talkin' too?
-			if (FlxG.keys.justPressed.SPACE || gamepad.justPressed.A){
+			if (FlxG.keys.justPressed.SPACE){
 				//Level 1 Dialogue
 				if (level == 1){
 					if (debugText.text == "Chez Beaks" && !chezKissed){
@@ -947,7 +1014,7 @@ class PlayState extends FlxState
 		if (isTalking){
 			curText.visible = true;
 			
-			if(FlxG.keys.justPressed.SPACE || gamepad.justPressed.A){
+			if(FlxG.keys.justPressed.SPACE){
 				curText.text = "";
 				curPlacement += 1;
 				
@@ -1049,9 +1116,9 @@ class PlayState extends FlxState
 		}
 		
 		//WORLD SCALE TWEENING	
-		smallScale = (worldScale * worldScale * 50) + 480;
+		smallScale = (worldScale * worldScale * 50) + 450;
 		middleScale = (100 / (worldScale / 2)) - 100;
-		bigScale = (worldScale * worldScale * 150) + 480;
+		bigScale = (worldScale * worldScale * 150) + 450;
 		
 		//so it doesnt all suck
 		_cickass.updateHitbox();
@@ -1092,18 +1159,18 @@ class PlayState extends FlxState
 			//position in level
 			FlxTween.tween(_cickass.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_cickass.x = smallScale;
-			_cickass.y = (worldScale * -100) + 240;
+			_cickass.y = (worldScale * -100) + 270;
 			
 			FlxTween.tween(_ferdinand.scale, { x: (tempScale / 75) * (worldScale * worldScale), y: (tempScale / 75) * (worldScale * worldScale) },  0.1);
 			_ferdinand.x = middleScale;
 			if (_ferdinand.x > 480){
 				_ferdinand.alpha = 0;
 			}
-			_ferdinand.y = (worldScale * -100) + 225;
+			_ferdinand.y = (worldScale * -100) + 270;
 			
 			FlxTween.tween(_chez.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 			_chez.x = bigScale;
-			_chez.y = (worldScale * -100) + 225;
+			_chez.y = (worldScale * -100) + 240;
 			
 			//Name popup bottom left and text color
 			if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){
@@ -1178,16 +1245,16 @@ class PlayState extends FlxState
 			_sammy.visible = true;
 		
 			//set position and scale
-			FlxTween.tween(_sammy.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
-			_sammy.x = smallScale;
-			_sammy.y = (worldScale * -100) + 240;
-			
-			FlxTween.tween(_vernie.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
-			_vernie.x = middleScale;
-			if (_vernie.x > 480){
-				_vernie.alpha = 0;
-			}
+			FlxTween.tween(_vernie.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
+			_vernie.x = smallScale;
 			_vernie.y = (worldScale * -100) + 240;
+			
+			FlxTween.tween(_sammy.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
+			_sammy.x = middleScale;
+			if (_sammy.x > 480){
+				_sammy.alpha = 0;
+			}
+			_sammy.y = (worldScale * -100) + 240;
 			
 			FlxTween.tween(_reggie.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 			_reggie.x = bigScale;
@@ -1198,12 +1265,12 @@ class PlayState extends FlxState
 				debugText.text = "Reggie";
 				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-			}else if (_player.overlaps(_vernie) && _vernie.scale.x > 0.6 && _vernie.scale.x < 1.2){
-				debugText.text = "Vern 'Vernie' Varns";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 			}else if (_player.overlaps(_sammy) && _sammy.scale.x > 0.6 && _sammy.scale.x < 1.2){
 				debugText.text = "Sammy Schwimmer";
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+			}else if (_player.overlaps(_vernie) && _vernie.scale.x > 0.6 && _vernie.scale.x < 1.2){
+				debugText.text = "Vern 'Vernie' Varns";
 				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 			}else{
@@ -1264,75 +1331,111 @@ class PlayState extends FlxState
 		*/
 		
 		//FADE OUT AND POP IN LOGIC
-		if (_chez.scale.x >= 1.45 || _chez.scale.x <= 0.18){
+		if (_chez.scale.x >= 1.35 || _chez.scale.x <= 0.18){
 			FlxTween.tween(_chez, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_chez.alpha != 1){
-			if (_chez.scale.x < 1.45 && _chez.scale.x > 0.18){
+			if (_chez.scale.x < 1.35 && _chez.scale.x > 0.18){
 				_chez.alpha = 1;
 			}
 		}
 		
-		if (_cickass.scale.x >= 1.45 || _cickass.scale.x <= 0.18){
-			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
-		}
-		if(_cickass.alpha != 1){
-			if (_cickass.scale.x < 1.45 && _cickass.scale.x > 0.18){
-				_cickass.alpha = 1;
-			}
-		}
-		
-		if (_ferdinand.scale.x >= 1.45 || _ferdinand.scale.x <= 0.24){
+		if (_ferdinand.scale.x >= 1.35 || _ferdinand.scale.x <= 0.24){
 			FlxTween.tween(_ferdinand, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_ferdinand.alpha != 1){
-			if (_ferdinand.scale.x < 1.45 && _ferdinand.scale.x > 0.21){
+			if (_ferdinand.scale.x < 1.35 && _ferdinand.scale.x > 0.21){
 				_ferdinand.alpha = 1;
 			}
 		}	
 		
-		if (_glottis.scale.x >= 1.45 || _glottis.scale.x <= 0.18){
-			FlxTween.tween(_glottis, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		if (_cickass.scale.x >= 1.35 || _cickass.scale.x <= 0.18){
+			FlxTween.tween(_cickass, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
-		if(_glottis.alpha != 1){
-			if (_glottis.scale.x < 1.45 && _glottis.scale.x > 0.18){
-				_glottis.alpha = 1;
+		if(_cickass.alpha != 1){
+			if (_cickass.scale.x < 1.35 && _cickass.scale.x > 0.18){
+				_cickass.alpha = 1;
 			}
 		}	
 		
-		if (_oscar.scale.x >= 1.45 || _oscar.scale.x <= 0.18){
-			FlxTween.tween(_oscar, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		if (_glottis.scale.x >= 1.35 || _glottis.scale.x <= 0.18){
+			FlxTween.tween(_glottis, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
-		if(_oscar.alpha != 1){
-			if (_oscar.scale.x < 1.45 && _oscar.scale.x > 0.18){
-				_oscar.alpha = 1;
+		if(_glottis.alpha != 1){
+			if (_glottis.scale.x < 1.35 && _glottis.scale.x > 0.18){
+				_glottis.alpha = 1;
 			}
-		}
-		
-		if (_ramasama.scale.x >= 1.45 || _ramasama.scale.x <= 0.18){
+		}	
+			
+		if (_ramasama.scale.x >= 1.35 || _ramasama.scale.x <= 0.18){
 			FlxTween.tween(_ramasama, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_ramasama.alpha != 1){
-			if (_ramasama.scale.x < 1.45 && _ramasama.scale.x > 0.18){
+			if (_ramasama.scale.x < 1.35 && _ramasama.scale.x > 0.18){
 				_ramasama.alpha = 1;
 			}
 		}
 		
-		if (_reggie.scale.x >= 1.45 || _reggie.scale.x <= 0.18){
+		if (_oscar.scale.x >= 1.35 || _oscar.scale.x <= 0.18){
+			FlxTween.tween(_oscar, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_oscar.alpha != 1){
+			if (_oscar.scale.x < 1.35 && _oscar.scale.x > 0.18){
+				_oscar.alpha = 1;
+			}
+		}
+		
+		if (_reggie.scale.x >= 1.35 || _reggie.scale.x <= 0.18){
 			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_reggie.alpha != 1){
-			if (_reggie.scale.x < 1.45 && _reggie.scale.x > 0.18){
+			if (_reggie.scale.x < 1.35 && _reggie.scale.x > 0.18){
 				_reggie.alpha = 1;
 			}
 		}
 			
-		if (_sammy.scale.x >= 1.45 || _sammy.scale.x <= 0.18){
+		if (_sammy.scale.x >= 1.35 || _sammy.scale.x <= 0.18){
 			FlxTween.tween(_sammy, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_sammy.alpha != 1){
-			if (_sammy.scale.x < 1.45 && _sammy.scale.x > 0.18){
+			if (_sammy.scale.x < 1.35 && _sammy.scale.x > 0.18){
 				_sammy.alpha = 1;
+			}
+		}
+		
+		if (_vernie.scale.x >= 1.35 || _vernie.scale.x <= 0.18){
+			FlxTween.tween(_vernie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_vernie.alpha != 1){
+			if (_vernie.scale.x < 1.35 && _vernie.scale.x > 0.18){
+				_vernie.alpha = 1;
+			}
+		}
+		
+		if (_gottsley.scale.x >= 1.35 || _gottsley.scale.x <= 0.18){
+			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_gottsley.alpha != 1){
+			if (_gottsley.scale.x < 1.35 && _reggie.scale.x > 0.18){
+				_gottsley.alpha = 1;
+			}
+		}
+			
+		if (_ken.scale.x >= 1.35 || _ken.scale.x <= 0.18){
+			FlxTween.tween(_sammy, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_sammy.alpha != 1){
+			if (_ken.scale.x < 1.35 && _ken.scale.x > 0.18){
+				_ken.alpha = 1;
+			}
+		}
+		
+		if (_digby.scale.x >= 1.35 || _digby.scale.x <= 0.18){
+			FlxTween.tween(_vernie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_digby.alpha != 1){
+			if (_digby.scale.x < 1.35 && _digby.scale.x > 0.18){
+				_digby.alpha = 1;
 			}
 		}
 		

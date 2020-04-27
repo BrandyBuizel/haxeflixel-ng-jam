@@ -1,44 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="chez.png">
+<TextureAtlas imagePath="hank.png">
 	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="chezIdle0000" x="0" y="0" width="336" height="525" frameX="-17" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0001" x="0" y="0" width="336" height="525" frameX="-17" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0002" x="0" y="0" width="336" height="525" frameX="-17" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0003" x="336" y="0" width="362" height="495" frameX="0" frameY="-32" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0004" x="336" y="0" width="362" height="495" frameX="0" frameY="-32" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0005" x="336" y="0" width="362" height="495" frameX="0" frameY="-32" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0006" x="698" y="0" width="348" height="513" frameX="-17" frameY="-14" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0007" x="698" y="0" width="348" height="513" frameX="-17" frameY="-14" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0008" x="698" y="0" width="348" height="513" frameX="-17" frameY="-14" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0009" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0010" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0011" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezIdle0012" x="1046" y="0" width="316" height="525" frameX="-28" frameY="0" frameWidth="365" frameHeight="527"/>
-	<SubTexture name="chezKissed0000" x="1362" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0001" x="1362" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0002" x="1362" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0003" x="1759" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0004" x="1759" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0005" x="1759" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0006" x="2156" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0007" x="2156" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0008" x="2156" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0009" x="2553" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0010" x="2553" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0011" x="2553" y="0" width="397" height="525"/>
-	<SubTexture name="chezKissed0012" x="2553" y="0" width="397" height="525"/>
-	<SubTexture name="chezTalking0000" x="2950" y="0" width="531" height="525"/>
-	<SubTexture name="chezTalking0001" x="2950" y="0" width="531" height="525"/>
-	<SubTexture name="chezTalking0002" x="3481" y="0" width="531" height="525"/>
-	<SubTexture name="chezTalking0003" x="0" y="525" width="531" height="525"/>
-	<SubTexture name="chezTalking0004" x="531" y="525" width="525" height="525" frameX="0" frameY="0" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0005" x="1056" y="525" width="525" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0006" x="1581" y="525" width="527" height="506" frameX="-2" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0007" x="1581" y="525" width="527" height="506" frameX="-2" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0008" x="2108" y="525" width="521" height="525" frameX="0" frameY="0" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0009" x="2629" y="525" width="521" height="525" frameX="0" frameY="0" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0010" x="3150" y="525" width="529" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0011" x="3150" y="525" width="529" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0012" x="0" y="1050" width="531" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
+	<SubTexture name="hankIdle0000" x="0" y="0" width="655" height="659" frameX="0" frameY="-28" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0001" x="0" y="0" width="655" height="659" frameX="0" frameY="-28" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0002" x="0" y="0" width="655" height="659" frameX="0" frameY="-28" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0003" x="0" y="0" width="655" height="659" frameX="0" frameY="-28" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0004" x="655" y="0" width="636" height="680" frameX="-1" frameY="-8" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0005" x="655" y="0" width="636" height="680" frameX="-1" frameY="-8" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0006" x="655" y="0" width="636" height="680" frameX="-1" frameY="-8" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0007" x="655" y="0" width="636" height="680" frameX="-1" frameY="-8" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0008" x="655" y="0" width="636" height="680" frameX="-1" frameY="-8" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0009" x="1291" y="0" width="616" height="687" frameX="0" frameY="0" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0010" x="1291" y="0" width="616" height="687" frameX="0" frameY="0" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0011" x="1291" y="0" width="616" height="687" frameX="0" frameY="0" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0012" x="1291" y="0" width="616" height="687" frameX="0" frameY="0" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0013" x="0" y="687" width="632" height="636" frameX="0" frameY="-52" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0014" x="0" y="687" width="632" height="636" frameX="0" frameY="-52" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0015" x="0" y="687" width="632" height="636" frameX="0" frameY="-52" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0016" x="0" y="687" width="632" height="636" frameX="0" frameY="-52" frameWidth="655" frameHeight="688"/>
+	<SubTexture name="hankIdle0017" x="0" y="687" width="632" height="636" frameX="0" frameY="-52" frameWidth="655" frameHeight="688"/>
 </TextureAtlas>
