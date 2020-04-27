@@ -193,7 +193,7 @@ class PlayState extends FlxState
 			"No, like, I just prefer showers. I'm not dirty"
 		],
 		[
-			">you look pretty gross though"
+			">you look pretty gross"
 		],
 		[
 			"I showered just last night though!"
@@ -361,7 +361,7 @@ class PlayState extends FlxState
 			">???"
 		],
 		[
-			"Well yes sir, what you like!"
+			"Well yes sir, what would you like!"
 		],
 		[
 			">I wou--"
@@ -385,7 +385,7 @@ class PlayState extends FlxState
 			">THERE'S ONLY ONE HOT DOG I WANT IN MY MOUTH, c'mere"
 		],
 		[
-			">Kiss the fool who wouldn't shut up"
+			">Kiss the fool"
 		]
 	];
 	
@@ -471,7 +471,7 @@ class PlayState extends FlxState
 			""
 		],
 		[
-			"Isn't being so happy All the time amazing?"
+			"Isn't being so happy ALL the time amazing?"
 		],
 		[
 			">Sounds exhausting"
@@ -499,7 +499,7 @@ class PlayState extends FlxState
 			""
 		],
 		[
-			"Please keep 6ft away from me sir!"
+			"Please keep six feet away from me sir!"
 		],
 		[
 			">Why?"
@@ -514,19 +514,19 @@ class PlayState extends FlxState
 			"Yep, can't be too sure, even with friends!"
 		],
 		[
-			">So you're like the TSA, but germs are your terrorists"
+			">So you're like the TSA, but germs for terrorists"
 		],
 		[
 			"How do you figure?"
 		],
 		[
-			">well they're mostly invisible and they're such an uncommon threat in reality but you let fear control you and police those around you"
+			">well they're mostly invisible and they're such an uncommon threat in reality, but you let the fear control you and police those around you"
 		],
 		[
 			"..."
 		],
 		[
-			">I don't like get sick either"
+			">I don't like getting sick either"
 		],
 		[
 			"You get me don't you?"
@@ -902,7 +902,8 @@ class PlayState extends FlxState
 			
 			isTalking = true;
 			curText.alpha += 0.01;
-			curText.text = "[>I met a lot of great people today and socializing with them made me feel a little less alone, but now that they're A PART of me...\n\nI'm just as alone...]\n\n\n\nthanks for playing, be safe in quarantine\n\n-brandon";
+			debugText.alpha = 0;
+			curText.text = "[>I met a lot of great people today and socializing with them made me feel a little less alone, but now that they're A PART of me...\n\nI'm just as alone...]\n\n\n\n\n\n\n\nthanks for playing, be safe in quarantine\n\n-brandon";
 			curText.color = FlxColor.YELLOW;
 			
 			if (FlxG.keys.justPressed.SPACE){
@@ -1563,7 +1564,7 @@ class PlayState extends FlxState
 			}else if (_player.overlaps(_sammy) && _sammy.scale.x > 0.6 && _sammy.scale.x < 1.2){
 				debugText.text = "Sammy Schwimmer";
 				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 3);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(196, 160, 40, 255), 3);
 			}else if (_player.overlaps(_vernie) && _vernie.scale.x > 0.6 && _vernie.scale.x < 1.2){
 				debugText.text = "Vern 'Vernie' Varns";
 				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 3);
