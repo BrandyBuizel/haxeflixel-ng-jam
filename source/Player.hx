@@ -25,12 +25,12 @@ class Player extends FlxSprite
         updateHitbox();
         antialiasing = true;
 
-		animation.addByPrefix('idleA', 'playerIdlea', 24, true);
-		animation.addByPrefix('idleB', 'playerIdleb', 24, true);
-		animation.addByPrefix('idleC', 'playerIdlec', 24, true);
-		animation.addByPrefix('idleD', 'playerIdled', 24, true);
-		animation.addByPrefix('idleE', 'playerIdlee', 24, true);
-		animation.addByPrefix('idleF', 'playerIdlef', 24, true);
+		animation.addByPrefix('idlea', 'playerIdlea', 24, true);
+		animation.addByPrefix('idleb', 'playerIdleb', 24, true);
+		animation.addByPrefix('idlec', 'playerIdlec', 24, true);
+		animation.addByPrefix('idled', 'playerIdled', 24, true);
+		animation.addByPrefix('idlee', 'playerIdlee', 24, true);
+		animation.addByPrefix('idlef', 'playerIdlef', 24, true);
 
 		FlxG.log.add("added player");
 	}

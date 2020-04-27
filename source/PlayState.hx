@@ -545,10 +545,12 @@ class PlayState extends FlxState
 		//setup backdrop
 		backdrop1 = new FlxSprite(0, 0, "assets/images/background.png");
 		backdrop1.screenCenter();
+		backdrop1.antialiasing = true;
 		add(backdrop1);
 		
 		backdrop2 = new FlxSprite(0, 0, "assets/images/back2.png");
 		backdrop2.screenCenter();
+		backdrop2.antialiasing = true;
 		//add(backdrop2);
 		
 		var effect = new MosaicEffect();
@@ -568,7 +570,12 @@ class PlayState extends FlxState
         _chez.antialiasing = true;
 
 		_chez.animation.addByPrefix('idle', 'chezIdle', 24, true);
-		_chez.animation.addByPrefix('kissed', 'chezKissed', 24, true);
+		_chez.animation.addByPrefix('kisseda', 'chezKisseda', 24, true);
+		_chez.animation.addByPrefix('kissedb', 'chezKissedb', 24, true);
+		_chez.animation.addByPrefix('kissedc', 'chezKissedc', 24, true);
+		_chez.animation.addByPrefix('kissedd', 'chezKissedd', 24, true);
+		_chez.animation.addByPrefix('kissede', 'chezKissede', 24, true);
+		_chez.animation.addByPrefix('kissedf', 'chezKissedf', 24, true);
 		_chez.animation.addByPrefix('talking', 'chezTalking', 24, true);
 		
 		//Cickass Cat
@@ -578,7 +585,12 @@ class PlayState extends FlxState
         _cickass.antialiasing = true;
 
 		_cickass.animation.addByPrefix('idle', 'cickassIdle', 24, true);
-		_cickass.animation.addByPrefix('kissed', 'cickassKissed', 24, true);
+		_cickass.animation.addByPrefix('kisseda', 'cickassKisseda', 24, true);
+		_cickass.animation.addByPrefix('kissedb', 'cickassKissedb', 24, true);
+		_cickass.animation.addByPrefix('kissedc', 'cickassKissedc', 24, true);
+		_cickass.animation.addByPrefix('kissedd', 'cickassKissedd', 24, true);
+		_cickass.animation.addByPrefix('kissede', 'cickassKissede', 24, true);
+		_cickass.animation.addByPrefix('kissedf', 'cickassKissedf', 24, true);
 		_cickass.animation.addByPrefix('talking', 'cickassTalking', 24, true);
 		
 		//Digby
@@ -588,7 +600,12 @@ class PlayState extends FlxState
         _digby.antialiasing = true;
 
 		_digby.animation.addByPrefix('idle', 'digbyIdle', 24, true);
-		_digby.animation.addByPrefix('kissed', 'digbyKissed', 24, true);
+		_digby.animation.addByPrefix('kisseda', 'digbyKisseda', 24, true);
+		_digby.animation.addByPrefix('kissedb', 'digbyKissedb', 24, true);
+		_digby.animation.addByPrefix('kissedc', 'digbyKissedc', 24, true);
+		_digby.animation.addByPrefix('kissedd', 'digbyKissedd', 24, true);
+		_digby.animation.addByPrefix('kissede', 'digbyKissede', 24, true);
+		_digby.animation.addByPrefix('kissedf', 'digbyKissedf', 24, true);
 		_digby.animation.addByPrefix('talking', 'digbyTalking', 24, true);
 				
 		//Ferdinand
@@ -598,7 +615,12 @@ class PlayState extends FlxState
         _ferdinand.antialiasing = true;
 
 		_ferdinand.animation.addByPrefix('idle', 'ferdinandIdle', 24, true);
-		_ferdinand.animation.addByPrefix('kissed', 'ferdinandKissed', 24, true);
+		_ferdinand.animation.addByPrefix('kisseda', 'ferdinandKisseda', 24, true);
+		_ferdinand.animation.addByPrefix('kissedb', 'ferdinandKissedb', 24, true);
+		_ferdinand.animation.addByPrefix('kissedc', 'ferdinandKissedc', 24, true);
+		_ferdinand.animation.addByPrefix('kissedd', 'ferdinandKissedd', 24, true);
+		_ferdinand.animation.addByPrefix('kissede', 'ferdinandKissede', 24, true);
+		_ferdinand.animation.addByPrefix('kissedf', 'ferdinandKissedf', 24, true);
 		_ferdinand.animation.addByPrefix('talking', 'ferdinandTalking', 24, true);
 		
 		//glottis
@@ -608,7 +630,12 @@ class PlayState extends FlxState
         _glottis.antialiasing = true;
 
 		_glottis.animation.addByPrefix('idle', 'glottisIdle', 24, true);
-		_glottis.animation.addByPrefix('kissed', 'glottisKissed', 24, true);
+		_glottis.animation.addByPrefix('kisseda', 'glottisKisseda', 24, true);
+		_glottis.animation.addByPrefix('kissedb', 'glottisKissedb', 24, true);
+		_glottis.animation.addByPrefix('kissedc', 'glottisKissedc', 24, true);
+		_glottis.animation.addByPrefix('kissedd', 'glottisKissedd', 24, true);
+		_glottis.animation.addByPrefix('kissede', 'glottisKissede', 24, true);
+		_glottis.animation.addByPrefix('kissedf', 'glottisKissedf', 24, true);
 		_glottis.animation.addByPrefix('talking', 'glottisTalking', 24, true);
 			
 		//Gottsley
@@ -618,7 +645,12 @@ class PlayState extends FlxState
         _gottsley.antialiasing = true;
 
 		_gottsley.animation.addByPrefix('idle', 'gottsleyIdle', 24, true);
-		_gottsley.animation.addByPrefix('kissed', 'gottsleyKissed', 24, true);
+		_gottsley.animation.addByPrefix('kisseda', 'gottsleyKisseda', 24, true);
+		_gottsley.animation.addByPrefix('kissedb', 'gottsleyKissedb', 24, true);
+		_gottsley.animation.addByPrefix('kissedc', 'gottsleyKissedc', 24, true);
+		_gottsley.animation.addByPrefix('kissedd', 'gottsleyKissedd', 24, true);
+		_gottsley.animation.addByPrefix('kissede', 'gottsleyKissede', 24, true);
+		_gottsley.animation.addByPrefix('kissedf', 'gottsleyKissedf', 24, true);
 		_gottsley.animation.addByPrefix('talking', 'gottsleyTalking', 24, true);
 		
 		//Hank
@@ -628,7 +660,12 @@ class PlayState extends FlxState
         _hank.antialiasing = true;
 
 		_hank.animation.addByPrefix('idle', 'hankIdle', 24, true);
-		_hank.animation.addByPrefix('kissed', 'hankKissed', 24, true);
+		_hank.animation.addByPrefix('kisseda', 'hankKisseda', 24, true);
+		_hank.animation.addByPrefix('kissedb', 'hankKissedb', 24, true);
+		_hank.animation.addByPrefix('kissedc', 'hankKissedc', 24, true);
+		_hank.animation.addByPrefix('kissedd', 'hankKissedd', 24, true);
+		_hank.animation.addByPrefix('kissede', 'hankKissede', 24, true);
+		_hank.animation.addByPrefix('kissedf', 'hankKissedf', 24, true);
 		_hank.animation.addByPrefix('talking', 'hankTalking', 24, true);
 		
 		//Ken
@@ -638,7 +675,12 @@ class PlayState extends FlxState
         _ken.antialiasing = true;
 
 		_ken.animation.addByPrefix('idle', 'kenIdle', 24, true);
-		_ken.animation.addByPrefix('kissed', 'kenKissed', 24, true);
+		_ken.animation.addByPrefix('kisseda', 'kenKisseda', 24, true);
+		_ken.animation.addByPrefix('kissedb', 'kenKissedb', 24, true);
+		_ken.animation.addByPrefix('kissedc', 'kenKissedc', 24, true);
+		_ken.animation.addByPrefix('kissedd', 'kenKissedd', 24, true);
+		_ken.animation.addByPrefix('kissede', 'kenKissede', 24, true);
+		_ken.animation.addByPrefix('kissedf', 'kenKissedf', 24, true);
 		_ken.animation.addByPrefix('talking', 'kenTalking', 24, true);
 		
 		//Oscar
@@ -648,7 +690,12 @@ class PlayState extends FlxState
         _oscar.antialiasing = true;
 
 		_oscar.animation.addByPrefix('idle', 'oscarIdle', 24, true);
-		_oscar.animation.addByPrefix('kissed', 'oscarKissed', 24, true);
+		_oscar.animation.addByPrefix('kisseda', 'oscarKisseda', 24, true);
+		_oscar.animation.addByPrefix('kissedb', 'oscarKissedb', 24, true);
+		_oscar.animation.addByPrefix('kissedc', 'oscarKissedc', 24, true);
+		_oscar.animation.addByPrefix('kissedd', 'oscarKissedd', 24, true);
+		_oscar.animation.addByPrefix('kissede', 'oscarKissede', 24, true);
+		_oscar.animation.addByPrefix('kissedf', 'oscarKissedf', 24, true);
 		_oscar.animation.addByPrefix('talking', 'oscarTalking', 24, true);
 		
 		//Ramasama
@@ -658,7 +705,12 @@ class PlayState extends FlxState
         _ramasama.antialiasing = true;
 
 		_ramasama.animation.addByPrefix('idle', 'ramasamaIdle', 24, true);
-		_ramasama.animation.addByPrefix('kissed', 'ramasamaKissed', 24, true);
+		_ramasama.animation.addByPrefix('kisseda', 'ramasamaKisseda', 24, true);
+		_ramasama.animation.addByPrefix('kissedb', 'ramasamaKissedb', 24, true);
+		_ramasama.animation.addByPrefix('kissedc', 'ramasamaKissedc', 24, true);
+		_ramasama.animation.addByPrefix('kissedd', 'ramasamaKissedd', 24, true);
+		_ramasama.animation.addByPrefix('kissede', 'ramasamaKissede', 24, true);
+		_ramasama.animation.addByPrefix('kissedf', 'ramasamaKissedf', 24, true);
 		_ramasama.animation.addByPrefix('talking', 'ramasamaTalking', 24, true);
 				
 		//Reggie
@@ -668,7 +720,12 @@ class PlayState extends FlxState
         _reggie.antialiasing = true;
 
 		_reggie.animation.addByPrefix('idle', 'reggieIdle', 24, true);
-		_reggie.animation.addByPrefix('kissed', 'reggieKissed', 24, true);
+		_reggie.animation.addByPrefix('kisseda', 'reggieKisseda', 24, true);
+		_reggie.animation.addByPrefix('kissedb', 'reggieKissedb', 24, true);
+		_reggie.animation.addByPrefix('kissedc', 'reggieKissedc', 24, true);
+		_reggie.animation.addByPrefix('kissedd', 'reggieKissedd', 24, true);
+		_reggie.animation.addByPrefix('kissede', 'reggieKissede', 24, true);
+		_reggie.animation.addByPrefix('kissedf', 'reggieKissedf', 24, true);
 		_reggie.animation.addByPrefix('talking', 'reggieTalking', 24, true);
 		
 		//Sammy the Otter
@@ -678,7 +735,12 @@ class PlayState extends FlxState
         _sammy.antialiasing = true;
 
 		_sammy.animation.addByPrefix('idle', 'sammyIdle', 24, true);
-		_sammy.animation.addByPrefix('kissed', 'sammyKissed', 24, true);
+		_sammy.animation.addByPrefix('kisseda', 'sammyKisseda', 24, true);
+		_sammy.animation.addByPrefix('kissedb', 'sammyKissedb', 24, true);
+		_sammy.animation.addByPrefix('kissedc', 'sammyKissedc', 24, true);
+		_sammy.animation.addByPrefix('kissedd', 'sammyKissedd', 24, true);
+		_sammy.animation.addByPrefix('kissede', 'sammyKissede', 24, true);
+		_sammy.animation.addByPrefix('kissedf', 'sammyKissedf', 24, true);
 		_sammy.animation.addByPrefix('talking', 'sammyTalking', 24, true);
 		
 		//Vernie
@@ -688,7 +750,12 @@ class PlayState extends FlxState
         _vernie.antialiasing = true;
 
 		_vernie.animation.addByPrefix('idle', 'vernieIdle', 24, true);
-		_vernie.animation.addByPrefix('kissed', 'vernieKissed', 24, true);
+		_vernie.animation.addByPrefix('kisseda', 'vernieKisseda', 24, true);
+		_vernie.animation.addByPrefix('kissedb', 'vernieKissedb', 24, true);
+		_vernie.animation.addByPrefix('kissedc', 'vernieKissedc', 24, true);
+		_vernie.animation.addByPrefix('kissedd', 'vernieKissedd', 24, true);
+		_vernie.animation.addByPrefix('kissede', 'vernieKissede', 24, true);
+		_vernie.animation.addByPrefix('kissedf', 'vernieKissedf', 24, true);
 		_vernie.animation.addByPrefix('talking', 'vernieTalking', 24, true);
 		
 		/*
@@ -764,8 +831,11 @@ class PlayState extends FlxState
 		_ken.visible = false;
 		_digby.visible = false;
 		
-		add(_hank);
-		_hank.visible = false;
+		//Hank is special
+		//add(_hank);
+		_hank.visible = true;
+		_hank.screenCenter();
+		_hank.animation.play("idle");
 		
 		/*
 		END OF CHARACTER CREATE
@@ -825,60 +895,265 @@ class PlayState extends FlxState
 		
 		if (hiveCount >= 13){
 			_face.animation.frameIndex = 5;
-			_player.animation.play('idleF');
-		}else if (hiveCount >= 11){
-			_face.animation.frameIndex = 4;
-			_player.animation.play('idleE');
-		}else if (hiveCount >= 9){
-			_face.animation.frameIndex = 3;
-			_player.animation.play('idleD');
-		}else if (hiveCount >= 6){
-			_face.animation.frameIndex = 2;
-			_player.animation.play('idleC');
-		}else if (hiveCount >= 3){
-			_face.animation.frameIndex = 1;
-			_player.animation.play('idleB');
-		}else{
-			_face.animation.frameIndex = 0;
-			_player.animation.play('idleA');
-		}
-		
+			_player.animation.play('idlef');
+			
 			if (cickassKissed == true){
-				_cickass.animation.play('kissed');
+				_cickass.animation.play('kissedf');
 			}
 			if (ferdinandKissed == true){
-				_ferdinand.animation.play('kissed');
+				_ferdinand.animation.play('kissedf');
 			}
 			if (chezKissed == true){
-				_chez.animation.play('kissed');
+				_chez.animation.play('kissedf');
 			}
 			if (oscarKissed == true){
-				_oscar.animation.play('kissed');
+				_oscar.animation.play('kissedf');
 			}
 			if (ramasamaKissed == true){
-				_ramasama.animation.play('kissed');
+				_ramasama.animation.play('kissedf');
 			}
 			if (glottisKissed == true){
-				_glottis.animation.play('kissed');
+				_glottis.animation.play('kissedf');
 			}
 			if (reggieKissed == true){
-				_reggie.animation.play('kissed');
+				_reggie.animation.play('kissedf');
 			}
 			if (vernieKissed == true){
-				_vernie.animation.play('kissed');
+				_vernie.animation.play('kissedf');
 			}
 			if (sammyKissed == true){
-				_sammy.animation.play('kissed');
+				_sammy.animation.play('kissedf');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kissed');
+				_glottis.animation.play('kissedf');
 			}
 			if (kenKissed == true){
-				_ken.animation.play('kissed');
+				_ken.animation.play('kissedf');
 			}
 			if (digbyKissed == true){
-				_digby.animation.play('kissed');
+				_digby.animation.play('kissedf');
 			}
+			if (hankKissed == true){
+				_hank.animation.play('kissedf');
+			}
+		}else if (hiveCount >= 11){
+			_face.animation.frameIndex = 4;
+			_player.animation.play('idlee');
+			
+			if (cickassKissed == true){
+				_cickass.animation.play('kissede');
+			}
+			if (ferdinandKissed == true){
+				_ferdinand.animation.play('kissede');
+			}
+			if (chezKissed == true){
+				_chez.animation.play('kissede');
+			}
+			if (oscarKissed == true){
+				_oscar.animation.play('kissede');
+			}
+			if (ramasamaKissed == true){
+				_ramasama.animation.play('kissede');
+			}
+			if (glottisKissed == true){
+				_glottis.animation.play('kissede');
+			}
+			if (reggieKissed == true){
+				_reggie.animation.play('kissede');
+			}
+			if (vernieKissed == true){
+				_vernie.animation.play('kissede');
+			}
+			if (sammyKissed == true){
+				_sammy.animation.play('kissede');
+			}
+			if (gottsleyKissed == true){
+				_glottis.animation.play('kissede');
+			}
+			if (kenKissed == true){
+				_ken.animation.play('kissede');
+			}
+			if (digbyKissed == true){
+				_digby.animation.play('kissede');
+			}
+			if (hankKissed == true){
+				_hank.animation.play('kissede');
+			}
+		}else if (hiveCount >= 9){
+			_face.animation.frameIndex = 3;
+			_player.animation.play('idled');
+			
+			if (cickassKissed == true){
+				_cickass.animation.play('kissedd');
+			}
+			if (ferdinandKissed == true){
+				_ferdinand.animation.play('kissedd');
+			}
+			if (chezKissed == true){
+				_chez.animation.play('kissedd');
+			}
+			if (oscarKissed == true){
+				_oscar.animation.play('kissedd');
+			}
+			if (ramasamaKissed == true){
+				_ramasama.animation.play('kissedd');
+			}
+			if (glottisKissed == true){
+				_glottis.animation.play('kissedd');
+			}
+			if (reggieKissed == true){
+				_reggie.animation.play('kissedd');
+			}
+			if (vernieKissed == true){
+				_vernie.animation.play('kissedd');
+			}
+			if (sammyKissed == true){
+				_sammy.animation.play('kissedd');
+			}
+			if (gottsleyKissed == true){
+				_glottis.animation.play('kissedd');
+			}
+			if (kenKissed == true){
+				_ken.animation.play('kissedd');
+			}
+			if (digbyKissed == true){
+				_digby.animation.play('kissedd');
+			}
+			if (hankKissed == true){
+				_hank.animation.play('kissedd');
+			}
+		}else if (hiveCount >= 6){
+			_face.animation.frameIndex = 2;
+			_player.animation.play('idlec');
+			
+			if (cickassKissed == true){
+				_cickass.animation.play('kissedc');
+			}
+			if (ferdinandKissed == true){
+				_ferdinand.animation.play('kissedc');
+			}
+			if (chezKissed == true){
+				_chez.animation.play('kissedc');
+			}
+			if (oscarKissed == true){
+				_oscar.animation.play('kissedc');
+			}
+			if (ramasamaKissed == true){
+				_ramasama.animation.play('kissedc');
+			}
+			if (glottisKissed == true){
+				_glottis.animation.play('kissedc');
+			}
+			if (reggieKissed == true){
+				_reggie.animation.play('kissedc');
+			}
+			if (vernieKissed == true){
+				_vernie.animation.play('kissedc');
+			}
+			if (sammyKissed == true){
+				_sammy.animation.play('kissedc');
+			}
+			if (gottsleyKissed == true){
+				_glottis.animation.play('kissedc');
+			}
+			if (kenKissed == true){
+				_ken.animation.play('kissedc');
+			}
+			if (digbyKissed == true){
+				_digby.animation.play('kissedc');
+			}
+			if (hankKissed == true){
+				_hank.animation.play('kissedc');
+			}
+		}else if (hiveCount >= 3){
+			_face.animation.frameIndex = 1;
+			_player.animation.play('idleb');
+			
+			if (cickassKissed == true){
+				_cickass.animation.play('kissedb');
+			}
+			if (ferdinandKissed == true){
+				_ferdinand.animation.play('kissedb');
+			}
+			if (chezKissed == true){
+				_chez.animation.play('kissedb');
+			}
+			if (oscarKissed == true){
+				_oscar.animation.play('kissedb');
+			}
+			if (ramasamaKissed == true){
+				_ramasama.animation.play('kissedb');
+			}
+			if (glottisKissed == true){
+				_glottis.animation.play('kissedb');
+			}
+			if (reggieKissed == true){
+				_reggie.animation.play('kissedb');
+			}
+			if (vernieKissed == true){
+				_vernie.animation.play('kissedb');
+			}
+			if (sammyKissed == true){
+				_sammy.animation.play('kissedb');
+			}
+			if (gottsleyKissed == true){
+				_glottis.animation.play('kissedb');
+			}
+			if (kenKissed == true){
+				_ken.animation.play('kissedb');
+			}
+			if (digbyKissed == true){
+				_digby.animation.play('kissedb');
+			}
+			if (hankKissed == true){
+				_hank.animation.play('kissedb');
+			}
+		}else{
+			_face.animation.frameIndex = 0;
+			_player.animation.play('idlea');
+			
+			if (cickassKissed == true){
+				_cickass.animation.play('kisseda');
+			}
+			if (ferdinandKissed == true){
+				_ferdinand.animation.play('kisseda');
+			}
+			if (chezKissed == true){
+				_chez.animation.play('kisseda');
+			}
+			if (oscarKissed == true){
+				_oscar.animation.play('kisseda');
+			}
+			if (ramasamaKissed == true){
+				_ramasama.animation.play('kisseda');
+			}
+			if (glottisKissed == true){
+				_glottis.animation.play('kisseda');
+			}
+			if (reggieKissed == true){
+				_reggie.animation.play('kisseda');
+			}
+			if (vernieKissed == true){
+				_vernie.animation.play('kisseda');
+			}
+			if (sammyKissed == true){
+				_sammy.animation.play('kisseda');
+			}
+			if (gottsleyKissed == true){
+				_glottis.animation.play('kisseda');
+			}
+			if (kenKissed == true){
+				_ken.animation.play('kisseda');
+			}
+			if (digbyKissed == true){
+				_digby.animation.play('kisseda');
+			}
+			if (hankKissed == true){
+				_hank.animation.play('kisseda');
+			}
+		}
+		
+			
 			
 		//Player Control
 		if (!isTalking){
@@ -916,30 +1191,34 @@ class PlayState extends FlxState
 						if (worldScale >= 0.3){
 							worldScale -= 0.005;
 						}
-					}
-					
-					if (level == 2 || level == 3){
+					}else{
 						worldScale -= 0.005;
-					}
-					
-					if (level == 4){
-						if (worldScale < 0.5){
-							worldScale -= 0.005;
-						}
-					}					
+					}	
 				}
 				
 				tempScale -= 0.;
 			}
 			
-			if (FlxG.keys.anyPressed(["W", "UP"])){
-				worldScale += 0.005;
+			if (FlxG.keys.anyPressed(["W", "UP"])){				
+				if (level == 4){
+					if (worldScale < 1.4){
+						worldScale += 0.005;
+					}
+				}else{
+					worldScale += 0.005;
+				}
 				
 				tempScale += 0.1;
 			}
 			
 			//Who ya talkin' too?
 			if (FlxG.keys.justPressed.SPACE){
+				if (debugText.text == "Biker Hank" && !hankKissed){
+					isTalking = true;
+					curDialogue = hankText;
+					_hank.animation.play("talking");
+				}
+				
 				//Level 1 Dialogue
 				if (level == 1){
 					if (debugText.text == "Chez Beaks" && !chezKissed){
@@ -956,7 +1235,7 @@ class PlayState extends FlxState
 						_cickass.animation.play("talking");
 					}	
 				}
-				
+					
 				//Level 2 Dialogue
 				if (level == 2){
 					if (debugText.text == "Glottis is a Glutton" && !glottisKissed){
@@ -973,7 +1252,7 @@ class PlayState extends FlxState
 						_oscar.animation.play("talking");
 					}	
 				}
-				
+					
 				//Level 3 Dialogue
 				if (level == 3){
 					if (debugText.text == "Reggie" && !reggieKissed){
@@ -990,7 +1269,7 @@ class PlayState extends FlxState
 						_oscar.animation.play("talking");
 					}	
 				}
-				
+					
 				//Level 4 Dialogue
 				if (level == 4){
 					if (debugText.text == "Gottsley" && !gottsleyKissed){
@@ -1111,6 +1390,12 @@ class PlayState extends FlxState
 							digbyKissed = true;
 						}
 					}
+					if (debugText.text == "Biker Hank"){
+						if (!hankKissed){
+							hiveCount += 1;
+							hankKissed = true;
+						}
+					}
 				}
 			}
 		}
@@ -1141,7 +1426,7 @@ class PlayState extends FlxState
 		if (prevLevel != level){
 			if (worldScale > 1.5){ worldScale = 0.25; }
 			if (worldScale < 0.25){ worldScale = 1.5; }
-			
+
 			prevLevel = level;
 		}
 		
@@ -1150,7 +1435,7 @@ class PlayState extends FlxState
 		
 		if (worldScale > 1.5){	level += 1;	}
 		if (worldScale < 0.25){	level -= 1;	}
-		
+			
 		if (level == 1){
 			_cickass.visible = true;
 			_ferdinand.visible = true;
@@ -1254,7 +1539,7 @@ class PlayState extends FlxState
 			if (_sammy.x > 480){
 				_sammy.alpha = 0;
 			}
-			_sammy.y = (worldScale * -100) + 240;
+			_sammy.y = (worldScale * -100) + 180;
 			
 			FlxTween.tween(_reggie.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 			_reggie.x = bigScale;
@@ -1267,12 +1552,12 @@ class PlayState extends FlxState
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 			}else if (_player.overlaps(_sammy) && _sammy.scale.x > 0.6 && _sammy.scale.x < 1.2){
 				debugText.text = "Sammy Schwimmer";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 2);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 2);
 			}else if (_player.overlaps(_vernie) && _vernie.scale.x > 0.6 && _vernie.scale.x < 1.2){
 				debugText.text = "Vern 'Vernie' Varns";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 2);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 2);
 			}else{
 				debugText.text = "";
 			}
@@ -1284,14 +1569,14 @@ class PlayState extends FlxState
 		
 		//Level 4
 		if (level == 4){
-			_gottsley.visible = false;
-			_ken.visible = false;
-			_digby.visible = false;
+			_gottsley.visible = true;
+			_ken.visible = true;
+			_digby.visible = true;
 		
 			//set position and scale
 			FlxTween.tween(_digby.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_digby.x = smallScale;
-			_digby.y = (worldScale * -100) + 240;
+			_digby.y = (worldScale * -100) + 270;
 			
 			FlxTween.tween(_ken.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
 			_ken.x = middleScale;
@@ -1302,21 +1587,21 @@ class PlayState extends FlxState
 			
 			FlxTween.tween(_gottsley.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 			_gottsley.x = bigScale;
-			_gottsley.y = (worldScale * -100) + 240;
+			_gottsley.y = (worldScale * -100) + 225;
 			
 			//change bottom left text and color
 			if (_player.overlaps(_gottsley) && _gottsley.scale.x > 0.6 && _gottsley.scale.x < 1.2){
 				debugText.text = "Gottsley";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(171, 61, 61, 255), 2);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(171, 61, 61, 255), 2);
 			}else if (_player.overlaps(_ken) && _ken.scale.x > 0.6 && _ken.scale.x < 1.2){
 				debugText.text = "Ken, sup";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(97, 129, 97, 255), 2);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(97, 129, 97, 255), 2);
 			}else if (_player.overlaps(_digby) && _digby.scale.x > 0.6 && _digby.scale.x < 1.2){
 				debugText.text = "Digby";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(87, 130, 151, 255), 2);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(87, 130, 151, 255), 2);
 			}else{
 				debugText.text = "";
 			}		
@@ -1413,30 +1698,60 @@ class PlayState extends FlxState
 		}
 		
 		if (_gottsley.scale.x >= 1.35 || _gottsley.scale.x <= 0.18){
-			FlxTween.tween(_reggie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+			FlxTween.tween(_gottsley, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_gottsley.alpha != 1){
-			if (_gottsley.scale.x < 1.35 && _reggie.scale.x > 0.18){
+			if (_gottsley.scale.x < 1.35 && _gottsley.scale.x > 0.18){
 				_gottsley.alpha = 1;
 			}
 		}
 			
 		if (_ken.scale.x >= 1.35 || _ken.scale.x <= 0.18){
-			FlxTween.tween(_sammy, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+			FlxTween.tween(_ken, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
-		if(_sammy.alpha != 1){
+		if(_ken.alpha != 1){
 			if (_ken.scale.x < 1.35 && _ken.scale.x > 0.18){
 				_ken.alpha = 1;
 			}
 		}
 		
 		if (_digby.scale.x >= 1.35 || _digby.scale.x <= 0.18){
-			FlxTween.tween(_vernie, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+			FlxTween.tween(_digby, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_digby.alpha != 1){
 			if (_digby.scale.x < 1.35 && _digby.scale.x > 0.18){
 				_digby.alpha = 1;
 			}
+		}
+		
+		//Hank
+		FlxTween.tween(_hank.scale, { x: (worldScale * worldScale), y: (worldScale * worldScale) },  0.1);
+		
+		if (!isTalking && debugText.text != "Biker Hank" && !hankKissed){
+			_hank.x -= worldScale * 12;
+		}
+		
+		_hank.y = (worldScale * -100) + 120;
+		
+		if (_hank.scale.x >= 1 || _hank.scale.x <= 0.7){
+			FlxTween.tween(_hank, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
+		}
+		if(_hank.alpha != 1){
+			if (_hank.scale.x < 1.35 && _hank.scale.x > 0.18){
+				_hank.alpha = 1;
+			}
+		}
+		/*
+		if (_player.overlaps(_hank) && _hank.scale.x > 0.6 && _hank.scale.x < 1){
+			debugText.text = "Biker Hank";
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 102, 153, 255), 2);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 102, 153, 255), 2);
+		}else{
+			debugText.text = "";
+		}
+		*/
+		if (_hank.x < -1080){
+			_hank.x = 1920;
 		}
 		
 		//default bottom left text
