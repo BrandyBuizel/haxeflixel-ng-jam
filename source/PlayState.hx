@@ -236,16 +236,25 @@ class PlayState extends FlxState
 			"Wanna join my cult?"
 		],
 		[
+			">That's strangely upfront, what are some of the activities?"
+		],
+		[
 			"We’ll spill the blood of virgins"
+		],
+		[
+			">right on. right on."
 		],
 		[
 			"You also have to take a vow of silence, but i broke mine to speak with you"
 		],
 		[
-			"I must be slaughtered now as per told by the scripture"
+			">oof"
 		],
 		[
-			"Give me the sweet kiss of death and seal my fate"
+			"I must be slaughtered now as per told by the scripture. Give me the sweet kiss of death and seal my fate"
+		],
+		[
+			">Kiss?"
 		]
 	];		
 	
@@ -322,10 +331,22 @@ class PlayState extends FlxState
 			"My great great great great grandpappy, pupsworth the cannibal created our family recipe that we continue to sell to this day. They’re barking delicious"
 		],
 		[
+			">I wou--"
+		],
+		[
 			"Well yes sir, what you like!"
 		],
 		[
+			">I would like a--"
+		],
+		[
 			"Can I recommend the... "
+		],
+		[
+			">THERE'S ONLY ONE HOT DOG I WANT IN MY MOUTH"
+		],
+		[
+			">Kiss the fool who wouldn't shut up"
 		]
 	];
 	
@@ -336,7 +357,31 @@ class PlayState extends FlxState
 			""
 		],
 		[
-			""
+			"Check this out nerd!"
+		],
+		[
+			">That's pretty rude"
+		],
+		[
+			"No, see I'm also a nerd, like you! Don't you wanna see my Yu-gi-oh cards?"
+		],
+		[
+			">Hell yea, do you play synchos?"
+		],
+		[
+			"Not really, I'm more  afan of yugioh classic"
+		],
+		[
+			">I'm in love"
+		],
+		[
+			"THis iS GoiNg tOO fASt!!"
+		],
+		[
+			">close those eyes"
+		],
+		[
+			">kiss"
 		]
 	];
 	
