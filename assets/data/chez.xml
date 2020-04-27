@@ -28,17 +28,17 @@
 	<SubTexture name="chezKissed0010" x="2553" y="0" width="397" height="525"/>
 	<SubTexture name="chezKissed0011" x="2553" y="0" width="397" height="525"/>
 	<SubTexture name="chezKissed0012" x="2553" y="0" width="397" height="525"/>
-	<SubTexture name="chezTalking0000" x="2950" y="0" width="531" height="525"/>
-	<SubTexture name="chezTalking0001" x="2950" y="0" width="531" height="525"/>
-	<SubTexture name="chezTalking0002" x="3481" y="0" width="531" height="525"/>
-	<SubTexture name="chezTalking0003" x="0" y="525" width="531" height="525"/>
-	<SubTexture name="chezTalking0004" x="531" y="525" width="525" height="525" frameX="0" frameY="0" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0005" x="1056" y="525" width="525" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0006" x="1581" y="525" width="527" height="506" frameX="-2" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0007" x="1581" y="525" width="527" height="506" frameX="-2" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0008" x="2108" y="525" width="521" height="525" frameX="0" frameY="0" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0009" x="2629" y="525" width="521" height="525" frameX="0" frameY="0" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0010" x="3150" y="525" width="529" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0011" x="3150" y="525" width="529" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
-	<SubTexture name="chezTalking0012" x="0" y="1050" width="531" height="506" frameX="0" frameY="-19" frameWidth="531" frameHeight="525"/>
+	<SubTexture name="chezTalking0000" x="2950" y="0" width="505" height="525"/>
+	<SubTexture name="chezTalking0001" x="2950" y="0" width="505" height="525"/>
+	<SubTexture name="chezTalking0002" x="3455" y="0" width="504" height="525" frameX="-1" frameY="0" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0003" x="0" y="525" width="504" height="525" frameX="-1" frameY="0" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0004" x="504" y="525" width="491" height="525" frameX="-8" frameY="0" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0005" x="995" y="525" width="491" height="506" frameX="-8" frameY="-19" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0006" x="1486" y="525" width="503" height="506" frameX="0" frameY="-19" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0007" x="1486" y="525" width="503" height="506" frameX="0" frameY="-19" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0008" x="1989" y="525" width="492" height="525" frameX="-3" frameY="0" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0009" x="2481" y="525" width="492" height="525" frameX="-3" frameY="0" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0010" x="2973" y="525" width="503" height="506" frameX="0" frameY="-19" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0011" x="2973" y="525" width="503" height="506" frameX="0" frameY="-19" frameWidth="505" frameHeight="525"/>
+	<SubTexture name="chezTalking0012" x="3476" y="525" width="504" height="506" frameX="-1" frameY="-19" frameWidth="505" frameHeight="525"/>
 </TextureAtlas>

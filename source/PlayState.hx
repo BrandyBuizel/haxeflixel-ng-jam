@@ -26,6 +26,7 @@ import openfl.utils.Object;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 
+import flixel.input.gamepad.FlxGamepad;
 import flixel.graphics.frames.FlxAtlasFrames;
 
 
@@ -94,6 +95,8 @@ class PlayState extends FlxState
 	var smallScale:Float;
 	var middleScale:Float;
 	var bigScale:Float;
+	
+	var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 	
 	//Character Dialogue Arrays
 	var chezText:Array<Dynamic> = 
@@ -474,13 +477,13 @@ class PlayState extends FlxState
 		LEVEL_MAX_Y = FlxG.stage.stageHeight * 1.5;
 		
 		//setup backdrop
-		backdrop1 = new FlxSprite(0, 0, "assets/images/back.png");
+		backdrop1 = new FlxSprite(0, 0, "assets/images/background.png");
 		backdrop1.screenCenter();
 		add(backdrop1);
 		
 		backdrop2 = new FlxSprite(0, 0, "assets/images/back2.png");
 		backdrop2.screenCenter();
-		add(backdrop2);
+		//add(backdrop2);
 		
 		var effect = new MosaicEffect();
 		backdrop1.shader = effect.shader;
@@ -703,7 +706,7 @@ class PlayState extends FlxState
 		_player = new Player(0, 180);
 		_player.screenCenter();
 		_player.x -= 120;
-		_player.animation.play('idle');
+		_player.animation.play('idleA');
 		add(_player);
 		
 		_face = new FlxSprite(770, 360);
@@ -753,17 +756,22 @@ class PlayState extends FlxState
 		
 		if (hiveCount >= 13){
 			_face.animation.frameIndex = 5;
+			_player.animation.play('idleF');
 		}else if (hiveCount >= 11){
 			_face.animation.frameIndex = 4;
+			_player.animation.play('idleE');
 		}else if (hiveCount >= 9){
 			_face.animation.frameIndex = 3;
+			_player.animation.play('idleD');
 		}else if (hiveCount >= 6){
 			_face.animation.frameIndex = 2;
+			_player.animation.play('idleC');
 		}else if (hiveCount >= 3){
 			_face.animation.frameIndex = 1;
+			_player.animation.play('idleB');
 		}else{
 			_face.animation.frameIndex = 0;
-			_player.animation.play('idle');
+			_player.animation.play('idleA');
 			
 			if (cickassKissed == true){
 				_cickass.animation.play('kissed');
@@ -810,7 +818,7 @@ class PlayState extends FlxState
 			curText.visible = false;
 
 			//Movement
-			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"])){
+			if (FlxG.keys.anyPressed(["S", "DOWN", "W", "UP", "A", "LEFT", "D", "RIGHT"]) || gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN", "UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP", "LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT", "RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"])){
 				if(_player.y <= 200){
 					_player.y += 2.4;
 				}else if (_player.y > 100){
@@ -820,20 +828,20 @@ class PlayState extends FlxState
 				_player.y = 180;
 			}
 			
-			if (FlxG.keys.anyPressed(["A", "LEFT"])){
+			if (FlxG.keys.anyPressed(["A", "LEFT"]) || gamepad.anyPressed(["LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT"])){
 				if(_player.x > 60){
 					_player.x -= 20;
 				}
 			}
 				
-			if (FlxG.keys.anyPressed(["D", "RIGHT"])){
+			if (FlxG.keys.anyPressed(["D", "RIGHT"]) || gamepad.anyPressed(["RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"])){
 				if(_player.x < 560){
 					_player.x += 20;
 				}
 			}
 			
 			//Zoom in and out
-			if (FlxG.keys.anyPressed(["S", "DOWN"])){
+			if (FlxG.keys.anyPressed(["S", "DOWN"]) || gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN"])){
 				if(worldScale > 0){
 					if (level == 1){
 						if (worldScale >= 0.3){
@@ -847,25 +855,25 @@ class PlayState extends FlxState
 				tempScale -= 0.;
 			}
 			
-			if (FlxG.keys.anyPressed(["W", "UP"])){
+			if (FlxG.keys.anyPressed(["W", "UP"]) || gamepad.anyPressed(["UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP"])){
 				worldScale += 0.005;
 				
 				tempScale += 0.1;
 			}
 			
 			//Who ya talkin' too?
-			if (FlxG.keys.justPressed.SPACE){
+			if (FlxG.keys.justPressed.SPACE || gamepad.justPressed.A){
 				//Level 1 Dialogue
 				if (level == 1){
-					if (debugText.text == "Chez Beaks"){
+					if (debugText.text == "Chez Beaks" && !chezKissed){
 						isTalking = true;
 						curDialogue = chezText;
 						_chez.animation.play("talking");
-					}else if (debugText.text == "Ferdinand"){
+					}else if (debugText.text == "Ferdinand" && !ferdinandKissed){
 						isTalking = true;
 						curDialogue = ferdinandText;
 						_ferdinand.animation.play("talking");
-					}else if (debugText.text == "Cickass Cat"){
+					}else if (debugText.text == "Cickass Cat" && !cickassKissed){
 						isTalking = true;
 						curDialogue = cickassText;
 						_cickass.animation.play("talking");
@@ -874,15 +882,15 @@ class PlayState extends FlxState
 				
 				//Level 2 Dialogue
 				if (level == 2){
-					if (debugText.text == "Glottis is a Glutton"){
+					if (debugText.text == "Glottis is a Glutton" && !glottisKissed){
 						isTalking = true;
 						curDialogue = glottisText;
 						_glottis.animation.play("talking");
-					}else if (debugText.text == "Ramasama-kun"){
+					}else if (debugText.text == "Ramasama-kun" && !ramasamaKissed){
 						isTalking = true;
 						curDialogue = ramasamaText;
 						_ramasama.animation.play("talking");
-					}else if (debugText.text == "Oscar's Hot Hot Dogs"){
+					}else if (debugText.text == "Oscar's Hot Hot Dogs" && !oscarKissed){
 						isTalking = true;
 						curDialogue = oscarText;
 						_oscar.animation.play("talking");
@@ -891,15 +899,15 @@ class PlayState extends FlxState
 				
 				//Level 3 Dialogue
 				if (level == 3){
-					if (debugText.text == "Reggie"){
+					if (debugText.text == "Reggie" && !reggieKissed){
 						isTalking = true;
 						curDialogue = reggieText;
 						_glottis.animation.play("talking");
-					}else if (debugText.text == "Vern 'Vernie' Varns"){
+					}else if (debugText.text == "Vern 'Vernie' Varns" && !vernieKissed){
 						isTalking = true;
 						curDialogue = vernieText;
 						_ramasama.animation.play("talking");
-					}else if (debugText.text == "Sammy Schwimmer"){
+					}else if (debugText.text == "Sammy Schwimmer" && !sammyKissed){
 						isTalking = true;
 						curDialogue = sammyText;
 						_oscar.animation.play("talking");
@@ -908,15 +916,15 @@ class PlayState extends FlxState
 				
 				//Level 4 Dialogue
 				if (level == 4){
-					if (debugText.text == "Gottsley"){
+					if (debugText.text == "Gottsley" && !gottsleyKissed){
 						isTalking = true;
 						curDialogue = gottsleyText;
 						_glottis.animation.play("talking");
-					}else if (debugText.text == "Ken, sup"){
+					}else if (debugText.text == "Ken, sup" && !kenKissed){
 						isTalking = true;
 						curDialogue = kenText;
 						_ramasama.animation.play("talking");
-					}else if (debugText.text == "Digby"){
+					}else if (debugText.text == "Digby" && !digbyKissed){
 						isTalking = true;
 						curDialogue = digbyText;
 						_oscar.animation.play("talking");
@@ -929,7 +937,7 @@ class PlayState extends FlxState
 		if (isTalking){
 			curText.visible = true;
 			
-			if(FlxG.keys.justPressed.SPACE){
+			if(FlxG.keys.justPressed.SPACE || gamepad.justPressed.A){
 				curText.text = "";
 				curPlacement += 1;
 				
@@ -961,67 +969,67 @@ class PlayState extends FlxState
 						}
 					}
 					if (debugText.text == "Ferdinand"){
-						if (!chezKissed){
+						if (!ferdinandKissed){
 							hiveCount += 1;
 							ferdinandKissed = true;
 						}
 					}
 					if (debugText.text == "Cickass Cat"){
-						if (!chezKissed){
+						if (!cickassKissed){
 							hiveCount += 1;
 							cickassKissed = true;
 						}
 					}		
 					if (debugText.text == "Glottis is a Glutton"){
-						if (!chezKissed){
+						if (!glottisKissed){
 							hiveCount += 1;
 							glottisKissed = true;
 						}
 					}	
 					if (debugText.text == "Ramasama-kun"){
-						if (!chezKissed){
+						if (!ramasamaKissed){
 							hiveCount += 1;
 							ramasamaKissed = true;
 						}
 					}
 					if (debugText.text == "Oscar's Hot Hot Dogs"){
-						if (!chezKissed){
+						if (!oscarKissed){
 							hiveCount += 1;
 							oscarKissed = true;
 						}
 					}	
 					if (debugText.text == "Reggie"){
-						if (!chezKissed){
+						if (!reggieKissed){
 							hiveCount += 1;
 							reggieKissed = true;
 						}
 					}
 					if (debugText.text == "Vern 'Vernie' Varns"){
-						if (!chezKissed){
+						if (!vernieKissed){
 							hiveCount += 1;
 							vernieKissed = true;
 						}
 					}
 					if (debugText.text == "Sammy Schwimmer"){
-						if (!chezKissed){
+						if (!sammyKissed){
 							hiveCount += 1;
 							sammyKissed = true;
 						}
 					}
 					if (debugText.text == "Gottsley"){
-						if (!chezKissed){
+						if (!gottsleyKissed){
 							hiveCount += 1;
 							gottsleyKissed = true;
 						}
 					}
 					if (debugText.text == "Ken, sup"){
-						if (!chezKissed){
+						if (!kenKissed){
 							hiveCount += 1;
 							kenKissed = true;
 						}
 					}
 					if (debugText.text == "Digby"){
-						if (!chezKissed){
+						if (!digbyKissed){
 							hiveCount += 1;
 							digbyKissed = true;
 						}
@@ -1049,14 +1057,22 @@ class PlayState extends FlxState
 		_digby.updateHitbox();
 		
 		//Backdrop sclaing
-		FlxTween.tween(backdrop1.scale, { x: worldScale, y: worldScale },  0.1);
-		FlxTween.tween(backdrop2.scale, { x: worldScale * 0.17, y: worldScale * 0.17 },  0.1);
+		FlxTween.tween(backdrop1.scale, { x: worldScale, y: worldScale },  0.001);
+		FlxTween.tween(backdrop2.scale, { x: worldScale * 0.17, y: worldScale * 0.17 },  0.001);
 		
 		//Level Code
 		if (prevLevel != level){
-			worldScale = 0.25;
+			if (worldScale > 1.5){ worldScale = 0.25; }
+			if (worldScale < 0.25){ worldScale = 1.5; }
+			
 			prevLevel = level;
 		}
+		
+		if (level < 1){ level = 1; }
+		if (level > 4){ level = 4; }
+		
+		if (worldScale > 1.5){	level += 1;	}
+		if (worldScale < 0.25){	level -= 1;	}
 		
 		if (level == 1){
 			_cickass.visible = true;
@@ -1095,15 +1111,10 @@ class PlayState extends FlxState
 			}else{
 				debugText.text = "";
 			}
-		
-			//level change
-			if (worldScale >= 1.5){
-				_cickass.visible = false;
-				_ferdinand.visible = false;
-				_chez.visible = false;
-		
-				level = 2;
-			}
+		}else{
+			_cickass.visible = false;
+			_ferdinand.visible = false;
+			_chez.visible = false;
 		}
 		
 		//Level 2
@@ -1144,24 +1155,11 @@ class PlayState extends FlxState
 			}else{
 				debugText.text = "";
 			}
-			
-			//level change
-			if (worldScale >= 1.5){
-				_oscar.visible = false;
-				_ramasama.visible = false;
-				_glottis.visible = false;
-		
-				level = 3;
-			}
-			
-			if (worldScale <= 0.5){
-				_oscar.visible = false;
-				_ramasama.visible = false;
-				_glottis.visible = false;
-				
-				level = 1;
-			}
-		}
+		}else{
+			_oscar.visible = false;
+			_ramasama.visible = false;
+			_glottis.visible = false;
+		}		
 		
 		//Level 3
 		if (level == 3){
@@ -1201,23 +1199,10 @@ class PlayState extends FlxState
 			}else{
 				debugText.text = "";
 			}
-			
-			//level change
-			if (worldScale >= 1.5){
-				_reggie.visible = false;
-				_vernie.visible = false;
-				_sammy.visible = false;
-				
-				level = 4;
-			}			
-			
-			if (worldScale <= 0.5){
-				_reggie.visible = false;
-				_vernie.visible = false;
-				_sammy.visible = false;
-		
-				level = 2;
-			}
+		}else{
+			_reggie.visible = false;
+			_vernie.visible = false;
+			_sammy.visible = false;
 		}
 		
 		//Level 4
@@ -1257,16 +1242,11 @@ class PlayState extends FlxState
 				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
 			}else{
 				debugText.text = "";
-			}
-			
-			//level chnage
-			if (worldScale <= 0.5){
-				_gottsley.visible = false;
-				_ken.visible = false;
-				_digby.visible = false;
-		
-				level = 3;
-			}			
+			}		
+		}else{
+			_gottsley.visible = false;
+			_ken.visible = false;
+			_digby.visible = false;
 		}
 		
 		/*
