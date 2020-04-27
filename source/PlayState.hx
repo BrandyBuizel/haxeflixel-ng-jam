@@ -147,6 +147,9 @@ class PlayState extends FlxState
 	var digbyText:Array<Dynamic> = 
 	[
 		[
+			""
+		],
+		[
 			"Have you talked to the other dog yet?"
 		],
 		[
@@ -864,7 +867,7 @@ class PlayState extends FlxState
 		curText = new FlxTypeText(0, 0, 720, "");
 		curText.setFormat("assets/fonts/SeaHorses.ttf");
 		curText.color = FlxColor.WHITE; // set the color to cyan
-		curText.size = 32; // set the text's size to 32px
+		curText.size = 36; // set the text's size to 32px
 		curText.alignment = FlxTextAlign.CENTER; // center the text
 		curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
 		curText.screenCenter();
@@ -893,9 +896,18 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		
-		if (hiveCount >= 13){
+		if (hiveCount >= 12){
 			_face.animation.frameIndex = 5;
 			_player.animation.play('idlef');
+			
+			isTalking = true;
+			curText.alpha = 0;
+			curText.text = "[>I met a lot of great people today and socializing with them made me feel a little less alone, but now that they're A PART of me...\n\nI'm just as alone...]\n\n\n\nthanks for playing, be safe in quarantine\n\n-brandon";
+			curText.color = FlxColor.YELLOW;
+			
+			if (FlxG.keys.justPressed.SPACE){
+				FlxG.resetGame();
+			}
 			
 			if (cickassKissed == true){
 				_cickass.animation.play('kissedf');
@@ -1152,8 +1164,6 @@ class PlayState extends FlxState
 				_hank.animation.play('kisseda');
 			}
 		}
-		
-			
 			
 		//Player Control
 		if (!isTalking){
@@ -1460,16 +1470,16 @@ class PlayState extends FlxState
 			//Name popup bottom left and text color
 			if (_player.overlaps(_chez) && _chez.scale.x > 0.6 && _chez.scale.x < 1.2){
 				debugText.text = "Chez Beaks";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 51, 51, 255), 3);
 			}else if (_player.overlaps(_ferdinand) && _ferdinand.scale.x > 0.6 && _ferdinand.scale.x < 1.2){
 				debugText.text = "Ferdinand";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(61, 64, 106, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(61, 64, 106, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(61, 64, 106, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(61, 64, 106, 255), 3);
 			}else if (_player.overlaps(_cickass) && _cickass.scale.x > 0.6 && _cickass.scale.x < 1.2){
 				debugText.text = "Cickass Cat";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 163, 5, 255), 3);
 			}else{
 				debugText.text = "";
 			}
@@ -1488,14 +1498,14 @@ class PlayState extends FlxState
 			//set position and scale
 			FlxTween.tween(_oscar.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_oscar.x = smallScale;
-			_oscar.y = (worldScale * -100) + 240;
+			_oscar.y = (worldScale * -100) + 225;
 			
 			FlxTween.tween(_ramasama.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
 			_ramasama.x = middleScale;
 			if (_ramasama.x > 480){
 				_ramasama.alpha = 0;
 			}
-			_ramasama.y = (worldScale * -100) + 240;
+			_ramasama.y = (worldScale * -100) + 225;
 			
 			FlxTween.tween(_glottis.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 			_glottis.x = bigScale;
@@ -1504,16 +1514,16 @@ class PlayState extends FlxState
 			//name in bottom left
 			if (_player.overlaps(_glottis) && _glottis.scale.x > 0.6 && _glottis.scale.x < 1.2){
 				debugText.text = "Glottis is a Glutton";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(204, 115, 159, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(204, 115, 159, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(204, 115, 159, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(204, 115, 159, 255), 3);
 			}else if (_player.overlaps(_ramasama) && _ramasama.scale.x > 0.6 && _ramasama.scale.x < 1.2){
 				debugText.text = "Ramasama-kun";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(105, 11, 20, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(105, 11, 20, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(105, 11, 20, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(105, 11, 20, 255), 3);
 			}else if (_player.overlaps(_oscar) && _oscar.scale.x > 0.6 && _oscar.scale.x < 1.2){
 				debugText.text = "Oscar's Hot Hot Dogs";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(51, 153, 255, 255), 3);
 			}else{
 				debugText.text = "";
 			}
@@ -1548,16 +1558,16 @@ class PlayState extends FlxState
 			//change bottom left text and color
 			if (_player.overlaps(_reggie) && _reggie.scale.x > 0.6 && _reggie.scale.x < 1.2){
 				debugText.text = "Reggie";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(0, 204, 153, 255), 3);
 			}else if (_player.overlaps(_sammy) && _sammy.scale.x > 0.6 && _sammy.scale.x < 1.2){
 				debugText.text = "Sammy Schwimmer";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(232, 229, 118, 255), 3);
 			}else if (_player.overlaps(_vernie) && _vernie.scale.x > 0.6 && _vernie.scale.x < 1.2){
 				debugText.text = "Vern 'Vernie' Varns";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(79, 54, 126, 255), 3);
 			}else{
 				debugText.text = "";
 			}
@@ -1578,12 +1588,12 @@ class PlayState extends FlxState
 			_digby.x = smallScale;
 			_digby.y = (worldScale * -100) + 270;
 			
-			FlxTween.tween(_ken.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
-			_ken.x = middleScale;
+			FlxTween.tween(_ken.scale, { x: (tempScale/100) * (worldScale * worldScale), y: (tempScale/100) * (worldScale * worldScale) },  0.1);
+			_ken.x = middleScale - 120;
 			if (_ken.x > 480){
 				_ken.alpha = 0;
 			}
-			_ken.y = (worldScale * -100) + 240;
+			_ken.y = (worldScale * -100) + 150;
 			
 			FlxTween.tween(_gottsley.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
 			_gottsley.x = bigScale;
@@ -1592,16 +1602,16 @@ class PlayState extends FlxState
 			//change bottom left text and color
 			if (_player.overlaps(_gottsley) && _gottsley.scale.x > 0.6 && _gottsley.scale.x < 1.2){
 				debugText.text = "Gottsley";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(171, 61, 61, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(171, 61, 61, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(171, 61, 61, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(171, 61, 61, 255), 3);
 			}else if (_player.overlaps(_ken) && _ken.scale.x > 0.6 && _ken.scale.x < 1.2){
 				debugText.text = "Ken, sup";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(97, 129, 97, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(97, 129, 97, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(97, 129, 97, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(97, 129, 97, 255), 3);
 			}else if (_player.overlaps(_digby) && _digby.scale.x > 0.6 && _digby.scale.x < 1.2){
 				debugText.text = "Digby";
-				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(87, 130, 151, 255), 2);
-				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(87, 130, 151, 255), 2);
+				debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(87, 130, 151, 255), 3);
+				curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(87, 130, 151, 255), 3);
 			}else{
 				debugText.text = "";
 			}		
@@ -1706,11 +1716,11 @@ class PlayState extends FlxState
 			}
 		}
 			
-		if (_ken.scale.x >= 1.35 || _ken.scale.x <= 0.18){
+		if (_ken.scale.x >= 1 || _ken.scale.x <= 0.18){
 			FlxTween.tween(_ken, { alpha: 0 }, 1, { ease: FlxEase.expoOut } );
 		}
 		if(_ken.alpha != 1){
-			if (_ken.scale.x < 1.35 && _ken.scale.x > 0.18){
+			if (_ken.scale.x < 1 && _ken.scale.x > 0.18){
 				_ken.alpha = 1;
 			}
 		}
@@ -1744,8 +1754,8 @@ class PlayState extends FlxState
 		/*
 		if (_player.overlaps(_hank) && _hank.scale.x > 0.6 && _hank.scale.x < 1){
 			debugText.text = "Biker Hank";
-			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 102, 153, 255), 2);
-			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 102, 153, 255), 2);
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 102, 153, 255), 3);
+			curText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.fromRGB(255, 102, 153, 255), 3);
 		}else{
 			debugText.text = "";
 		}
@@ -1757,7 +1767,7 @@ class PlayState extends FlxState
 		//default bottom left text
 		if (debugText.text == ""){
 			debugText.text = "OBJECTIVE: Get Kisses, Assimilate";
-			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2);
+			debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 3);
 		}
 	}
 }
