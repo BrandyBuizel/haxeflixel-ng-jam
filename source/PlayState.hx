@@ -875,10 +875,10 @@ class PlayState extends FlxState
 		add(curText);
 		
 		//create a new FlxText
-		debugText = new FlxText(20, 480, 640, "");
+		debugText = new FlxText(25, 480, 800, "");
 		debugText.setFormat("assets/fonts/SeaHorses.ttf");
 		debugText.color = FlxColor.WHITE; // set the color to cyan
-		debugText.size = 42; // set the text's size to 32px
+		debugText.size = 48; // set the text's size to 32px
 		debugText.alignment = FlxTextAlign.LEFT; // center the text
 		debugText.setBorderStyle(FlxTextBorderStyle.SHADOW, FlxColor.CYAN, 2); // give the text a 2-pixel deep, cyan shadow
 		add(debugText);
@@ -901,7 +901,7 @@ class PlayState extends FlxState
 			_player.animation.play('idlef');
 			
 			isTalking = true;
-			curText.alpha = 0;
+			curText.alpha += 0.01;
 			curText.text = "[>I met a lot of great people today and socializing with them made me feel a little less alone, but now that they're A PART of me...\n\nI'm just as alone...]\n\n\n\nthanks for playing, be safe in quarantine\n\n-brandon";
 			curText.color = FlxColor.YELLOW;
 			
