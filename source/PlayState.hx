@@ -160,19 +160,40 @@ class PlayState extends FlxState
 			"I hate taking baths"
 		],
 		[
+			">that's pretty gross"
+		],
+		[
 			"No, like, I just prefer showers. I'm not dirty"
+		],
+		[
+			">you look pretty gross though"
 		],
 		[
 			"I showered just last night though!"
 		],
 		[
+			">you shouldn't lie..."
+		],
+		[
 			"Do people really think I'm dirty?"
+		],
+		[
+			">dood i wouldn't poke you with a 10 foot pole"
 		],
 		[
 			"I even use mouthwash regularly"
 		],
 		[
+			"I bet your breath still smells"
+		],
+		[
 			"I'll prove it doesnt, Kiss me!"
+		],
+		[
+			">kiss reluctantly"
+		],
+		[
+			">Not bad"
 		]
 	];
 	
@@ -238,16 +259,25 @@ class PlayState extends FlxState
 			"Gotta get top speed. Win next week's race. Show biker troy who's boss"
 		],
 		[
+			"..."
+		],
+		[
 			"Gotta go fast, beat my best time. Gotta keep moving"
+		],
+		[
+			"..."
 		],
 		[
 			"What do you want. I cant stop right now, so close to my Personal record"
 		],
 		[
-			"*heaves*"
+			"..."
 		],
 		[
-			"*collapses*"
+			"*heaves and collapses*"
+		],
+		[
+			">kiss"
 		]
 	];
 	
@@ -260,16 +290,25 @@ class PlayState extends FlxState
 			"You holding?"
 		],
 		[
-			"Nah man, you got seed?"
+			">nothing in particular right now"
 		],
 		[
-			"Sunflower seeds, whats your favorite flavor?"
+			"Nah man, you got seed? Sunflower seeds, whats your favorite flavor?"
+		],
+		[
+			">i'm partial to barbeque"
 		],
 		[
 			"Man me too, aww bro. Nice nice. "
 		],
 		[
+			">i can share but i already got most of them in my mouth"
+		],
+		[
 			"No problem"
+		],
+		[
+			">get kiss, oh wow he's all up in your mouth for them seeds"
 		]
 	];	
 	
@@ -311,16 +350,34 @@ class PlayState extends FlxState
 			"I just finished this neat sketch, do you like it?"
 		],
 		[
+			">well it’s not the best tree i’ve ever seen"
+		],
+		[
 			"...you can't tell it’s me at all. "
+		],
+		[
+			">that's almost not true"
 		],
 		[
 			"oh, well i actually spent the whole day on it. practice makes... perfect."
 		],
 		[
+			">you should practice more"
+		],
+		[
 			"I do every day! i want so badly to draw like i see people do on twitter!! i've been doing art for 5 years but im still no good"
 		],
 		[
+			">it takes a lot of bad pieces to get to one you like"
+		],
+		[
 			"Wow, you know, you're really nice."
+		],
+		[
+			">stop being so hard on yourself "
+		],
+		[
+			">kiss on cheek"
 		]
 	];	
 	
@@ -333,10 +390,22 @@ class PlayState extends FlxState
 			"Isn't being so happy All the time amazing?"
 		],
 		[
+			">Sounds exhausting"
+		],
+		[
 			"I just love smiling, they say if you smile more you'll start being happy again."
 		],
 		[
+			">I dont believe you, you dont look happy at all to me"
+		],
+		[
 			"You're right, I'm actually quite depressed but i try to smile so that people dont have to worry about me and feel sorry for me"
+		],
+		[
+			">i get it. it's hard putting on a smile, youre brave for dling so but you dont need to hide how you really feel. We're all the same on the inside can can understand what you're going though if you let others in"
+		],
+		[
+			">kiss"
 		]
 	];	
 	
@@ -838,44 +907,79 @@ class PlayState extends FlxState
 				//end dialogue victory
 				if (curPlacement > (curDialogue.length - 1)){
 					curDialogue = blankDialogue;
-					hiveCount += 1;
 					isTalking = false;
 					
 					if (debugText.text == "Chez Beaks"){
-						chezKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							chezKissed = true;
+						}
 					}
 					if (debugText.text == "Ferdinand"){
-						ferdinandKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							ferdinandKissed = true;
+						}
 					}
 					if (debugText.text == "Cickass Cat"){
-						cickassKissed = true;
-					}	
+						if (!chezKissed){
+							hiveCount += 1;
+							cickassKissed = true;
+						}
+					}		
 					if (debugText.text == "Glottis is a Glutton"){
-						glottisKissed = true;
-					}
+						if (!chezKissed){
+							hiveCount += 1;
+							glottisKissed = true;
+						}
+					}	
 					if (debugText.text == "Ramasama-kun"){
-						ramasamaKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							ramasamaKissed = true;
+						}
 					}
 					if (debugText.text == "Oscar's Hot Hot Dogs"){
-						oscarKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							oscarKissed = true;
+						}
 					}	
 					if (debugText.text == "Reggie"){
-						reggieKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							reggieKissed = true;
+						}
 					}
 					if (debugText.text == "Vern 'Vernie' Varns"){
-						vernieKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							vernieKissed = true;
+						}
 					}
 					if (debugText.text == "Sammy Schwimmer"){
-						sammyKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							sammyKissed = true;
+						}
 					}
 					if (debugText.text == "Gottsley"){
-						gottsleyKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							gottsleyKissed = true;
+						}
 					}
 					if (debugText.text == "Ken, sup"){
-						kenKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							kenKissed = true;
+						}
 					}
 					if (debugText.text == "Digby"){
-						digbyKissed = true;
+						if (!chezKissed){
+							hiveCount += 1;
+							digbyKissed = true;
+						}
 					}
 				}
 			}
