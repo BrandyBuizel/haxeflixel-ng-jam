@@ -644,15 +644,15 @@ class PlayState extends FlxState
 			if (FlxG.keys.justPressed.SPACE){
 				//Level 1 Dialogue
 				if (level == 1){
-					if (_player.overlaps(_chez)){
+					if (debugText.text == "Chez Beaks"){
 						isTalking = true;
 						curDialogue = chezText;
 						_chez.animation.play("talking");
-					}else if (_player.overlaps(_ferdinand)){
+					}else if (debugText.text == "Ferdinand"){
 						isTalking = true;
 						curDialogue = ferdinandText;
 						_ferdinand.animation.play("talking");
-					}else if (_player.overlaps(_cickass)){
+					}else if (debugText.text == "Cickass Cat"){
 						isTalking = true;
 						curDialogue = cickassText;
 						_cickass.animation.play("talking");
@@ -661,15 +661,15 @@ class PlayState extends FlxState
 				
 				//Level 2 Dialogue
 				if (level == 2){
-					if (_player.overlaps(_glottis)){
+					if (debugText.text == "Glottis is a Glutton"){
 						isTalking = true;
 						curDialogue = glottisText;
 						_glottis.animation.play("talking");
-					}else if (_player.overlaps(_ramasama) && level == 2){
+					}else if (debugText.text == "Ramasama-kun"){
 						isTalking = true;
 						curDialogue = ramasamaText;
 						_ramasama.animation.play("talking");
-					}else if (_player.overlaps(_oscar) && level == 2){
+					}else if (debugText.text == "Oscar's Hot Hot Dogs"){
 						isTalking = true;
 						curDialogue = oscarText;
 						_oscar.animation.play("talking");
@@ -678,32 +678,32 @@ class PlayState extends FlxState
 				
 				//Level 3 Dialogue
 				if (level == 3){
-					if (_player.overlaps(_reggie)){
+					if (debugText.text == "Reggie"){
 						isTalking = true;
 						curDialogue = reggieText;
 						_glottis.animation.play("talking");
-					}else if (_player.overlaps(_vernie)){
+					}else if (debugText.text == "Vern 'Vernie' Varns"){
 						isTalking = true;
 						curDialogue = vernieText;
 						_ramasama.animation.play("talking");
-					}else if (_player.overlaps(_sammy)){
+					}else if (debugText.text == "Sammy Schwimmer"){
 						isTalking = true;
 						curDialogue = sammyText;
 						_oscar.animation.play("talking");
-					}				
+					}	
 				}
 				
 				//Level 4 Dialogue
 				if (level == 4){
-					if (_player.overlaps(_gottsley)){
+					if (debugText.text == "Gottsley"){
 						isTalking = true;
 						curDialogue = gottsleyText;
 						_glottis.animation.play("talking");
-					}else if (_player.overlaps(_ken)){
+					}else if (debugText.text == "Ken, sup"){
 						isTalking = true;
 						curDialogue = kenText;
 						_ramasama.animation.play("talking");
-					}else if (_player.overlaps(_digby)){
+					}else if (debugText.text == "Digby"){
 						isTalking = true;
 						curDialogue = digbyText;
 						_oscar.animation.play("talking");
@@ -814,6 +814,10 @@ class PlayState extends FlxState
 		
 		//Level 2
 		if (level == 2){
+			_oscar.visible = true;
+			_ramasama.visible = true;
+			_glottis.visible = true;
+		
 			//set position and scale
 			FlxTween.tween(_oscar.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_oscar.x = smallScale;
@@ -849,16 +853,28 @@ class PlayState extends FlxState
 			
 			//level change
 			if (worldScale >= 1.5){
+				_oscar.visible = false;
+				_ramasama.visible = false;
+				_glottis.visible = false;
+		
 				level = 3;
 			}
 			
 			if (worldScale <= 0.5){
+				_oscar.visible = false;
+				_ramasama.visible = false;
+				_glottis.visible = false;
+				
 				level = 1;
 			}
 		}
 		
 		//Level 3
 		if (level == 3){
+			_reggie.visible = true;
+			_vernie.visible = true;
+			_sammy.visible = true;
+		
 			//set position and scale
 			FlxTween.tween(_sammy.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_sammy.x = smallScale;
@@ -894,16 +910,28 @@ class PlayState extends FlxState
 			
 			//level change
 			if (worldScale >= 1.5){
+				_reggie.visible = false;
+				_vernie.visible = false;
+				_sammy.visible = false;
+				
 				level = 4;
 			}			
 			
 			if (worldScale <= 0.5){
+				_reggie.visible = false;
+				_vernie.visible = false;
+				_sammy.visible = false;
+		
 				level = 2;
 			}
 		}
 		
 		//Level 4
 		if (level == 4){
+			_gottsley.visible = false;
+			_ken.visible = false;
+			_digby.visible = false;
+		
 			//set position and scale
 			FlxTween.tween(_digby.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_digby.x = smallScale;
@@ -939,9 +967,17 @@ class PlayState extends FlxState
 			
 			//level chnage
 			if (worldScale <= 0.5){
+				_gottsley.visible = false;
+				_ken.visible = false;
+				_digby.visible = false;
+		
 				level = 3;
 			}			
 		}
+		
+		/*
+		MISC EXTRA BITS
+		*/
 		
 		//FADE OUT AND POP IN LOGIC
 		if (_chez.scale.x >= 1.45 || _chez.scale.x <= 0.18){
