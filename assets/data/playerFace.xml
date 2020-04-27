@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="playerFace.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="playerFace0000" x="0" y="0" width="166" height="163" frameX="-1" frameY="0" frameWidth="167" frameHeight="163"/>
+	<SubTexture name="playerFace0001" x="166" y="0" width="166" height="163" frameX="0" frameY="0" frameWidth="167" frameHeight="163"/>
+	<SubTexture name="playerFace0002" x="332" y="0" width="166" height="163" frameX="0" frameY="0" frameWidth="167" frameHeight="163"/>
+	<SubTexture name="playerFace0003" x="0" y="163" width="166" height="163" frameX="0" frameY="0" frameWidth="167" frameHeight="163"/>
+	<SubTexture name="playerFace0004" x="166" y="163" width="166" height="163" frameX="-1" frameY="0" frameWidth="167" frameHeight="163"/>
+	<SubTexture name="playerFace0005" x="332" y="163" width="166" height="163" frameX="-1" frameY="0" frameWidth="167" frameHeight="163"/>
+</TextureAtlas>

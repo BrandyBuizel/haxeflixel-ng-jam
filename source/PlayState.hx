@@ -53,6 +53,7 @@ class PlayState extends FlxState
 	
 	//player=
 	var _player:Player;
+	var _face:FlxSprite;
 	var isTalking:Bool = false;
 	
 	//characters
@@ -70,10 +71,25 @@ class PlayState extends FlxState
 	var _sammy:FlxSprite;
 	var _vernie:FlxSprite;
 	
+	var chezKissed:Bool = false;
+	var cickassKissed:Bool = false;
+	var digbyKissed:Bool = false;
+	var ferdinandKissed:Bool = false;
+	var glottisKissed:Bool = false;
+	var gottsleyKissed:Bool = false;
+	var hankKissed:Bool = false;
+	var kenKissed:Bool = false;
+	var oscarKissed:Bool = false;
+	var ramasamaKissed:Bool = false;
+	var reggieKissed:Bool = false;
+	var sammyKissed:Bool = false;
+	var vernieKissed:Bool = false;
+	
 	var worldScale:Float = 0.25;
 	var tempScale:Float = 100;
 	var level:Int = 1;
 	var prevLevel:Int = 1;
+	var hiveCount:Int = 0;
 	
 	var smallScale:Float;
 	var middleScale:Float;
@@ -87,6 +103,9 @@ class PlayState extends FlxState
 		],
 		[
 			"Gimme Kiss"
+		],
+		[
+			">Kiss"
 		]
 	];		
 	
@@ -99,10 +118,19 @@ class PlayState extends FlxState
 			"Wanna fight bro?"
 		],
 		[
+			">do I need to call the cops?"
+		],
+		[
 			"Nah man, i just love fighting. My dad bought me these gloves as a kitten, been fighting ever since. Can i try my gloves on your face?"
 		],
 		[
+			">can i try something on your face?"
+		],
+		[
 			"Only if you promise it'll hurt. Pain is just information that the mind can master!"
+		],
+		[
+			">You plant a fat one on the kitty"
 		]
 	];	
 	
@@ -158,10 +186,22 @@ class PlayState extends FlxState
 			"munch munch much"
 		],
 		[
+			">whatcha eating..?"
+		],
+		[
 			"munch munch much munch munch"
 		],
 		[
+			">ya got a little somethin on your face"
+		],
+		[
 			"munch munch munch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch munch munch\nmunch munch munch munch munch munch munch munch munch"
+		],
+		[
+			">let me get that for you"
+		],
+		[
+			">kiss"
 		]
 	];	
 	
@@ -552,6 +592,13 @@ class PlayState extends FlxState
 		_player.animation.play('idle');
 		add(_player);
 		
+		_face = new FlxSprite(770, 360);
+		_face.frames = FlxAtlasFrames.fromSparrow(AssetPaths.playerFace__png, AssetPaths.playerFace__xml);
+		_face.animation.addByPrefix('face', 'playerFace', 0, false);
+		_face.animation.play('face');
+		_face.antialiasing = true;
+		_face.updateHitbox();
+		add(_face);		
 		
 		/*
 		CREATE TEXT 
@@ -590,6 +637,58 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		
+		if (hiveCount >= 13){
+			_face.animation.frameIndex = 5;
+		}else if (hiveCount >= 11){
+			_face.animation.frameIndex = 4;
+		}else if (hiveCount >= 9){
+			_face.animation.frameIndex = 3;
+		}else if (hiveCount >= 6){
+			_face.animation.frameIndex = 2;
+		}else if (hiveCount >= 3){
+			_face.animation.frameIndex = 1;
+		}else{
+			_face.animation.frameIndex = 0;
+			_player.animation.play('idle');
+			
+			if (cickassKissed == true){
+				_cickass.animation.play('kissed');
+			}
+			if (ferdinandKissed == true){
+				_ferdinand.animation.play('kissed');
+			}
+			if (chezKissed == true){
+				_chez.animation.play('kissed');
+			}
+			if (oscarKissed == true){
+				_oscar.animation.play('kissed');
+			}
+			if (ramasamaKissed == true){
+				_ramasama.animation.play('kissed');
+			}
+			if (glottisKissed == true){
+				_glottis.animation.play('kissed');
+			}
+			if (reggieKissed == true){
+				_reggie.animation.play('kissed');
+			}
+			if (vernieKissed == true){
+				_vernie.animation.play('kissed');
+			}
+			if (sammyKissed == true){
+				_sammy.animation.play('kissed');
+			}
+			if (gottsleyKissed == true){
+				_glottis.animation.play('kissed');
+			}
+			if (kenKissed == true){
+				_ken.animation.play('kissed');
+			}
+			if (digbyKissed == true){
+				_digby.animation.play('kissed');
+			}
+		}
+			
 		//Player Control
 		if (!isTalking){
 			curPlacement = 0;
@@ -728,10 +827,56 @@ class PlayState extends FlxState
 					curText.start();
 				}
 				
-				//end dialogue
+				if (curPlacement > (curDialogue.length - 2)){
+					curText.color = FlxColor.YELLOW;
+				}else if (FlxMath.isOdd(curPlacement)){
+					curText.color = FlxColor.WHITE;
+				}else{
+					curText.color = FlxColor.YELLOW;
+				}
+				
+				//end dialogue victory
 				if (curPlacement > (curDialogue.length - 1)){
 					curDialogue = blankDialogue;
+					hiveCount += 1;
 					isTalking = false;
+					
+					if (debugText.text == "Chez Beaks"){
+						chezKissed = true;
+					}
+					if (debugText.text == "Ferdinand"){
+						ferdinandKissed = true;
+					}
+					if (debugText.text == "Cickass Cat"){
+						cickassKissed = true;
+					}	
+					if (debugText.text == "Glottis is a Glutton"){
+						glottisKissed = true;
+					}
+					if (debugText.text == "Ramasama-kun"){
+						ramasamaKissed = true;
+					}
+					if (debugText.text == "Oscar's Hot Hot Dogs"){
+						oscarKissed = true;
+					}	
+					if (debugText.text == "Reggie"){
+						reggieKissed = true;
+					}
+					if (debugText.text == "Vern 'Vernie' Varns"){
+						vernieKissed = true;
+					}
+					if (debugText.text == "Sammy Schwimmer"){
+						sammyKissed = true;
+					}
+					if (debugText.text == "Gottsley"){
+						gottsleyKissed = true;
+					}
+					if (debugText.text == "Ken, sup"){
+						kenKissed = true;
+					}
+					if (debugText.text == "Digby"){
+						digbyKissed = true;
+					}
 				}
 			}
 		}
