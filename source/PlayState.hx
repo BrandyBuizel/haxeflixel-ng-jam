@@ -51,10 +51,9 @@ class PlayState extends FlxState
 	var textSound:Array<FlxSound>;
 	var debugText:FlxText;
 	
-	var isTalking:Bool = false;
-	
 	//player=
 	var _player:Player;
+	var isTalking:Bool = false;
 	
 	//characters
 	var _chez:FlxSprite;
@@ -74,6 +73,7 @@ class PlayState extends FlxState
 	var worldScale:Float = 0.25;
 	var tempScale:Float = 100;
 	var level:Int = 1;
+	var prevLevel:Int = 1;
 	
 	var smallScale:Float;
 	var middleScale:Float;
@@ -508,19 +508,38 @@ class PlayState extends FlxState
 		_vernie.screenCenter();
 		_vernie.animation.play("idle");
 		
+		//Spawn NPCs
 		add(_cickass);
 		add(_ferdinand);
 		add(_chez);
 		
-		//add(_oscar);
-		//add(_glottis);
-		//add(_ramasama);
-		//add(_reggie);
-		//add(_sammy);			
-		//add(_vernie);
-		//add(_ken);
-		//add(_gottsley);
-		//add(_digby);
+		add(_oscar);
+		add(_ramasama);
+		add(_glottis);
+		
+		add(_reggie);			
+		add(_vernie);
+		add(_sammy);
+		
+		add(_gottsley);
+		add(_ken);
+		add(_digby);
+		
+		_cickass.visible = false;
+		_ferdinand.visible = false;
+		_chez.visible = false;
+		
+		_oscar.visible = false;
+		_ramasama.visible = false;
+		_glottis.visible = false;
+		
+		_reggie.visible = false;
+		_vernie.visible = false;
+		_sammy.visible = false;
+		
+		_gottsley.visible = false;
+		_ken.visible = false;
+		_digby.visible = false;
 		
 		/*
 		END OF CHARACTER CREATE
@@ -571,6 +590,7 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		
+		//Player Control
 		if (!isTalking){
 			curPlacement = 0;
 			curText.text = "";
@@ -604,81 +624,90 @@ class PlayState extends FlxState
 				if(worldScale > 0){
 					if (level == 1){
 						if (worldScale >= 0.3){
-							worldScale -= 0.01;
+							worldScale -= 0.005;
 						}
 					}else{
-						worldScale -= 0.01;
+						worldScale -= 0.005;
 					}
 				}
 				
-				tempScale -= 0.1;
+				tempScale -= 0.;
 			}
 			
 			if (FlxG.keys.anyPressed(["W", "UP"])){
-				worldScale += 0.01;
+				worldScale += 0.005;
 				
 				tempScale += 0.1;
 			}
 			
+			//Who ya talkin' too?
 			if (FlxG.keys.justPressed.SPACE){
 				//Level 1 Dialogue
-				if (_player.overlaps(_chez) && level == 1){
-					isTalking = true;
-					curDialogue = chezText;
-					_chez.animation.play("talking");
-				}else if (_player.overlaps(_ferdinand) && level == 1){
-					isTalking = true;
-					curDialogue = ferdinandText;
-					_ferdinand.animation.play("talking");
-				}else if (_player.overlaps(_cickass) && level == 1){
-					isTalking = true;
-					curDialogue = cickassText;
-					_cickass.animation.play("talking");
-				}		
+				if (level == 1){
+					if (_player.overlaps(_chez)){
+						isTalking = true;
+						curDialogue = chezText;
+						_chez.animation.play("talking");
+					}else if (_player.overlaps(_ferdinand)){
+						isTalking = true;
+						curDialogue = ferdinandText;
+						_ferdinand.animation.play("talking");
+					}else if (_player.overlaps(_cickass)){
+						isTalking = true;
+						curDialogue = cickassText;
+						_cickass.animation.play("talking");
+					}	
+				}
 				
 				//Level 2 Dialogue
-				if (_player.overlaps(_glottis) && level == 2){
-					isTalking = true;
-					curDialogue = glottisText;
-					_glottis.animation.play("talking");
-				}else if (_player.overlaps(_ramasama) && level == 2){
-					isTalking = true;
-					curDialogue = ramasamaText;
-					_ramasama.animation.play("talking");
-				}else if (_player.overlaps(_oscar) && level == 2){
-					isTalking = true;
-					curDialogue = oscarText;
-					_oscar.animation.play("talking");
-				}		
+				if (level == 2){
+					if (_player.overlaps(_glottis)){
+						isTalking = true;
+						curDialogue = glottisText;
+						_glottis.animation.play("talking");
+					}else if (_player.overlaps(_ramasama) && level == 2){
+						isTalking = true;
+						curDialogue = ramasamaText;
+						_ramasama.animation.play("talking");
+					}else if (_player.overlaps(_oscar) && level == 2){
+						isTalking = true;
+						curDialogue = oscarText;
+						_oscar.animation.play("talking");
+					}	
+				}
 				
 				//Level 3 Dialogue
-				if (_player.overlaps(_reggie) && level == 3){
-					isTalking = true;
-					curDialogue = reggieText;
-					_glottis.animation.play("talking");
-				}else if (_player.overlaps(_vernie) && level == 3){
-					isTalking = true;
-					curDialogue = vernieText;
-					_ramasama.animation.play("talking");
-				}else if (_player.overlaps(_sammy) && level == 3){
-					isTalking = true;
-					curDialogue = sammyText;
-					_oscar.animation.play("talking");
-				}				
+				if (level == 3){
+					if (_player.overlaps(_reggie)){
+						isTalking = true;
+						curDialogue = reggieText;
+						_glottis.animation.play("talking");
+					}else if (_player.overlaps(_vernie)){
+						isTalking = true;
+						curDialogue = vernieText;
+						_ramasama.animation.play("talking");
+					}else if (_player.overlaps(_sammy)){
+						isTalking = true;
+						curDialogue = sammyText;
+						_oscar.animation.play("talking");
+					}				
+				}
 				
 				//Level 4 Dialogue
-				if (_player.overlaps(_gottsley) && level == 4){
-					isTalking = true;
-					curDialogue = gottsleyText;
-					_glottis.animation.play("talking");
-				}else if (_player.overlaps(_ken) && level == 4){
-					isTalking = true;
-					curDialogue = kenText;
-					_ramasama.animation.play("talking");
-				}else if (_player.overlaps(_digby) && level == 4){
-					isTalking = true;
-					curDialogue = digbyText;
-					_oscar.animation.play("talking");
+				if (level == 4){
+					if (_player.overlaps(_gottsley)){
+						isTalking = true;
+						curDialogue = gottsleyText;
+						_glottis.animation.play("talking");
+					}else if (_player.overlaps(_ken)){
+						isTalking = true;
+						curDialogue = kenText;
+						_ramasama.animation.play("talking");
+					}else if (_player.overlaps(_digby)){
+						isTalking = true;
+						curDialogue = digbyText;
+						_oscar.animation.play("talking");
+					}
 				}
 			}
 		}
@@ -712,6 +741,7 @@ class PlayState extends FlxState
 		middleScale = (100 / (worldScale / 2)) - 100;
 		bigScale = (worldScale * worldScale * 150) + 480;
 		
+		//so it doesnt all suck
 		_cickass.updateHitbox();
 		_ferdinand.updateHitbox();
 		_chez.updateHitbox();
@@ -724,12 +754,21 @@ class PlayState extends FlxState
 		_gottsley.updateHitbox();
 		_digby.updateHitbox();
 		
-		//Level 1
+		//Backdrop sclaing
 		FlxTween.tween(backdrop1.scale, { x: worldScale, y: worldScale },  0.1);
 		FlxTween.tween(backdrop2.scale, { x: worldScale * 0.17, y: worldScale * 0.17 },  0.1);
-		//backdrop2.setSize(backdrop1.width * 0.17, backdrop1.height * 0.17);
+		
+		//Level Code
+		if (prevLevel != level){
+			worldScale = 0.25;
+			prevLevel = level;
+		}
 		
 		if (level == 1){
+			_cickass.visible = true;
+			_ferdinand.visible = true;
+			_chez.visible = true;
+			
 			//position in level
 			FlxTween.tween(_cickass.scale, { x: (tempScale/150) * (worldScale * worldScale), y: (tempScale/150) * (worldScale * worldScale) },  0.1);
 			_cickass.x = smallScale;
@@ -737,6 +776,9 @@ class PlayState extends FlxState
 			
 			FlxTween.tween(_ferdinand.scale, { x: (tempScale / 75) * (worldScale * worldScale), y: (tempScale / 75) * (worldScale * worldScale) },  0.1);
 			_ferdinand.x = middleScale;
+			if (_ferdinand.x > 480){
+				_ferdinand.alpha = 0;
+			}
 			_ferdinand.y = (worldScale * -100) + 225;
 			
 			FlxTween.tween(_chez.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
@@ -761,8 +803,11 @@ class PlayState extends FlxState
 			}
 		
 			//level change
-			if (worldScale >= 1.5){		
-				worldScale = 0.25;
+			if (worldScale >= 1.5){
+				_cickass.visible = false;
+				_ferdinand.visible = false;
+				_chez.visible = false;
+		
 				level = 2;
 			}
 		}
@@ -776,6 +821,9 @@ class PlayState extends FlxState
 			
 			FlxTween.tween(_ramasama.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
 			_ramasama.x = middleScale;
+			if (_ramasama.x > 480){
+				_ramasama.alpha = 0;
+			}
 			_ramasama.y = (worldScale * -100) + 240;
 			
 			FlxTween.tween(_glottis.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
@@ -801,12 +849,10 @@ class PlayState extends FlxState
 			
 			//level change
 			if (worldScale >= 1.5){
-				worldScale = 0.25;
 				level = 3;
 			}
 			
 			if (worldScale <= 0.5){
-				worldScale = 0.25;
 				level = 1;
 			}
 		}
@@ -820,6 +866,9 @@ class PlayState extends FlxState
 			
 			FlxTween.tween(_vernie.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
 			_vernie.x = middleScale;
+			if (_vernie.x > 480){
+				_vernie.alpha = 0;
+			}
 			_vernie.y = (worldScale * -100) + 240;
 			
 			FlxTween.tween(_reggie.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
@@ -845,12 +894,10 @@ class PlayState extends FlxState
 			
 			//level change
 			if (worldScale >= 1.5){
-				worldScale = 0.25;
 				level = 4;
 			}			
 			
 			if (worldScale <= 0.5){
-				worldScale = 0.25;
 				level = 2;
 			}
 		}
@@ -864,6 +911,9 @@ class PlayState extends FlxState
 			
 			FlxTween.tween(_ken.scale, { x: (tempScale/75) * (worldScale * worldScale), y: (tempScale/75) * (worldScale * worldScale) },  0.1);
 			_ken.x = middleScale;
+			if (_ken.x > 480){
+				_ken.alpha = 0;
+			}
 			_ken.y = (worldScale * -100) + 240;
 			
 			FlxTween.tween(_gottsley.scale, { x: (tempScale/40) * (worldScale * worldScale), y: (tempScale/40) * (worldScale * worldScale) },  0.1);
@@ -889,7 +939,6 @@ class PlayState extends FlxState
 			
 			//level chnage
 			if (worldScale <= 0.5){
-				worldScale = 0.25;
 				level = 3;
 			}			
 		}
