@@ -25,34 +25,13 @@ class Player extends FlxSprite
         updateHitbox();
         antialiasing = true;
 
-		animation.addByPrefix('idle', 'playerIdle', 24, true);
+		animation.addByPrefix('idleA', 'playerIdlea', 24, true);
+		animation.addByPrefix('idleB', 'playerIdleb', 24, true);
+		animation.addByPrefix('idleC', 'playerIdlec', 24, true);
+		animation.addByPrefix('idleD', 'playerIdled', 24, true);
+		animation.addByPrefix('idleE', 'playerIdlee', 24, true);
+		animation.addByPrefix('idleF', 'playerIdlef', 24, true);
 
 		FlxG.log.add("added player");
-	}
-	
-	private function gamepadControls(gamepad:FlxGamepad):Bool
-	{
-		if (gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN", "UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP", "LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT", "RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"]))
-		{
-				
-			if (gamepad.anyPressed(["DOWN", "DPAD_DOWN", "LEFT_STICK_DIGITAL_DOWN"]))
-			{
-
-			}
-			if (gamepad.anyPressed(["UP", "DPAD_UP", "LEFT_STICK_DIGITAL_UP"]))
-			{
-
-			}
-			if (gamepad.anyPressed(["LEFT", "DPAD_LEFT", "LEFT_STICK_DIGITAL_LEFT"]))
-			{
-
-			}
-			if (gamepad.anyPressed(["RIGHT", "DPAD_RIGHT", "LEFT_STICK_DIGITAL_RIGHT"]))
-			{
-
-			}
-			return true;
-		}
-		return false;
 	}
 }

@@ -674,13 +674,13 @@ class PlayState extends FlxState
 		add(_ramasama);
 		add(_glottis);
 		
-		add(_reggie);			
-		add(_vernie);
 		add(_sammy);
+		add(_vernie);
+		add(_reggie);		
 		
-		add(_gottsley);
-		add(_ken);
 		add(_digby);
+		add(_ken);
+		add(_gottsley);
 		
 		_cickass.visible = false;
 		_ferdinand.visible = false;
@@ -715,7 +715,7 @@ class PlayState extends FlxState
 		_face.animation.play('face');
 		_face.antialiasing = true;
 		_face.updateHitbox();
-		add(_face);		
+		//add(_face);		
 		
 		/*
 		CREATE TEXT 
@@ -772,7 +772,8 @@ class PlayState extends FlxState
 		}else{
 			_face.animation.frameIndex = 0;
 			_player.animation.play('idleA');
-			
+		}
+		
 			if (cickassKissed == true){
 				_cickass.animation.play('kissed');
 			}
@@ -809,7 +810,6 @@ class PlayState extends FlxState
 			if (digbyKissed == true){
 				_digby.animation.play('kissed');
 			}
-		}
 			
 		//Player Control
 		if (!isTalking){
@@ -847,9 +847,19 @@ class PlayState extends FlxState
 						if (worldScale >= 0.3){
 							worldScale -= 0.005;
 						}
-					}else{
+					}
+					
+					if (level == 2 || level == 3){
 						worldScale -= 0.005;
 					}
+					
+					if (level == 4){
+						if (worldScale < 0.5){
+							worldScale -= 0.005;
+						}
+					}
+					
+					
 				}
 				
 				tempScale -= 0.;
@@ -1050,8 +1060,8 @@ class PlayState extends FlxState
 		_oscar.updateHitbox();
 		_glottis.updateHitbox();
 		_ramasama.updateHitbox();
-		_reggie.updateHitbox();
 		_sammy.updateHitbox();
+		_reggie.updateHitbox();
 		_vernie.updateHitbox();
 		_gottsley.updateHitbox();
 		_digby.updateHitbox();
