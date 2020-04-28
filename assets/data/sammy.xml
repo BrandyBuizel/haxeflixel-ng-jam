@@ -6,24 +6,72 @@
 	<SubTexture name="sammyIdle0001" x="0" y="0" width="606" height="593"/>
 	<SubTexture name="sammyIdle0002" x="0" y="0" width="606" height="593"/>
 	<SubTexture name="sammyIdle0003" x="0" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0004" x="606" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0005" x="606" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0004" x="0" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0005" x="0" y="0" width="606" height="593"/>
 	<SubTexture name="sammyIdle0006" x="606" y="0" width="606" height="593"/>
 	<SubTexture name="sammyIdle0007" x="606" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0008" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0009" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0010" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0011" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0012" x="0" y="593" width="606" height="593"/>
-	<SubTexture name="sammyIdle0013" x="0" y="593" width="606" height="593"/>
-	<SubTexture name="sammyIdle0014" x="0" y="593" width="606" height="593"/>
-	<SubTexture name="sammyIdle0015" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyIdle0008" x="606" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0009" x="606" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0010" x="606" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0011" x="606" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0012" x="1212" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0013" x="1212" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0014" x="1212" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0015" x="1212" y="0" width="606" height="593"/>
 	<SubTexture name="sammyIdle0016" x="1212" y="0" width="606" height="593"/>
 	<SubTexture name="sammyIdle0017" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0018" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0019" x="1212" y="0" width="606" height="593"/>
-	<SubTexture name="sammyIdle0020" x="606" y="593" width="606" height="593"/>
-	<SubTexture name="sammyIdle0021" x="606" y="593" width="606" height="593"/>
-	<SubTexture name="sammyIdle0022" x="606" y="593" width="606" height="593"/>
-	<SubTexture name="sammyIdle0023" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyIdle0018" x="1818" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0019" x="1818" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0020" x="1818" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0021" x="1818" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0022" x="1818" y="0" width="606" height="593"/>
+	<SubTexture name="sammyIdle0023" x="1818" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKisseda0000" x="2424" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKisseda0001" x="2424" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKisseda0002" x="2424" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKisseda0003" x="2424" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKisseda0004" x="2424" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKisseda0005" x="2424" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedb0000" x="3030" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedb0001" x="3030" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedb0002" x="3030" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedb0003" x="3030" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedb0004" x="3030" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedb0005" x="3030" y="0" width="606" height="593"/>
+	<SubTexture name="sammyKissedc0000" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedc0001" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedc0002" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedc0003" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedc0004" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedc0005" x="0" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedd0000" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedd0001" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedd0002" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedd0003" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedd0004" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedd0005" x="606" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissede0000" x="1212" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissede0001" x="1212" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissede0002" x="1212" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissede0003" x="1212" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissede0004" x="1212" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissede0005" x="1212" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedf0000" x="1818" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedf0001" x="1818" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedf0002" x="1818" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedf0003" x="1818" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedf0004" x="1818" y="593" width="606" height="593"/>
+	<SubTexture name="sammyKissedf0005" x="1818" y="593" width="606" height="593"/>
+	<SubTexture name="sammyTalking0000" x="0" y="0" width="606" height="593"/>
+	<SubTexture name="sammyTalking0001" x="0" y="0" width="606" height="593"/>
+	<SubTexture name="sammyTalking0002" x="2424" y="593" width="606" height="593"/>
+	<SubTexture name="sammyTalking0003" x="2424" y="593" width="606" height="593"/>
+	<SubTexture name="sammyTalking0004" x="2424" y="593" width="606" height="593"/>
+	<SubTexture name="sammyTalking0005" x="3030" y="593" width="606" height="593"/>
+	<SubTexture name="sammyTalking0006" x="3030" y="593" width="606" height="593"/>
+	<SubTexture name="sammyTalking0007" x="0" y="1186" width="606" height="593"/>
+	<SubTexture name="sammyTalking0008" x="0" y="1186" width="606" height="593"/>
+	<SubTexture name="sammyTalking0009" x="606" y="1186" width="606" height="593"/>
+	<SubTexture name="sammyTalking0010" x="606" y="1186" width="606" height="593"/>
+	<SubTexture name="sammyTalking0011" x="606" y="1186" width="606" height="593"/>
 </TextureAtlas>
