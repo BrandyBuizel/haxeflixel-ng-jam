@@ -1,21 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="vernieIdle.png">
+<TextureAtlas imagePath="vernie.png">
 	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="vernieIdle0000" x="0" y="0" width="308" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0001" x="0" y="0" width="308" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0002" x="0" y="0" width="308" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0003" x="0" y="0" width="308" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0004" x="308" y="0" width="356" height="422"/>
-	<SubTexture name="vernieIdle0005" x="308" y="0" width="356" height="422"/>
-	<SubTexture name="vernieIdle0006" x="308" y="0" width="356" height="422"/>
-	<SubTexture name="vernieIdle0007" x="664" y="0" width="356" height="418" frameX="0" frameY="-4" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0008" x="0" y="422" width="258" height="418" frameX="0" frameY="-4" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0009" x="0" y="422" width="258" height="418" frameX="0" frameY="-4" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0010" x="0" y="422" width="258" height="418" frameX="0" frameY="-4" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0011" x="0" y="422" width="258" height="418" frameX="0" frameY="-4" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0012" x="258" y="422" width="300" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0013" x="258" y="422" width="300" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0014" x="258" y="422" width="300" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
-	<SubTexture name="vernieIdle0015" x="258" y="422" width="300" height="420" frameX="0" frameY="-2" frameWidth="356" frameHeight="422"/>
+	<SubTexture name="vernieITalking0000" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0001" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0002" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0003" x="0" y="0" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0004" x="0" y="0" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0005" x="0" y="0" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0006" x="309" y="0" width="363" height="418"/>
+	<SubTexture name="vernieITalking0007" x="672" y="0" width="363" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0008" x="931" y="418" width="363" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0009" x="1294" y="418" width="363" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0010" x="1035" y="0" width="363" height="408" frameX="0" frameY="-10" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0011" x="1035" y="0" width="363" height="408" frameX="0" frameY="-10" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0012" x="1035" y="0" width="363" height="408" frameX="0" frameY="-10" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0013" x="0" y="836" width="259" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0014" x="0" y="836" width="259" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0015" x="1398" y="0" width="259" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0016" x="1657" y="0" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0017" x="0" y="418" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0018" x="0" y="418" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0019" x="0" y="418" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieITalking0020" x="0" y="418" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0000" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0001" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0002" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0003" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0004" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0005" x="259" y="418" width="309" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0006" x="568" y="418" width="363" height="418"/>
+	<SubTexture name="vernieIdle0007" x="931" y="418" width="363" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0008" x="931" y="418" width="363" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0009" x="1294" y="418" width="363" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0010" x="1657" y="418" width="363" height="408" frameX="0" frameY="-10" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0011" x="1657" y="418" width="363" height="408" frameX="0" frameY="-10" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0012" x="1657" y="418" width="363" height="408" frameX="0" frameY="-10" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0013" x="0" y="836" width="259" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0014" x="0" y="836" width="259" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0015" x="0" y="836" width="259" height="413" frameX="0" frameY="-5" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0016" x="259" y="836" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0017" x="259" y="836" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0018" x="259" y="836" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0019" x="259" y="836" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieIdle0020" x="259" y="836" width="259" height="418" frameX="0" frameY="0" frameWidth="363" frameHeight="418"/>
+	<SubTexture name="vernieKisseda0000" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKisseda0001" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKisseda0002" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKisseda0003" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKisseda0004" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKisseda0005" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKisseda0006" x="518" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0000" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0001" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0002" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0003" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0004" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0005" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedb0006" x="792" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0000" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0001" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0002" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0003" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0004" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0005" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedc0006" x="1066" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0000" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0001" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0002" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0003" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0004" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0005" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedd0006" x="1340" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0000" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0001" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0002" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0003" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0004" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0005" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissede0006" x="1614" y="836" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0000" x="0" y="1254" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0001" x="0" y="1254" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0002" x="0" y="1254" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0003" x="0" y="1254" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0004" x="0" y="1254" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0005" x="0" y="1254" width="274" height="413"/>
+	<SubTexture name="vernieKissedf0006" x="0" y="1254" width="274" height="413"/>
 </TextureAtlas>

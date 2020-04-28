@@ -2,36 +2,99 @@
 <TextureAtlas imagePath="ken.png">
 	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="kenIdle0000" x="0" y="0" width="262" height="429" frameX="0" frameY="-1" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0001" x="0" y="0" width="262" height="429" frameX="0" frameY="-1" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0002" x="0" y="0" width="262" height="429" frameX="0" frameY="-1" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0003" x="0" y="0" width="262" height="429" frameX="0" frameY="-1" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0004" x="0" y="0" width="262" height="429" frameX="0" frameY="-1" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0005" x="0" y="0" width="262" height="429" frameX="0" frameY="-1" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0006" x="262" y="0" width="262" height="428" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0007" x="262" y="0" width="262" height="428" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0008" x="262" y="0" width="262" height="428" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0009" x="262" y="0" width="262" height="428" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0010" x="262" y="0" width="262" height="428" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0011" x="262" y="0" width="262" height="428" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0012" x="524" y="0" width="256" height="424" frameX="-6" frameY="-7" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0013" x="524" y="0" width="256" height="424" frameX="-6" frameY="-7" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0014" x="524" y="0" width="256" height="424" frameX="-6" frameY="-7" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0015" x="524" y="0" width="256" height="424" frameX="-6" frameY="-7" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0016" x="524" y="0" width="256" height="424" frameX="-6" frameY="-7" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0017" x="0" y="429" width="256" height="428" frameX="-6" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0018" x="0" y="429" width="256" height="428" frameX="-6" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0019" x="0" y="429" width="256" height="428" frameX="-6" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0020" x="0" y="429" width="256" height="428" frameX="-6" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0021" x="0" y="429" width="256" height="428" frameX="-6" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0022" x="256" y="429" width="262" height="427" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0023" x="256" y="429" width="262" height="427" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0024" x="256" y="429" width="262" height="427" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0025" x="256" y="429" width="262" height="427" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0026" x="256" y="429" width="262" height="427" frameX="0" frameY="-3" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0027" x="518" y="429" width="262" height="430" frameX="0" frameY="0" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0028" x="518" y="429" width="262" height="430" frameX="0" frameY="0" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0029" x="518" y="429" width="262" height="430" frameX="0" frameY="0" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0030" x="518" y="429" width="262" height="430" frameX="0" frameY="0" frameWidth="262" frameHeight="431"/>
-	<SubTexture name="kenIdle0031" x="518" y="429" width="262" height="430" frameX="0" frameY="0" frameWidth="262" frameHeight="431"/>
+	<SubTexture name="kenIdle0000" x="0" y="0" width="278" height="456" frameX="0" frameY="0" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0001" x="0" y="0" width="278" height="456" frameX="0" frameY="0" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0002" x="0" y="0" width="278" height="456" frameX="0" frameY="0" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0003" x="0" y="0" width="278" height="456" frameX="0" frameY="0" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0004" x="0" y="0" width="278" height="456" frameX="0" frameY="0" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0005" x="0" y="0" width="278" height="456" frameX="0" frameY="0" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0006" x="278" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0007" x="278" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0008" x="278" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0009" x="278" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0010" x="278" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0011" x="278" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0012" x="556" y="0" width="272" height="450" frameX="-6" frameY="-6" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0013" x="556" y="0" width="272" height="450" frameX="-6" frameY="-6" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0014" x="556" y="0" width="272" height="450" frameX="-6" frameY="-6" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0015" x="556" y="0" width="272" height="450" frameX="-6" frameY="-6" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0016" x="556" y="0" width="272" height="450" frameX="-6" frameY="-6" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0017" x="828" y="0" width="272" height="454" frameX="-6" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0018" x="828" y="0" width="272" height="454" frameX="-6" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0019" x="828" y="0" width="272" height="454" frameX="-6" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0020" x="828" y="0" width="272" height="454" frameX="-6" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0021" x="828" y="0" width="272" height="454" frameX="-6" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0022" x="1100" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0023" x="1100" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0024" x="1100" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0025" x="1100" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0026" x="1100" y="0" width="278" height="454" frameX="0" frameY="-2" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0027" x="1378" y="0" width="278" height="456" frameX="0" frameY="-29" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0028" x="1378" y="0" width="278" height="456" frameX="0" frameY="-29" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0029" x="1378" y="0" width="278" height="456" frameX="0" frameY="-29" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0030" x="1378" y="0" width="278" height="456" frameX="0" frameY="-29" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenIdle0031" x="1378" y="0" width="278" height="456" frameX="0" frameY="-29" frameWidth="278" frameHeight="485"/>
+	<SubTexture name="kenKisseda0000" x="1656" y="0" width="346" height="456"/>
+	<SubTexture name="kenKisseda0001" x="1656" y="0" width="346" height="456"/>
+	<SubTexture name="kenKisseda0002" x="1656" y="0" width="346" height="456"/>
+	<SubTexture name="kenKisseda0003" x="1656" y="0" width="346" height="456"/>
+	<SubTexture name="kenKisseda0004" x="1656" y="0" width="346" height="456"/>
+	<SubTexture name="kenKisseda0005" x="1656" y="0" width="346" height="456"/>
+	<SubTexture name="kenKissedb0000" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedb0001" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedb0002" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedb0003" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedb0004" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedb0005" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedc0000" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedc0001" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedc0002" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedc0003" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedc0004" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedc0005" x="0" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedd0000" x="346" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedd0001" x="346" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedd0002" x="346" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedd0003" x="346" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedd0004" x="346" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedd0005" x="346" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissede0000" x="692" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissede0001" x="692" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissede0002" x="692" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissede0003" x="692" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissede0004" x="692" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissede0005" x="692" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedf0000" x="1038" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedf0001" x="1038" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedf0002" x="1038" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedf0003" x="1038" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedf0004" x="1038" y="456" width="346" height="456"/>
+	<SubTexture name="kenKissedf0005" x="1038" y="456" width="346" height="456"/>
+	<SubTexture name="kenTalking0000" x="1384" y="456" width="285" height="456" frameX="-1" frameY="0" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0001" x="1384" y="456" width="285" height="456" frameX="-1" frameY="0" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0002" x="1384" y="456" width="285" height="456" frameX="-1" frameY="0" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0003" x="1384" y="456" width="285" height="456" frameX="-1" frameY="0" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0004" x="1384" y="456" width="285" height="456" frameX="-1" frameY="0" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0005" x="1384" y="456" width="285" height="456" frameX="-1" frameY="0" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0006" x="1669" y="456" width="286" height="454" frameX="0" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0007" x="1669" y="456" width="286" height="454" frameX="0" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0008" x="1669" y="456" width="286" height="454" frameX="0" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0009" x="1669" y="456" width="286" height="454" frameX="0" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0010" x="1669" y="456" width="286" height="454" frameX="0" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0011" x="1669" y="456" width="286" height="454" frameX="0" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0012" x="0" y="912" width="254" height="450" frameX="-32" frameY="-6" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0013" x="0" y="912" width="254" height="450" frameX="-32" frameY="-6" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0014" x="0" y="912" width="254" height="450" frameX="-32" frameY="-6" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0015" x="0" y="912" width="254" height="450" frameX="-32" frameY="-6" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0016" x="0" y="912" width="254" height="450" frameX="-32" frameY="-6" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0017" x="254" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0018" x="254" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0019" x="254" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0020" x="254" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0021" x="254" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0022" x="508" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0023" x="508" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0024" x="508" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0025" x="508" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
+	<SubTexture name="kenTalking0026" x="508" y="912" width="254" height="454" frameX="-32" frameY="-2" frameWidth="286" frameHeight="456"/>
 </TextureAtlas>

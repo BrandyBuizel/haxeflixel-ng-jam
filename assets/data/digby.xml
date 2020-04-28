@@ -2,24 +2,90 @@
 <TextureAtlas imagePath="digby.png">
 	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="digbyIdle0000" x="0" y="0" width="209" height="368" frameX="-13" frameY="0" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0001" x="0" y="0" width="209" height="368" frameX="-13" frameY="0" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0002" x="0" y="0" width="209" height="368" frameX="-13" frameY="0" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0003" x="0" y="0" width="209" height="368" frameX="-13" frameY="0" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0004" x="209" y="0" width="224" height="357" frameX="-3" frameY="-11" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0005" x="209" y="0" width="224" height="357" frameX="-3" frameY="-11" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0006" x="209" y="0" width="224" height="357" frameX="-3" frameY="-11" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0007" x="209" y="0" width="224" height="357" frameX="-3" frameY="-11" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0008" x="433" y="0" width="221" height="360" frameX="0" frameY="-8" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0009" x="433" y="0" width="221" height="360" frameX="0" frameY="-8" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0010" x="433" y="0" width="221" height="360" frameX="0" frameY="-8" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0011" x="433" y="0" width="221" height="360" frameX="0" frameY="-8" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0012" x="654" y="0" width="216" height="362" frameX="-13" frameY="-6" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0013" x="654" y="0" width="216" height="362" frameX="-13" frameY="-6" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0014" x="654" y="0" width="216" height="362" frameX="-13" frameY="-6" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0015" x="654" y="0" width="216" height="362" frameX="-13" frameY="-6" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0016" x="0" y="368" width="209" height="363" frameX="-13" frameY="-5" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0017" x="0" y="368" width="209" height="363" frameX="-13" frameY="-5" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0018" x="0" y="368" width="209" height="363" frameX="-13" frameY="-5" frameWidth="229" frameHeight="368"/>
-	<SubTexture name="digbyIdle0019" x="0" y="368" width="209" height="363" frameX="-13" frameY="-5" frameWidth="229" frameHeight="368"/>
+	<SubTexture name="digbyIdle0000" x="0" y="0" width="216" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0001" x="0" y="0" width="216" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0002" x="0" y="0" width="216" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0003" x="0" y="0" width="216" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0004" x="0" y="0" width="216" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0005" x="216" y="0" width="212" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0006" x="216" y="0" width="212" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0007" x="216" y="0" width="212" height="361" frameX="-9" frameY="-3" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0008" x="428" y="0" width="221" height="359" frameX="0" frameY="-5" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0009" x="428" y="0" width="221" height="359" frameX="0" frameY="-5" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0010" x="649" y="0" width="225" height="359" frameX="0" frameY="-5" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0011" x="874" y="0" width="225" height="355" frameX="0" frameY="-9" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0012" x="874" y="0" width="225" height="355" frameX="0" frameY="-9" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0013" x="874" y="0" width="225" height="355" frameX="0" frameY="-9" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0014" x="1099" y="0" width="216" height="364" frameX="-9" frameY="0" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0015" x="1099" y="0" width="216" height="364" frameX="-9" frameY="0" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0016" x="1099" y="0" width="216" height="364" frameX="-9" frameY="0" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyIdle0017" x="1099" y="0" width="216" height="364" frameX="-9" frameY="0" frameWidth="225" frameHeight="364"/>
+	<SubTexture name="digbyKisseda0000" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0001" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0002" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0003" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0004" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0005" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0006" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0007" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKisseda0008" x="1315" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0000" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0001" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0002" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0003" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0004" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0005" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0006" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0007" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedb0008" x="1550" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0000" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0001" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0002" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0003" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0004" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0005" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0006" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0007" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedc0008" x="1785" y="0" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0000" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0001" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0002" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0003" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0004" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0005" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0006" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0007" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedd0008" x="0" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0000" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0001" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0002" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0003" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0004" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0005" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0006" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0007" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissede0008" x="235" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0000" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0001" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0002" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0003" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0004" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0005" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0006" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0007" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyKissedf0008" x="470" y="364" width="235" height="361"/>
+	<SubTexture name="digbyTalking0000" x="705" y="364" width="216" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0001" x="705" y="364" width="216" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0002" x="921" y="364" width="216" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0003" x="921" y="364" width="216" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0004" x="1137" y="364" width="234" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0005" x="1137" y="364" width="234" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0006" x="1371" y="364" width="234" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0007" x="1371" y="364" width="234" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0008" x="1605" y="364" width="212" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0009" x="1605" y="364" width="212" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0010" x="1817" y="364" width="212" height="361" frameX="-19" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0011" x="0" y="725" width="231" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0012" x="231" y="725" width="231" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
+	<SubTexture name="digbyTalking0013" x="231" y="725" width="231" height="361" frameX="0" frameY="0" frameWidth="235" frameHeight="361"/>
 </TextureAtlas>

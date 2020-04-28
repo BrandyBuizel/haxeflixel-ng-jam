@@ -901,6 +901,8 @@ class PlayState extends FlxState
 			_player.animation.play('idlef');
 			
 			isTalking = true;
+			
+			add(curText);
 			curText.alpha += 0.01;
 			debugText.alpha = 0;
 			curText.text = "[>I met a lot of great people today and socializing with them made me feel a little less alone, but now that they're A PART of me...\n\nI'm just as alone...]\n\n\n\n\n\n\n\nthanks for playing, be safe in quarantine\n\n-brandon";
@@ -938,7 +940,7 @@ class PlayState extends FlxState
 				_sammy.animation.play('kissedf');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kissedf');
+				_gottsley.animation.play('kissedf');
 			}
 			if (kenKissed == true){
 				_ken.animation.play('kissedf');
@@ -981,7 +983,7 @@ class PlayState extends FlxState
 				_sammy.animation.play('kissede');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kissede');
+				_gottsley.animation.play('kissede');
 			}
 			if (kenKissed == true){
 				_ken.animation.play('kissede');
@@ -1024,7 +1026,7 @@ class PlayState extends FlxState
 				_sammy.animation.play('kissedd');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kissedd');
+				_gottsley.animation.play('kissedd');
 			}
 			if (kenKissed == true){
 				_ken.animation.play('kissedd');
@@ -1067,7 +1069,7 @@ class PlayState extends FlxState
 				_sammy.animation.play('kissedc');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kissedc');
+				_gottsley.animation.play('kissedc');
 			}
 			if (kenKissed == true){
 				_ken.animation.play('kissedc');
@@ -1110,7 +1112,7 @@ class PlayState extends FlxState
 				_sammy.animation.play('kissedb');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kissedb');
+				_gottsley.animation.play('kissedb');
 			}
 			if (kenKissed == true){
 				_ken.animation.play('kissedb');
@@ -1153,7 +1155,7 @@ class PlayState extends FlxState
 				_sammy.animation.play('kisseda');
 			}
 			if (gottsleyKissed == true){
-				_glottis.animation.play('kisseda');
+				_gottsley.animation.play('kisseda');
 			}
 			if (kenKissed == true){
 				_ken.animation.play('kisseda');
@@ -1269,15 +1271,15 @@ class PlayState extends FlxState
 					if (debugText.text == "Reggie" && !reggieKissed){
 						isTalking = true;
 						curDialogue = reggieText;
-						_glottis.animation.play("talking");
+						_reggie.animation.play("talking");
 					}else if (debugText.text == "Vern 'Vernie' Varns" && !vernieKissed){
 						isTalking = true;
 						curDialogue = vernieText;
-						_ramasama.animation.play("talking");
+						_vernie.animation.play("talking");
 					}else if (debugText.text == "Sammy Schwimmer" && !sammyKissed){
 						isTalking = true;
 						curDialogue = sammyText;
-						_oscar.animation.play("talking");
+						_sammy.animation.play("talking");
 					}	
 				}
 					
@@ -1286,15 +1288,15 @@ class PlayState extends FlxState
 					if (debugText.text == "Gottsley" && !gottsleyKissed){
 						isTalking = true;
 						curDialogue = gottsleyText;
-						_glottis.animation.play("talking");
+						_gottsley.animation.play("talking");
 					}else if (debugText.text == "Ken, sup" && !kenKissed){
 						isTalking = true;
 						curDialogue = kenText;
-						_ramasama.animation.play("talking");
+						_ken.animation.play("talking");
 					}else if (debugText.text == "Digby" && !digbyKissed){
 						isTalking = true;
 						curDialogue = digbyText;
-						_oscar.animation.play("talking");
+						_digby.animation.play("talking");
 					}
 				}
 			}

@@ -1,17 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Gottsley.png">
+<TextureAtlas imagePath="gottsley.png">
 	<!-- Created with Adobe Animate version 20.0.2.22168 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="gottselyIdle0000" x="0" y="0" width="380" height="612"/>
-	<SubTexture name="gottselyIdle0001" x="0" y="0" width="380" height="612"/>
-	<SubTexture name="gottselyIdle0002" x="0" y="0" width="380" height="612"/>
-	<SubTexture name="gottselyIdle0003" x="0" y="0" width="380" height="612"/>
-	<SubTexture name="gottselyIdle0004" x="0" y="0" width="380" height="612"/>
-	<SubTexture name="gottselyIdle0005" x="0" y="0" width="380" height="612"/>
-	<SubTexture name="gottselyIdle0006" x="380" y="0" width="380" height="606" frameX="0" frameY="-6" frameWidth="380" frameHeight="612"/>
-	<SubTexture name="gottselyIdle0007" x="380" y="0" width="380" height="606" frameX="0" frameY="-6" frameWidth="380" frameHeight="612"/>
-	<SubTexture name="gottselyIdle0008" x="380" y="0" width="380" height="606" frameX="0" frameY="-6" frameWidth="380" frameHeight="612"/>
-	<SubTexture name="gottselyIdle0009" x="380" y="0" width="380" height="606" frameX="0" frameY="-6" frameWidth="380" frameHeight="612"/>
-	<SubTexture name="gottselyIdle0010" x="380" y="0" width="380" height="606" frameX="0" frameY="-6" frameWidth="380" frameHeight="612"/>
-	<SubTexture name="gottselyIdle0011" x="380" y="0" width="380" height="606" frameX="0" frameY="-6" frameWidth="380" frameHeight="612"/>
+	<SubTexture name="gottsleyIdle0000" x="0" y="0" width="244" height="393" frameX="-1" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0001" x="0" y="0" width="244" height="393" frameX="-1" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0002" x="0" y="0" width="244" height="393" frameX="-1" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0003" x="0" y="0" width="244" height="393" frameX="-1" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0004" x="0" y="0" width="244" height="393" frameX="-1" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0005" x="0" y="0" width="244" height="393" frameX="-1" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0006" x="244" y="0" width="244" height="389" frameX="0" frameY="-4" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0007" x="244" y="0" width="244" height="389" frameX="0" frameY="-4" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0008" x="244" y="0" width="244" height="389" frameX="0" frameY="-4" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0009" x="244" y="0" width="244" height="389" frameX="0" frameY="-4" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyIdle0010" x="244" y="0" width="244" height="389" frameX="0" frameY="-4" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyKisseda0000" x="488" y="0" width="318" height="399"/>
+	<SubTexture name="gottsleyKisseda0001" x="488" y="0" width="318" height="399"/>
+	<SubTexture name="gottsleyKissedb0000" x="806" y="0" width="308" height="385"/>
+	<SubTexture name="gottsleyKissedb0001" x="806" y="0" width="308" height="385"/>
+	<SubTexture name="gottsleyKissedc0000" x="1114" y="0" width="310" height="387"/>
+	<SubTexture name="gottsleyKissedc0001" x="1114" y="0" width="310" height="387"/>
+	<SubTexture name="gottsleyKissedd0000" x="1424" y="0" width="308" height="386"/>
+	<SubTexture name="gottsleyKissedd0001" x="1424" y="0" width="308" height="386"/>
+	<SubTexture name="gottsleyKissede0000" x="1732" y="0" width="308" height="386"/>
+	<SubTexture name="gottsleyKissede0001" x="1732" y="0" width="308" height="386"/>
+	<SubTexture name="gottsleyKissedf0000" x="0" y="399" width="308" height="386"/>
+	<SubTexture name="gottsleyKissedf0001" x="0" y="399" width="308" height="386"/>
+	<SubTexture name="gottsleyTalking0000" x="0" y="0" width="244" height="393" frameX="-78" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0001" x="0" y="0" width="244" height="393" frameX="-78" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0002" x="0" y="0" width="244" height="393" frameX="-78" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0003" x="0" y="0" width="244" height="393" frameX="-78" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0004" x="0" y="0" width="244" height="393" frameX="-78" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0005" x="0" y="0" width="244" height="393" frameX="-78" frameY="0" frameWidth="245" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0006" x="308" y="399" width="321" height="389" frameX="0" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0007" x="308" y="399" width="321" height="389" frameX="0" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0008" x="308" y="399" width="321" height="389" frameX="0" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0009" x="308" y="399" width="321" height="389" frameX="0" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0010" x="308" y="399" width="321" height="389" frameX="0" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0011" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0012" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0013" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0014" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0015" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0016" x="873" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0017" x="873" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0018" x="873" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0019" x="873" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0020" x="873" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0021" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0022" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
+	<SubTexture name="gottsleyTalking0023" x="629" y="399" width="244" height="389" frameX="-77" frameY="-4" frameWidth="322" frameHeight="393"/>
 </TextureAtlas>
