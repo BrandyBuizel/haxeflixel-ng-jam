@@ -554,13 +554,13 @@ class PlayState extends FlxState
 		backdrop2 = new FlxSprite(0, 0, "assets/images/back2.png");
 		backdrop2.screenCenter();
 		backdrop2.antialiasing = true;
-		//add(backdrop2);
+		add(backdrop2);
 		
 		var effect = new MosaicEffect();
 		backdrop1.shader = effect.shader;
 		backdrop2.shader = effect.shader;
 		
-		effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v){effect.setStrength(v, v);});
+		//effectTween = FlxTween.num(MosaicEffect.DEFAULT_STRENGTH, 16, 1.2, {type: BACKWARD}, function(v){effect.setStrength(v, v);});
 		
 		/*
 		CREATE NPC CHARACTERS TO TALK TO 
